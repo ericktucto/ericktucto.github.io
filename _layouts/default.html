@@ -4,7 +4,10 @@
     {% include head.html %}
 </head>
 <body>
-    <div class="grid-10">{{ content }}</div>
+    <div class="grid-12">
+        {% include navbar.html %}
+        {{ content }}
+    </div>
     <script src="{{ "/assets/js/app.js" | relative_url }}"></script>
 </body>
 </html>
