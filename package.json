@@ -1,0 +1,25 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "This is my jekyll page",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  },
+  "scripts": {
+    "server": "bundle exec jekyll serve --watch --livereload",
+    "build": "webpack --config webpack.config.js --mode=development --watch",
+    "dev": "npm run build | npm run server"
+  },
+  "keywords": [],
+  "author": "Erick Tucto",
+  "email": "erick.tucto@outlook.com",
+  "license": "MIT"
+}

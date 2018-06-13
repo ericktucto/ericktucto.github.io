@@ -1,0 +1,8 @@
+author: Erick Tucto
+# exclude:
+#   - .git/
+#   - node_modules/
+#   - Gemfile
+#   - Gemfile.lock
+#   - package.json
+#   - package-lock.json
