@@ -1,0 +1,38 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Server",
+            "type": "shell",
+            "command": "npm run server",
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "identifier": "server"
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "npm run build",
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Develop",
+            "type": "shell",
+            "command": "npm run dev",
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            }
+        }
+    ]
+}

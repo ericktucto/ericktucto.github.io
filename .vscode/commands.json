@@ -1,0 +1,28 @@
+{
+  "commands": [
+    {
+      "text": "$(rocket) Develop",
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["Develop"],
+      "tooltip": "Develop"
+    },
+    {
+      "text": "$(server) Server",
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["Server"],
+      "tooltip": "Server"
+    },
+    {
+      "text": "$(package) Build",
+      "command": "workbench.action.tasks.runTask",
+      "arguments": ["Build"],
+      "tooltip": "Build"
+    },
+    {
+      "command": "commands.refresh",
+      "text": "$(sync)",
+      "tooltip": "Refresh commands",
+      "color": "#FFCC00"
+    }
+  ]
+}
