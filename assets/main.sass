@@ -4,18 +4,49 @@
 @import "libs/stix-grid/sass/_stix-grid"
 
 .nav-bar
-  border-bottom: 1px solid #BFBFBF
-  background: linear-gradient(#E6E6E6, white, #E6E6E6)
+  background: $purple-dark
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5)
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  img
+    background-image: linear-gradient(#508026, #A0FF4C), radial-gradient(circle at bottom right, #508026, #A0FF4C)
 header
   background: aqua
-nav
-  background: teal
 
 #content
-  background: goldenrod
-  height: 100vh
-footer
+  background: #F7F7F7
+  margin-top: 64px
+#history
+  width: 60%
+.date
+  margin-right: 24px
+  margin-top: 8px
+  width: 72px
+  height: 72px
+  padding: 0
+  border-radius: 50%
+  background: $purple
   color: white
+  text-align: center
+  font-weight: bold
+  font-size: 18px
+  
+.post
+  border-radius: 5px
+  background: #DDDDDD
+  .title
+    font-size: 2rem
+    padding-bottom: 10px
+    a
+      color: #AC4CFF
+  .grid-1
+    width: 100wh
+  .grid-5
+    background: goldenrod
+footer
+  color: #F7F7F7
   background: #333333
 
 @media (max-width: 768px)
@@ -31,9 +62,11 @@ footer
       color: #000
       text-shadow: 0 1px 0 #fff
       opacity: .5
-// .img
-  // &:after
-  //   content: ""
-  //   width: 3px
-  //   height: 3px
-  //   background: purple
+footer
+  .content
+    padding: 8px
+    .col-all
+      padding: 4px 0
+#all
+  color: #F7F7F7
+  background: #562680
