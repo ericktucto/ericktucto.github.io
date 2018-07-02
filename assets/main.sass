@@ -12,14 +12,11 @@
   z-index: 100
   img
     background-image: linear-gradient(#508026, #A0FF4C), radial-gradient(circle at bottom right, #508026, #A0FF4C)
-header
-  background: aqua
 
 #content
-  background: #F7F7F7
+  background: $white
   margin-top: 64px
-#history
-  width: 60%
+
 .date
   margin-right: 24px
   margin-top: 8px
@@ -28,7 +25,7 @@ header
   padding: 0
   border-radius: 50%
   background: $purple
-  color: white
+  color: $white
   text-align: center
   font-weight: bold
   font-size: 18px
@@ -40,13 +37,13 @@ header
     font-size: 2rem
     padding-bottom: 10px
     a
-      color: #AC4CFF
+      color: $purple
   .grid-1
     width: 100wh
   .grid-5
     background: goldenrod
 footer
-  color: #F7F7F7
+  color: $white
   background: #333333
 
 @media (max-width: 768px)
@@ -62,11 +59,13 @@ footer
       color: #000
       text-shadow: 0 1px 0 #fff
       opacity: .5
+
 footer
   .content
-    padding: 8px
+    padding-left: 8px
+    padding-top: 8px
     .col-all
-      padding: 4px 0
+      padding-bottom: 16px
 #all
-  color: #F7F7F7
-  background: #562680
+  color: $white
+  background: $purple-dark
