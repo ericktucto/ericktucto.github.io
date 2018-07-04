@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)('.nav-bar button.close').on('click', function (e) {\n    var items = (0, _jquery2.default)(e.target).siblings().not('.nav-bar .show-bar');\n    items.toggle(function () {\n        (0, _jquery2.default)(undefined).css('display', 'block');\n    }, function () {\n        (0, _jquery2.default)(undefined).css('display', 'none');\n    });\n    /*     $(window).on('resize', () => {\n            $('.nav-bar button.close').siblings().css('display', 'block')\n        }) */\n});\n\n//# sourceURL=webpack:///./_sass/libs/stix-grid/es6/main.es6?");
+eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar items_nav_bar;\n(0, _jquery2.default)('.nav-bar button.close').on('click', function (e) {\n    items_nav_bar = (0, _jquery2.default)(e.target).siblings().not('.nav-bar .show-bar');\n    items_nav_bar.toggle(function () {\n        (0, _jquery2.default)(undefined).css('display', 'grid');\n    }, function () {\n        (0, _jquery2.default)(undefined).css('display', 'none');\n    });\n});\n(0, _jquery2.default)(window).on('resize', function () {\n    if (items_nav_bar) {\n        items_nav_bar.css('display', 'grid');\n    }\n});\n\n//# sourceURL=webpack:///./_sass/libs/stix-grid/es6/main.es6?");
 
 /***/ }),
 
