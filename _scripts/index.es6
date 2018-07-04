@@ -1,2 +1,2 @@
-import './stix-grid/main.es6'
+import '../_sass/libs/stix-grid/es6/main.es6'
 
