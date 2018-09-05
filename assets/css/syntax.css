@@ -64,5 +64,6 @@
 .highlight .vg { color: #f2777a !important; } /* Name.Variable.Global */
 .highlight .vi { color: #f2777a !important; } /* Name.Variable.Instance */
 .highlight .il { color: #f99157 !important; } /* Literal.Number.Integer.Long */
-.gutter { padding: 0px 10px; }
-.lineno { padding: 10px; border-right: 1px solid #999999; }
+.highlight .gutter { padding: 0px 10px; }
+.highlight .lineno { padding: 10px; border-right: 1px solid #999999; }
+.highlight .btn-copy { position: absolute; top: 0; right: 0; }

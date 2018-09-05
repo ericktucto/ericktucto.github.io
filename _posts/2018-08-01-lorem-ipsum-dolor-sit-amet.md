@@ -17,3 +17,10 @@ public function miFuncion($value='')
 }
 
 {% endhighlight %}
+
+{% highlight python linenos %}
+
+def miFuncion(value):
+    print(value)
+
+{% endhighlight %}
