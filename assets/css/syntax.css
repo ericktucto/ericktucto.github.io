@@ -66,4 +66,7 @@
 .highlight .il { color: #f99157 !important; } /* Literal.Number.Integer.Long */
 .highlight .gutter { padding: 0px 10px; }
 .highlight .lineno { padding: 10px; border-right: 1px solid #999999; }
-.highlight .btn-copy { position: absolute; top: 0; right: 0; }
+.highlight .btn { position: absolute; top: 0; right: 0; margin-top: 8px; margin-right: 8px; }
+.highlight .btn-copy { border-radius: 1em; border: none; color: #999999; padding: 4px 16px; text-align: center; background: #3d3d3d; font-size: 12px; }
+.highlight .btn-copy:hover { background: #5d5d5d; }
+.highlight .btn-copy:active { background: #0d0d0d; }

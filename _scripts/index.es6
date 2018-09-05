@@ -7,6 +7,7 @@ $(document).ready((e) => {
         pre.css('position', 'relative');
         pre.append(
             $("<button></button>")
+                .addClass('btn')
                 .addClass('btn-copy')
                 .text("Copiar")
         );
@@ -17,5 +18,11 @@ $(document).ready((e) => {
                 return text;
             }
         });
+        clipboard.on('success', (e) => {
+            $(e.trigger).text("¡Copiado!");
+            setTimeout(() => {
+                $(e.trigger).text("Copiar");
+            }, 1000)
+        })
     });
 });
