@@ -3,6 +3,7 @@ github: "https://github.com/ErickTucto"
 twitter: "https://twitter.com/erick_tucto"
 youtube: "https://www.youtube.com/channel/UCtvxBlUmjpJrefpgK4P1URQ"
 permalink: /:year-:month-:day-:title
+markdown: kramdown
 # exclude:
 #   - .git/
 #   - node_modules/
