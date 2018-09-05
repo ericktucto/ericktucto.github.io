@@ -7,8 +7,8 @@ layout: home
         <div class="grid-8">
             <div class="grid-1 narrow col-1 date">
                 <div class="me-center">
-                    Jul<br>
-                    23
+                    {{ post.date | date: "%b" | date_es }}<br>
+                    {{ post.date | date: "%d" }}
                 </div>
             </div>
             <div class="col-7 post">
