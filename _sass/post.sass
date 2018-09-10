@@ -1,0 +1,54 @@
+#post
+  background: $white
+  font-size: 20px
+  font-family: 'Open Sans'
+  box-shadow: 0 0 25px rgba(0,0,0,.2)
+  .post-header
+    .post-title
+      font-size: 1.5em
+      font-weight: bold
+      padding: 1em 1.5em
+      background: #FFA619
+      color: $white
+    #tags
+      margin-top: .2em
+      margin-bottom: 2em
+      padding: .5em 1em
+      .tag
+        font-size: .8em
+        background: #ECEEED
+        color: $purple
+        padding: 1px 5px
+        box-shadow: 0 2px 2px rgba(0,0,0,.2)
+        margin-right: 1em
+  .post-body
+    padding-left: 1.5em
+    padding-right: 1.5em
+    .yt-buttons
+      margin: 1em 0
+      a:hover
+        text-decoration: none
+      .yt-btn
+        font-size: .8em
+        border-radius: 5px
+        padding: .5em .8em
+        background: #209CEE
+        border: 2px solid #209CEE
+        box-shadow: 0 2px 2px rgba(0,0,0,.2)
+        &:not(.yt-enable)
+          a
+            color: $white
+          &:hover
+            box-shadow: 0 2px 2px rgba(0,0,0,.5)
+        &.yt-see
+          border: 2px solid #F44236
+          background: #F44236
+        &.yt-enable
+          border: 2px solid $gray
+          background: $gray
+          a
+            color: black
+            cursor: default
+    p
+      margin: 0
+      margin-bottom: 2em

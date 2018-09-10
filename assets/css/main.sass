@@ -5,14 +5,10 @@
 @import "syntax"
 @import "btn-clipboardjs"
 @import "markdown"
+@import "post"
 
-.tag
-  background: #ECEEED
-  color: #f4645f
-  padding: 1px 5px
-  box-shadow: 0 2px 2px rgba(0,0,0,.200)
-  margin-right: 1em
 .nav-bar
+  font-size: 16px
   background: $purple-dark
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5)
   position: fixed
@@ -23,7 +19,8 @@
     background-image: linear-gradient($green, $green-light), radial-gradient(circle at bottom right, $green, $green-light)
 
 #content
-  background: $white
+  padding: 0
+  background: #F0F0F0
   margin-top: 64px
 
 .date
@@ -41,7 +38,8 @@
   
 .post
   border-radius: 5px
-  background: $gray
+  background: $white
+  box-shadow: 0 0 25px rgba(0,0,0,.2)
   .title
     font-size: 2rem
     padding-bottom: 10px

@@ -2,9 +2,20 @@
 layout: default
 ---
 
-<div id="content" class="grid-12 col-all">
-    <div class="offset-2"></div>
-    <div id="post" class="col-8 h-center">
-        {{ content }}
+<div id="content" class="grid-12 col-all narrow">
+    <div class="offset-1"></div>
+    <div id="post" class="col-10 h-center">
+        <div class="post-header">
+            <div class="post-title">{{ page.title }}</div>
+            <div id="tags">
+                {% for tag in page.tags %}
+                    <a href="https//google.com" class="tag">#{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="post-body">
+            {{ content }}
+        </div>
+        <div class="post-footer"></div>
     </div>
 </div>

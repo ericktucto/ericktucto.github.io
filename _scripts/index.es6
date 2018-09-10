@@ -2,6 +2,11 @@ import '../_sass/libs/stix-grid/es6/main.es6'
 import $ from 'jquery'
 import ClipboardJS from 'clipboard/dist/clipboard'
 $(document).ready((e) => {
+    $('.embed-container iframe').each((i, frame) => {
+        let attr = $(frame).attr('src');
+        attr = `${attr}?showinfo=0`;
+        $(frame).attr('src', attr);
+    });
     $('figure.highlight > pre').each((i, el) => {
         let pre = $(el);
         pre.css('position', 'relative');
