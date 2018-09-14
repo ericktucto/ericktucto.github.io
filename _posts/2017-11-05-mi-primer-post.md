@@ -1,6 +1,7 @@
 ---
 layout: post
 tags: ['xonsh', 'shell', 'devblog']
+videoId: 'aTpuEhVHASw'
 ---
 
 Lorem ipsum dolor `sit`, amet consectetur adipisicing elit. Hic nam, molestiae
@@ -8,18 +9,7 @@ natus necessitatibus perferendis nulla ipsam exercitationem, accusantium
 distinctio itaque nostrum deserunt iure. Quam ipsam placeat tempora id, ullam
 minima impedit. Nemo accusamus dolorum exercitationem!
 
-<div class="grid-12 narrow yt-content">
-    <div class="col-all yt-video">
-        {% youtube "https://www.youtube.com/watch?v=ho8-vK0L1_8" %}
-    </div>
-    <div class="coll-all yt-share">
-    </div>
-    <div class="grid-3 col-all yt-buttons">
-        <div class="yt-btn me-left yt-enable"><a href="#">Anterior</a></div>
-        <div class="yt-btn me-center yt-see"><a href="#">Ver en Youtube</a></div>
-        <div class="yt-btn me-right"><a href="#">Siguiente</a></div>
-    </div>
-</div>
+{% include _youtube-player.html id=page.videoId %}
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non vitae quibusdam
 eos placeat similique quos officiis mollitia numquam velit minus voluptas

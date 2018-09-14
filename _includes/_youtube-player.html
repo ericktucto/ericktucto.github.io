@@ -1,0 +1,35 @@
+<div class="grid-12 narrow yt-content">
+
+    {% if include.id %}
+    <div class="col-all yt-video">
+        <div class="embed-container">
+            <div id="video">{{ include.id }}</div>
+        </div>
+    </div>
+    {% else %}
+    <img class="col-all coming" src="/assets/images/coming-soon.jpeg" alt="Ups!">
+    {% endif %}
+
+    <div class="col-all yt-share">
+    </div>
+    <div class="grid-3 col-all yt-buttons">
+        {% if page.previus %}
+        <div class="yt-btn me-left"><a href="{{ page.previus.url }}">Anterior</a></div>
+        {% else %}
+        <div class="yt-btn me-left yt-enable">Anterior</div>
+        {% endif %}
+
+        {% if include.id %}
+        <div class="yt-btn me-center yt-see"><a  target="_blank" href="https://www.youtube.com/watch?v={{ include.id }}">Ver en Youtube</a></div>
+        {% else %}
+        <div class="yt-btn me-center yt-enable">Pronto</div>
+        {% endif %}
+        
+
+        {% if page.next %}
+        <div class="yt-btn me-right"><a href="{{ page.next.url }}">Siguiente</a></div>
+        {% else %}
+        <div class="yt-btn me-right yt-enable">Siguiente</div>
+        {% endif %}
+    </div>
+</div>
