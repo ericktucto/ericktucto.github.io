@@ -2,6 +2,8 @@
 layout: post
 tags: ['xonsh', 'shell', 'devblog']
 videoId: 'aTpuEhVHASw'
+image: "https://img.youtube.com/vi/aTpuEhVHASw/default.jpg"
+dateModified: '2018-09-23'
 ---
 
 Lorem ipsum dolor `sit`, amet consectetur adipisicing elit. Hic nam, molestiae
