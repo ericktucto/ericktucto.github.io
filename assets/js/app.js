@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./_scripts/index.es6");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./_scripts/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -90,47 +90,47 @@
 /*!*******************************************!*\
   !*** ./_sass/libs/stix-grid/es6/main.es6 ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar items_nav_bar;\n(0, _jquery2.default)('.nav-bar button.close').on('click', function (e) {\n    items_nav_bar = (0, _jquery2.default)(e.target).siblings().not('.nav-bar .show-bar');\n    items_nav_bar.toggle(function () {\n        (0, _jquery2.default)(undefined).css('display', 'grid');\n    }, function () {\n        (0, _jquery2.default)(undefined).css('display', 'none');\n    });\n});\n(0, _jquery2.default)(window).on('resize', function () {\n    if (items_nav_bar) {\n        items_nav_bar.css('display', 'grid');\n    }\n});\n\n//# sourceURL=webpack:///./_sass/libs/stix-grid/es6/main.es6?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar items_nav_bar\njquery__WEBPACK_IMPORTED_MODULE_0___default()('.nav-bar button.close').on('click', (e) => {\n    items_nav_bar = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).siblings().not('.nav-bar .show-bar')\n    items_nav_bar.toggle(() => {\n        jquery__WEBPACK_IMPORTED_MODULE_0___default()(undefined).css('display', 'grid')\n    }, () => {\n        jquery__WEBPACK_IMPORTED_MODULE_0___default()(undefined).css('display', 'none')\n    })\n})\njquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', () => {\n    if (items_nav_bar) {\n        items_nav_bar.css('display', 'grid')\n    }\n})\n\n\n//# sourceURL=webpack:///./_sass/libs/stix-grid/es6/main.es6?");
 
 /***/ }),
 
-/***/ "./_scripts/index.es6":
-/*!****************************!*\
-  !*** ./_scripts/index.es6 ***!
-  \****************************/
+/***/ "./_scripts/index.js":
+/*!***************************!*\
+  !*** ./_scripts/index.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../_sass/libs/stix-grid/es6/main.es6 */ \"./_sass/libs/stix-grid/es6/main.es6\");\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _clipboard = __webpack_require__(/*! clipboard/dist/clipboard */ \"./node_modules/clipboard/dist/clipboard.js\");\n\nvar _clipboard2 = _interopRequireDefault(_clipboard);\n\nvar _CodeSnippet = __webpack_require__(/*! ./src/CodeSnippet.es6 */ \"./_scripts/src/CodeSnippet.es6\");\n\nvar _CodeSnippet2 = _interopRequireDefault(_CodeSnippet);\n\nvar _youtube = __webpack_require__(/*! ./youtube.es6 */ \"./_scripts/youtube.es6\");\n\nvar _youtube2 = _interopRequireDefault(_youtube);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(document).ready(function (e) {\n    (0, _youtube2.default)((0, _jquery2.default)('#video').data('id'));\n\n    (0, _jquery2.default)('figure.highlight > pre').each(function (i, el) {\n        var code = new _CodeSnippet2.default(el);\n\n        new _clipboard2.default(code.button(), {\n            text: function text() {\n                return code.text();\n            }\n        }).on('success', function (e) {\n            (0, _jquery2.default)(e.trigger).text(\"¡Copiado!\");\n            setTimeout(function () {\n                (0, _jquery2.default)(e.trigger).text(\"Copiar\");\n            }, 1000);\n        });\n    });\n});\n\n//# sourceURL=webpack:///./_scripts/index.es6?");
+eval("\n\n__webpack_require__(/*! ../_sass/libs/stix-grid/es6/main.es6 */ \"./_sass/libs/stix-grid/es6/main.es6\");\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _clipboard = __webpack_require__(/*! clipboard/dist/clipboard */ \"./node_modules/clipboard/dist/clipboard.js\");\n\nvar _clipboard2 = _interopRequireDefault(_clipboard);\n\nvar _CodeSnippet = __webpack_require__(/*! ./src/CodeSnippet */ \"./_scripts/src/CodeSnippet.js\");\n\nvar _CodeSnippet2 = _interopRequireDefault(_CodeSnippet);\n\nvar _youtube = __webpack_require__(/*! ./youtube */ \"./_scripts/youtube.js\");\n\nvar _youtube2 = _interopRequireDefault(_youtube);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(document).ready(function (e) {\n    (0, _youtube2.default)((0, _jquery2.default)('#video').data('id'));\n\n    (0, _jquery2.default)('figure.highlight > pre').each(function (i, el) {\n        var code = new _CodeSnippet2.default(el);\n\n        new _clipboard2.default(code.button(), {\n            text: function text() {\n                return code.text();\n            }\n        }).on('success', function (e) {\n            (0, _jquery2.default)(e.trigger).text(\"¡Copiado!\");\n            setTimeout(function () {\n                (0, _jquery2.default)(e.trigger).text(\"Copiar\");\n            }, 1000);\n        });\n    });\n});\n\n//# sourceURL=webpack:///./_scripts/index.js?");
 
 /***/ }),
 
-/***/ "./_scripts/src/CodeSnippet.es6":
-/*!**************************************!*\
-  !*** ./_scripts/src/CodeSnippet.es6 ***!
-  \**************************************/
+/***/ "./_scripts/src/CodeSnippet.js":
+/*!*************************************!*\
+  !*** ./_scripts/src/CodeSnippet.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar CodeSnippet = function () {\n    function CodeSnippet(snippet) {\n        _classCallCheck(this, CodeSnippet);\n\n        this._text = (0, _jquery2.default)(snippet).find('.code pre').text();\n        this._button = this._buildButton(snippet);\n    }\n\n    _createClass(CodeSnippet, [{\n        key: '_buildButton',\n        value: function _buildButton(snippet) {\n            return (0, _jquery2.default)('<button class=\"btn btn-copy\">Copiar</button>').appendTo(snippet);\n        }\n    }, {\n        key: 'text',\n        value: function text() {\n            return this._text;\n        }\n    }, {\n        key: 'button',\n        value: function button() {\n            return this._button.get(0);\n        }\n    }]);\n\n    return CodeSnippet;\n}();\n\nexports.default = CodeSnippet;\n\n//# sourceURL=webpack:///./_scripts/src/CodeSnippet.es6?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar CodeSnippet = function () {\n    function CodeSnippet(snippet) {\n        _classCallCheck(this, CodeSnippet);\n\n        this._text = (0, _jquery2.default)(snippet).find('.code pre').text();\n        this._button = this._buildButton(snippet);\n    }\n\n    _createClass(CodeSnippet, [{\n        key: '_buildButton',\n        value: function _buildButton(snippet) {\n            return (0, _jquery2.default)('<button class=\"btn btn-copy\">Copiar</button>').appendTo(snippet);\n        }\n    }, {\n        key: 'text',\n        value: function text() {\n            return this._text;\n        }\n    }, {\n        key: 'button',\n        value: function button() {\n            return this._button.get(0);\n        }\n    }]);\n\n    return CodeSnippet;\n}();\n\nexports.default = CodeSnippet;\n\n//# sourceURL=webpack:///./_scripts/src/CodeSnippet.js?");
 
 /***/ }),
 
-/***/ "./_scripts/youtube.es6":
-/*!******************************!*\
-  !*** ./_scripts/youtube.es6 ***!
-  \******************************/
+/***/ "./_scripts/youtube.js":
+/*!*****************************!*\
+  !*** ./_scripts/youtube.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nexports.default = function (youtubeId) {\n    if (youtubeId) {\n        // Loading Video\n        (0, _youtubePlayer2.default)('video', { videoId: youtubeId });\n\n        // Adding link\n        var a = (0, _jquery2.default)('<a></a>').attr({\n            target: \"_blank\",\n            href: function href() {\n                return 'https://www.youtube.com/watch?v=' + youtubeId;\n            }\n        }).text('Ver en Youtube');\n        (0, _jquery2.default)('#youtube').addClass('yt-see').append(a);\n    } else {\n        // If I don't created video on youtube\n        (0, _jquery2.default)('#youtube').addClass('yt-disable').text('Pronto habra Video');\n    }\n};\n\nvar _youtubePlayer = __webpack_require__(/*! youtube-player */ \"./node_modules/youtube-player/dist/index.js\");\n\nvar _youtubePlayer2 = _interopRequireDefault(_youtubePlayer);\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//# sourceURL=webpack:///./_scripts/youtube.es6?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nexports.default = function (youtubeId) {\n    if (youtubeId) {\n        // Loading Video\n        (0, _youtubePlayer2.default)('video', { videoId: youtubeId });\n\n        // Adding link\n        var a = (0, _jquery2.default)('<a></a>').attr({\n            target: \"_blank\",\n            href: function href() {\n                return 'https://www.youtube.com/watch?v=' + youtubeId;\n            }\n        }).text('Ver en Youtube');\n        (0, _jquery2.default)('#youtube').addClass('yt-see').append(a);\n    } else {\n        // If I don't created video on youtube\n        (0, _jquery2.default)('#youtube').addClass('yt-disable').text('Pronto habra Video');\n    }\n};\n\nvar _youtubePlayer = __webpack_require__(/*! youtube-player */ \"./node_modules/youtube-player/dist/index.js\");\n\nvar _youtubePlayer2 = _interopRequireDefault(_youtubePlayer);\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//# sourceURL=webpack:///./_scripts/youtube.js?");
 
 /***/ }),
 

@@ -1,8 +1,8 @@
 import '../_sass/libs/stix-grid/es6/main.es6'
 import $ from 'jquery'
 import ClipboardJS from 'clipboard/dist/clipboard'
-import CodeSnippet from './src/CodeSnippet.es6'
-import getVideo from './youtube.es6'
+import CodeSnippet from './src/CodeSnippet'
+import getVideo from './youtube'
 $(document).ready((e) => {
     getVideo($('#video').data('id'))
 

@@ -1,14 +1,14 @@
 const path = require('path');
 
 module.exports = {
-    entry: './_scripts/index.es6',
+    entry: './_scripts/index.js',
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, 'assets/js')
     },
     module: {
         rules: [
-            { test: /\.es6$/, exclude: /(node_modules)/,loader: 'babel-loader'}
+            { test: /\.js$/, exclude: /(node_modules)/,loader: 'babel-loader'}
         ]
     }
 }
