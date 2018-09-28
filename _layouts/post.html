@@ -16,35 +16,7 @@ layout: default
         <div class="post-body">
             {{ content }}
         </div>
-        <div class="post-footer">{{ page.date }}</div>
+        <div class="post-footer"></div>
     </div>
 </div>
-<script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "{{ page.title }}",
-        "datePublished": "{{ page.date }}",
-        "dateModified": "{{ page.dateModified }}",
-        "image": {
-            "@type": "ImageObject",
-            "url": "{{ page.image }}"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http://ericktucto.github.io/"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "{{ site.author }}",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://raw.githubusercontent.com/ErickTucto/ericktucto.github.io/master/favicon.ico"
-            }
-        },
-        "author": {
-            "@type": "Person",
-            "name": "{{ site.author }}"
-        }
-    }
-</script>
+{% include templates/json-ld.html %}

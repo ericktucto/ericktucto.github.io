@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ page.title }}",
+        "datePublished": "{{ page.date }}",
+        "dateModified": "{{ page.dateModified }}",
+        "image": {
+            "@type": "ImageObject",
+            "url": "{{ page.videoId | image_youtube }}"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ site.url }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ site.author }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://raw.githubusercontent.com/ErickTucto/ericktucto.github.io/master/favicon.ico"
+            }
+        },
+        "author": {
+            "@type": "Person",
+            "name": "{{ site.author }}"
+        }
+    }
+</script>

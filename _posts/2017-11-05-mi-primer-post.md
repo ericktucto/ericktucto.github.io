@@ -1,8 +1,7 @@
 ---
 layout: post
 tags: ['xonsh', 'shell', 'devblog']
-videoId: 'aTpuEhVHASw'
-image: "https://img.youtube.com/vi/aTpuEhVHASw/default.jpg"
+videoId: 'coming-soon'
 dateModified: '2018-09-23'
 ---
 
@@ -11,7 +10,7 @@ natus necessitatibus perferendis nulla ipsam exercitationem, accusantium
 distinctio itaque nostrum deserunt iure. Quam ipsam placeat tempora id, ullam
 minima impedit. Nemo accusamus dolorum exercitationem!
 
-{% include _youtube-player.html id=page.videoId %}
+{% include templates/youtube-player.html id=page.videoId %}
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non vitae quibusdam
 eos placeat similique quos officiis mollitia numquam velit minus voluptas
