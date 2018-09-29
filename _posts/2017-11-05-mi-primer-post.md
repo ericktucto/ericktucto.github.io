@@ -44,7 +44,7 @@ iure ut tempore blanditiis.
 
 public function miFuncion($value='')
 {
-    echo $value;
+    echo $value."Esta es una expresion larga para ver que sucede si es demasiado largo en mi pagina los codigos que vaya poniendo";
 }
 
 {% endhighlight %}
