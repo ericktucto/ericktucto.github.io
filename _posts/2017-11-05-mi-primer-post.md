@@ -1,5 +1,6 @@
 ---
 layout: post
+title: 'Xonsh: Mi SHELL predeterminada'
 tags: ['xonsh', 'shell', 'devblog']
 videoId: 'coming-soon'
 dateModified: '2018-09-23'
