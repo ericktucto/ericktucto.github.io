@@ -7,6 +7,7 @@ layout: default
     <div id="post" class="col-12-until-mobile col-10-from-tablet h-center">
         <div class="post-header">
             <div class="post-title">{{ page.title }}</div>
+            <div class="post-data">{% include templates/post/data.html %}</div>
             <div id="tags">
                 {% for tag in page.tags %}
                     <a href="https//google.com" class="tag">#{{ tag }}</a>
@@ -19,4 +20,4 @@ layout: default
         <div class="post-footer"></div>
     </div>
 </div>
-{% include templates/json-ld.html %}
+{% include templates/post/json-ld.html %}

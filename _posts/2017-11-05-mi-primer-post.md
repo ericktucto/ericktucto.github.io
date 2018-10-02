@@ -2,7 +2,7 @@
 layout: post
 title: 'Xonsh: Mi SHELL predeterminada'
 tags: ['xonsh', 'shell', 'devblog']
-videoId: 'coming-soon'
+videoId: '8KCEQpg65aw'
 dateModified: '2018-09-23'
 ---
 
