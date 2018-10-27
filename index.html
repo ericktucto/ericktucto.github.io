@@ -12,10 +12,26 @@ layout: home
                 </div>
             </div>
             <div class="col-7 post">
-                <div>
-                    <div class="title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-                    <div class="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
+                <div class="title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                <div class="info">
+                    <div class="data">
+                        <i class="fas fa-user"></i> Autor: {{ site.author }}
+                    </div>
+                    <div class="data">
+                        <i class="fas fa-calendar-alt"></i> Publicado: {{ post.date | date: "%m-%d-%Y"}}
+                    </div>
+                    <div class="data">
+                        <i class="fas fa-calendar-alt"></i> Actualizado: {{ post.dateModified }}
+                    </div>
+                    {% if post.videoId != 'coming-soon' %}
+                    <div class="data">
+                        <a href="https://www.youtube.com/watch?v={{ post.videoId }}" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
+                <div class="description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
             </div>
         </div>
     {% endfor %}

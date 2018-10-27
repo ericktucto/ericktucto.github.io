@@ -1,5 +1,8 @@
 ---
 layout: post
+tags: ['lorem', 'ipsum', 'testing']
+videoId: 'coming-soon'
+dateModified: '2018-09-01'
 ---
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nam, molestiae
