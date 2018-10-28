@@ -12,8 +12,31 @@ module Jekyll
                 "Set"
             when "Dec"
                 "Dic"
+            when "January"
+                "Enero"
+            when "February"
+                "Febrero"
+            when "March"
+                "Marzo"
+            when "April"
+                "Abril"
+            when "May"
+                "Mayo"
+            when "June"
+                "Junio"
+            when "July"
+                "Julio"
+            when "August"
+                "Agosto"
+            when "September"
+                "Setiembre"
+            when "October"
+                "Octubre"
+            when "November"
+                "Noviembre"
+            when "December"
+                "Diciembre"
             end
-            date
         end
     end
 end
