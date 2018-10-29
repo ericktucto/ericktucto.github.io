@@ -6,7 +6,7 @@ import getVideo from './youtube'
 $(document).ready((e) => {
     getVideo($('#video').data('id'))
 
-    $('figure.highlight > pre').each((i, el) => {
+    $('figure.highlight').each((i, el) => {
         let code = new CodeSnippet(el)
 
         new ClipboardJS(code.button(), {
