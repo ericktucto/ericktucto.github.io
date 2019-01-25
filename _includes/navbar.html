@@ -1,37 +1,26 @@
-<nav id='nav' class="nav-bar">
-    <button type="button" class="close"><i class="fas fa-bars"></i></button>
-    <div class="left show-bar">
-        <div class="img img-48-48 img-circle">
-            <a href="{{ site.url }}"><img src="/assets/images/perfil.jpeg" alt="Ups!" class="active"></a>
+<div id="nav" class="grid-3-auto narrow content-between col-12">
+    <div class="col-1 hide-until-tablet"></div>
+    <div id="links" class="grid-4 content-between narrow col-1">
+        <a class="grid-1 narrow items-v-middle col-1"><span class="active">Historia</span></a>
+        <a class="grid-1 narrow items-v-middle col-1"><span>Series</span></a>
+        <a class="grid-1 narrow items-v-middle col-1"><span>Proyectos</span></a>
+        <a class="grid-1 narrow items-v-middle col-1"><span>Categorias</span></a>
+    </div>
+    <div id="social-header" class="grid-3 col-1 narrow items-v-middle items-h-middle">
+        <div class="icon24">
+            <a href="{{ site.github }}" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="icon24">
+            <a href="{{ site.youtube }}" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        <div class="icon24">
+            <a href="{{ site.twitter }}" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
     </div>
-    <div class="center">
-        <ul class="list">
-            <li class="active"><a href="{{ site.url }}">Historia</a></li>
-            <li><a>Series</a></li>
-            <li><a>Proyectos</a></li>
-            <li><a>Categorias</a></li>
-            <li><a>Sobre Mí</a></li>
-        </ul>
-    </div>
-    <div class="right">
-        <ul class="list-group">
-            <li class="icon24">
-                <a href="{{ site.github }}" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li class="icon24">
-                <a href="{{ site.youtube }}" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </li>
-            <li class="icon24">
-                <a href="{{ site.twitter }}" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-    
+</div>

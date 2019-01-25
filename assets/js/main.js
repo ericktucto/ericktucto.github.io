@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./_scripts/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./_scripts/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,15 +98,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 
 /***/ }),
 
-/***/ "./_scripts/index.js":
-/*!***************************!*\
-  !*** ./_scripts/index.js ***!
-  \***************************/
+/***/ "./_scripts/main.js":
+/*!**************************!*\
+  !*** ./_scripts/main.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../_sass/libs/stix-grid/es6/main.es6 */ \"./_sass/libs/stix-grid/es6/main.es6\");\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _clipboard = __webpack_require__(/*! clipboard/dist/clipboard */ \"./node_modules/clipboard/dist/clipboard.js\");\n\nvar _clipboard2 = _interopRequireDefault(_clipboard);\n\nvar _CodeSnippet = __webpack_require__(/*! ./src/CodeSnippet */ \"./_scripts/src/CodeSnippet.js\");\n\nvar _CodeSnippet2 = _interopRequireDefault(_CodeSnippet);\n\nvar _youtube = __webpack_require__(/*! ./youtube */ \"./_scripts/youtube.js\");\n\nvar _youtube2 = _interopRequireDefault(_youtube);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(document).ready(function (e) {\n    (0, _youtube2.default)((0, _jquery2.default)('#video').data('id'));\n\n    (0, _jquery2.default)('figure.highlight').each(function (i, el) {\n        var code = new _CodeSnippet2.default(el);\n\n        new _clipboard2.default(code.button(), {\n            text: function text() {\n                return code.text();\n            }\n        }).on('success', function (e) {\n            (0, _jquery2.default)(e.trigger).text(\"¡Copiado!\");\n            setTimeout(function () {\n                (0, _jquery2.default)(e.trigger).text(\"Copiar\");\n            }, 1000);\n        });\n    });\n});\n\n//# sourceURL=webpack:///./_scripts/index.js?");
+eval("\n\n__webpack_require__(/*! ../_sass/libs/stix-grid/es6/main.es6 */ \"./_sass/libs/stix-grid/es6/main.es6\");\n\nvar _jquery = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\nvar _jquery2 = _interopRequireDefault(_jquery);\n\nvar _clipboard = __webpack_require__(/*! clipboard/dist/clipboard */ \"./node_modules/clipboard/dist/clipboard.js\");\n\nvar _clipboard2 = _interopRequireDefault(_clipboard);\n\nvar _CodeSnippet = __webpack_require__(/*! ./src/CodeSnippet */ \"./_scripts/src/CodeSnippet.js\");\n\nvar _CodeSnippet2 = _interopRequireDefault(_CodeSnippet);\n\nvar _youtube = __webpack_require__(/*! ./youtube */ \"./_scripts/youtube.js\");\n\nvar _youtube2 = _interopRequireDefault(_youtube);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _jquery2.default)(document).ready(function (e) {\n    // Efecto Parallax y cambiar color del nav\n    (0, _jquery2.default)(window).on('scroll', function (e) {\n        var scroll = e.pageY / 5;\n        if (scroll < 100) (0, _jquery2.default)('#header').css('background-position', 'center ' + scroll + '%');\n        (0, _jquery2.default)('#nav').css('background', 'rgba(255, 255, 255, ' + scroll / 50 + ')');\n    });\n    (0, _youtube2.default)((0, _jquery2.default)('#video').data('id'));\n\n    (0, _jquery2.default)('figure.highlight').each(function (i, el) {\n        var code = new _CodeSnippet2.default(el);\n\n        new _clipboard2.default(code.button(), {\n            text: function text() {\n                return code.text();\n            }\n        }).on('success', function (e) {\n            (0, _jquery2.default)(e.trigger).text(\"¡Copiado!\");\n            setTimeout(function () {\n                (0, _jquery2.default)(e.trigger).text(\"Copiar\");\n            }, 1000);\n        });\n    });\n});\n\n//# sourceURL=webpack:///./_scripts/main.js?");
 
 /***/ }),
 

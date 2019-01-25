@@ -10,32 +10,49 @@
 @import "youtube"
 @import "cards"
 
-.nav-bar
-  font-size: 16px
-  background: $purple-dark
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5)
-  position: fixed
-  top: 0
-  width: 100%
-  z-index: 100
-  img
-    background-image: linear-gradient($green, $green-light), radial-gradient(circle at bottom right, $green, $green-light)
+/*@media (max-width: 768px)*/
 
-@media (max-width: 768px)
-  .nav-bar
-    button.close
+#header
+  height: 720px
+  position: relative
+  background: url(https://ik.imagekit.io/0l9xz00bkkiqh/header_Sk8m1kuX4.png) no-repeat
+  background-size: cover
+  padding: 0
+  .unsplash
+    background: black
+    color: white
+    position: absolute
+    bottom: 0
+
+#nav
+  position: fixed
+  z-index: 10
+  width: 100%
+
+#links
+  width: 720px
+  text-align: center
+  font-size: 16px
+  a
+    padding: 24px 8px
+    color: $purple
+    text-decoration: none
+    .active, span:hover
+      background: $purple
       padding: 8px 12px
-      margin-right: 8px
-      background-color: transparent
-      font-size: 1.5rem
-      color: $purple-light
-      border: 2px solid $purple-light
       border-radius: 4px
+      color: white
+
+#social-header
+  width: 240px
+  a, a:hover
+    color: $purple
+  div
+    padding: 0
 
 #content
   padding: 0
   background: #F0F0F0
-  margin-top: 64px
 
 footer
   color: $white
