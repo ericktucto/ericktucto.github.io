@@ -1,7 +1,7 @@
 import YouTubePlayer from 'youtube-player'
 import $ from 'jquery'
 
-export default function (youtubeId) {
+export function youtube(youtubeId) {
     if (youtubeId) {
         // Loading Video
         YouTubePlayer('video', { videoId: youtubeId });

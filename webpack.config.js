@@ -2,7 +2,9 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        main: './_scripts/main.js'
+        main: './_scripts/main.js',
+        home: './_scripts/home.js',
+        post: './_scripts/post.js'
     },
     output: {
         filename: '[name].js',

@@ -2,54 +2,10 @@
 ---
 
 @import "libs/stix-grid/sass/_stix-grid"
-@import "syntax"
-@import "btn-clipboardjs"
-@import "fonts"
-@import "markdown"
-@import "post"
-@import "youtube"
-@import "cards"
+@import "base/typography"
+@import "partials/nav"
 
-/*@media (max-width: 768px)*/
-
-#header
-  height: 720px
-  position: relative
-  background: url(https://ik.imagekit.io/0l9xz00bkkiqh/header_Sk8m1kuX4.png) no-repeat
-  background-size: cover
-  padding: 0
-  .unsplash
-    background: black
-    color: white
-    position: absolute
-    bottom: 0
-
-#nav
-  position: fixed
-  z-index: 10
-  width: 100%
-
-#links
-  width: 720px
-  text-align: center
-  font-size: 16px
-  a
-    padding: 24px 8px
-    color: $purple
-    text-decoration: none
-    .active, span:hover
-      background: $purple
-      padding: 8px 12px
-      border-radius: 4px
-      color: white
-
-#social-header
-  width: 240px
-  a, a:hover
-    color: $purple
-  div
-    padding: 0
-
+// @media (max-width: 768px)
 #content
   padding: 0
   background: #F0F0F0
