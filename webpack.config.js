@@ -4,7 +4,8 @@ module.exports = {
     entry: {
         main: './_scripts/main.js',
         home: './_scripts/home.js',
-        post: './_scripts/post.js'
+        post: './_scripts/post.js',
+        404: './_scripts/404.js'
     },
     output: {
         filename: '[name].js',
