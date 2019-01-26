@@ -1,10 +1,14 @@
+#menu
+  color: white
+  padding: 20px
+  font-size: 32px
+
 #nav
   position: fixed
   z-index: 10
   width: 100%
 
 #links
-  width: 720px
   text-align: center
   font-size: 16px
   a
@@ -19,17 +23,19 @@
       color: white
 
 #social-header
-  width: 240px
   a, a:hover
     color: $purple
   div
     padding: 0
 
-@media (max-width: 1024px)
+@media (min-width: 1024px)
   #links
-    width: 100%
+    width: 720px
   #social-header
-    width: 100%
+    width: 240px
+
+@media (max-width: 1024px)
+  #social-header
     height: 83px
     align-self: end
 
