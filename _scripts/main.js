@@ -7,20 +7,17 @@ $(document).ready((e) => {
         if (index == paths.indexOf(window.location.pathname))
             $(link).addClass('active')
     })
-    let social = $("#social-header")
-    let link = $("#links")
-    social.addClass('hide-until-tablet')
-    link.addClass('hide-until-tablet')
+    let items = $("#social-header, #links")
+    items.each((i, item) => {
+        $(item).addClass('hide-until-tablet')
+    })
     $("#menu").click(() => {
-        if (social.hasClass('hide-until-tablet')) {
-            social.removeClass('hide-until-tablet')
-        } else {
-            social.addClass('hide-until-tablet')
-        }
-        if (link.hasClass('hide-until-tablet')) {
-            link.removeClass('hide-until-tablet')
-        } else {
-            link.addClass('hide-until-tablet')
-        }
+        items.each((i, item) => {
+            if ($(item).hasClass('hide-until-tablet')) {
+                $(item).removeClass('hide-until-tablet')
+            } else {
+                $(item).addClass('hide-until-tablet')
+            }
+        })
     })
 });
