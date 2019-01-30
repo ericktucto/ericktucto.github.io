@@ -1,46 +1,49 @@
-.date
+.card__container
+  position: relative
+  margin: 24px
+
+.card__date
+  position: absolute
+  color: white
   background: $purple
-  padding: 16px
+  padding: 14px
   text-align: center
-  font-weight: bold
-  font-size: 16px
-  color: $white
-  border-radius: 5px 5px 0 0
+  text-transform: uppercase
+  .card__day
+    font-size: 20px
+  .card__month, .card__year
+    font-size: 12px
 
-.post
-  border-radius: 0 0 5px 5px
-  background: $white
-  box-shadow: 0 0 25px rgba(0,0,0,.2)
-  .title
-    font-size: 2rem
-    padding-bottom: .2em
-    a
-      color: $purple
-  .grid-1
-    width: 100wh
-  .grid-5
-    background: goldenrod
+.card__image
+  width: 426px
+  height: 240px
+  background-size: cover
+  background-position: center
 
-.info
-  padding: 0
-  padding-bottom: 1em
-  .data
-    display: inline-block
-    padding: 0
-    padding-right: 1em
-    font-size: 1em
-    *
-      color: #777777
+.card__data
+  display: grid
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  align-content: end
+  .data_contain
+    display: grid
+    grid-auto-flow: row
+    background: $white
+    .card__title, .card__description
+      padding: 24px
+    .card__title
+      padding: 24px
+    .card__description
+      display: none
+      transition: opacity .8s ease-out
+  &:hover .card__description
+    display: block
+    opacity: 1
+
 $desktop: map-get($viewports, "desktop")
 $minViewport: map-get($desktop, "min")
 @media (min-width: $minViewport)
   .date
-    margin-right: 24px
-    margin-top: 8px
-    width: 72px
-    height: 72px
-    padding: 0
-    border-radius: 50%
-    background: $purple
-  .post
-    border-radius: 5px
+    padding: 10px

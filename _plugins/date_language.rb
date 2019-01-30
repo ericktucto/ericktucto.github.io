@@ -36,6 +36,8 @@ module Jekyll
                 "Noviembre"
             when "December"
                 "Diciembre"
+            else
+                date
             end
         end
     end
