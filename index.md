@@ -3,8 +3,8 @@ layout: home
 ---
 <div id="history" class="grid-12 narrow col-12 items-center">
   {% for post in site.posts %}
-    <div class="grid-1 narrow col-4-from-desktop card__container">
-      <div class="card__date grid-1 narrow col-1">
+    <div class="col-4 card__container" style="background-image: url({{ post.image  }});">
+      <div class="grid-1 narrow col-1 me-left card__date">
         <div class="col-1 card__day">
           {{ post.date | date: "%d" }}
         </div>
@@ -15,11 +15,7 @@ layout: home
           {{ post.date | date: "%Y" }}
         </div>
       </div>
-      <div class="card__image">
-        <img src="{{ post.image }}" width="426px" height="240px" alt="Ups!">
-      </div>
-      <div class="grid-1 narrow card__data">
-        <div class="grid-1 col-1 data_contain">
+      <div class="grid-1 narrow me-down card__data">
           <div class="col-1 card__title">
             {{ post.title }}
           </div>
@@ -27,9 +23,8 @@ layout: home
             <div class="description__sms">
               {{ post.excerpt | remove: '<p>' | remove: '</p>' | str_255 }}
             </div>
-            <a href="{{ post.url }}" class="grid-1 items-center description__readmore">LEER MÁS</a>
+            <a href="{{ post.url }}" class="grid-1 me-center items-between description__readmore">LEER MÁS</a>
           </div>
-        </div>
       </div>
     </div>
   {% endfor %}

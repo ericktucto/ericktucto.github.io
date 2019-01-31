@@ -1,51 +1,61 @@
 .card__container
-  position: relative
-  margin: 24px
-
-.card__date
-  position: absolute
-  color: white
-  background: $purple
-  padding: 14px
-  text-align: center
-  text-transform: uppercase
-  .card__day
-    font-size: 20px
-  .card__month, .card__year
-    font-size: 12px
-
-.card__image
+  display: grid
+  grid-template-rows: 80px auto
   width: 426px
   height: 240px
-  background-size: cover
-  background-position: center
+  background-size: contain
+  background-repeat: no-repeat
+  &:hover
+    grid-template-rows: [start] 34px 1fr [end]
+    .card__date
+      padding: 8px
+      grid-template-columns: [start] repeat(3, 1fr) [end]
+      justify-self: stretch
+      .card__day, .card__month, .card__year
+        font-size: 16px
+    .card__data
+      align-self: stretch
+      .card__description
+        display: grid
+
+  .card__date
+    color: white
+    background: $purple
+    padding: 12px
+    text-align: center
+    text-transform: uppercase
+    .card__day
+      font-size: 20px
+    .card__month, .card__year
+      font-size: 12px
 
 .card__data
-  position: absolute
-  width: 100%
-  height: 100%
-  align-items: end
-  overflow: hidden
-  transition: 2s
-  .data_contain
-    background: white
-    .card__description
-      display: none
-      grid-template: auto 36px / auto 120px auto
-      grid-gap: 10px
-      padding-top: 0
-      .description__sms
-        grid-column: 1 / -1
-      .description__readmore
-        grid-column: 2 / 3
+  background: white
+  grid-template-rows: 48px 1fr
+  .card__title
+    padding: 16px
+  .card__description
+    display: none
+    padding: 16px
+    padding-top: 0
+    grid-template: auto 40px / auto 120px auto
+    .description__sms
+      grid-column: 1 / -1
+    .description__readmore
+      grid-column: 2 / 3
+      padding: 8px 12px
+      color: $purple
+      border: solid 2px $purple
+      background: white
+      text-decoration: none
+      &:hover
         color: white
         background: $purple
-        text-decoration: none
-    &:hover .card__description
-        display: grid
 
 $desktop: map-get($viewports, "desktop")
 $minViewport: map-get($desktop, "min")
-@media (min-width: $minViewport)
-  .date
-    padding: 10px
+@media (max-width: 1360px)
+  .card__image
+    width: 284px
+    height: 160px
+
