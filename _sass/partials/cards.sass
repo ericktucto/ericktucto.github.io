@@ -1,61 +1,50 @@
 .card__container
-  display: grid
-  grid-template-rows: 80px auto
-  width: 426px
-  height: 240px
-  background-size: contain
-  background-repeat: no-repeat
-  &:hover
-    grid-template-rows: [start] 34px 1fr [end]
-    .card__date
-      padding: 8px
-      grid-template-columns: [start] repeat(3, 1fr) [end]
-      justify-self: stretch
-      .card__day, .card__month, .card__year
-        font-size: 16px
-    .card__data
-      align-self: stretch
-      .card__description
-        display: grid
-
+  width: 400px
   .card__date
+    border-radius: 0.8em 0.8em 0 0
     color: white
     background: $purple
-    padding: 12px
-    text-align: center
+    padding: 8px
+    font-size: 16px
     text-transform: uppercase
-    .card__day
-      font-size: 20px
-    .card__month, .card__year
-      font-size: 12px
-
-.card__data
-  background: white
-  grid-template-rows: 48px 1fr
-  .card__title
-    padding: 16px
-  .card__description
-    display: none
-    padding: 16px
-    padding-top: 0
-    grid-template: auto 40px / auto 120px auto
-    .description__sms
-      grid-column: 1 / -1
-    .description__readmore
-      grid-column: 2 / 3
-      padding: 8px 12px
-      color: $purple
-      border: solid 2px $purple
-      background: white
-      text-decoration: none
-      &:hover
-        color: white
-        background: $purple
-
-$desktop: map-get($viewports, "desktop")
-$minViewport: map-get($desktop, "min")
-@media (max-width: 1360px)
   .card__image
-    width: 284px
-    height: 160px
+    width: 400px
+    height: 225px
+    background-size: contain
+    background-repeat: no-repeat
+  .card__data
+    background-color: white
+    grid-template-rows: [start] 48px auto [end]
+    .card__title
+      padding: 16px
+    .card__description
+      display: none
+      padding: 16px
+      padding-top: 0
+      .description__sms
+      .description__readmore
+        padding: 8px 12px
+        color: $purple
+        border: solid 2px $purple
+        background: white
+        text-decoration: none
+        &:hover
+          color: white
+          background: $purple
+  &:hover
+    .card__image
+      height: 0
+    .card__data
+      height: 273px
+      .card__description
+        display: grid
+        height: 100%
+        align-content: space-between
+
+@media (max-width: 420px)
+  .card__container
+    width: 300px
+    .card__image
+      width: 300px
+      height: 168.75px
 
