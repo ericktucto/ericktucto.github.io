@@ -15,6 +15,7 @@
   .card__data
     background-color: white
     grid-template-rows: [start] 48px auto [end]
+    border-radius: 0 0 0.8em 0.8em
     .card__title
       padding: 16px
     .card__description
@@ -31,15 +32,16 @@
         &:hover
           color: white
           background: $purple
-  &:hover
-    .card__image
-      height: 0
-    .card__data
-      height: 273px
-      .card__description
-        display: grid
-        height: 100%
-        align-content: space-between
+
+.show__data
+  .card__image
+    height: 0
+  .card__data
+    height: 273px
+    .card__description
+      display: grid
+      height: 100%
+      align-content: space-between
 
 @media (max-width: 420px)
   .card__container
@@ -47,4 +49,12 @@
     .card__image
       width: 300px
       height: 168.75px
-
+    .card__data
+      height: 273px
+      .card__description
+        display: grid
+        height: 100%
+        align-content: space-between
+        .description__readmore
+          color: white
+          background: $purple
