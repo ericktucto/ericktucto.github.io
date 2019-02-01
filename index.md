@@ -11,7 +11,7 @@ layout: home
       </div>
       <div class="grid-1 card__data">
         <div class="col-all me-up card__title">
-          {{ post.title }}
+          <span class="me-left me-v-middle">{{ post.title }}</span><i class="me-center fas fa-ellipsis-h"></i>
         </div>
         <div class="col-all me-up grid-1 narrow card__description">
           <div class="col-all description__sms">
