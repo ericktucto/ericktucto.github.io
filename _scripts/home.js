@@ -2,6 +2,7 @@ import $ from 'jquery'
 
 $(document).ready((e) => {
   // ------ CONSTANTES
+  const REGEX_DATE_POST = /([0-9]+) ([a-zA-Z]+) ([0-9]+)/
   const MESES = {
     'January': 'Enero',
     'February': 'Febrero',
@@ -16,7 +17,6 @@ $(document).ready((e) => {
     'November': 'Noviembre',
     'December': 'Diciembre',
   }
-  const REGEX_DATE_POST = /([0-9]+) ([a-zA-Z]+) ([0-9]+)/
   // ------
   // ------ Esto es para adaptar el nav y el header
   let mobile = () => {
@@ -40,13 +40,15 @@ $(document).ready((e) => {
     container.toggleClass('show__data')
   })
   // ------
-  // ------ Retoques en los cards
-  $('.card__container').each( (i, card) => {
-    let [date, description] = $(card).find('.description__sms, .card__date')
-    // ------ Acortar descripcion de los post a 255 caracteres
+  // ------ Acortar descripcion de los post a 255 caracteres
+  $('.description__sms').each( (i, description) => {
     $(description).text( (i, text) => `${text.slice(0, 255)} ...` )
-    // ------ Cambiar los meses
-    $(date).text( (i, text) => text.replace(REGEX_DATE_POST, (match, day, month, year) => `${day} ${MESES[month]} ${year}`))
+  })
+  // ------
+  // ------ Cambiar los meses
+  $('.card__date').each( (i, date) => {
+    let dateToSpanish = (match, day, month, year) => `${day} ${MESES[month]} ${year}`
+    $(date).text( (i, text) => text.replace(REGEX_DATE_POST, dateToSpanish))
   })
   // ------
 })
