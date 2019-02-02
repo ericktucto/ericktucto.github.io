@@ -42,15 +42,11 @@ $(document).ready((e) => {
   // ------
   // ------ Retoques en los cards
   $('.card__container').each( (i, card) => {
+    let [date, description] = $(card).find('.description__sms, .card__date')
     // ------ Acortar descripcion de los post a 255 caracteres
-    $(card).find('.description__sms').text( (i, text) => {
-      return `${text.slice(0, 255)} ...`
-    })
+    $(description).text( (i, text) => `${text.slice(0, 255)} ...` )
     // ------ Cambiar los meses
-    $(card).find('.card__date').text( (i, text) => {
-      let mes = REGEX_DATE_POST.exec(text)[2]
-      return text.replace(mes, MESES[mes])
-    })
+    $(date).text( (i, text) => text.replace(REGEX_DATE_POST, (match, day, month, year) => `${day} ${MESES[month]} ${year}`))
   })
   // ------
 })
