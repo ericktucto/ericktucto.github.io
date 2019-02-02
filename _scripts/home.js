@@ -1,6 +1,23 @@
 import $ from 'jquery'
 
 $(document).ready((e) => {
+  // ------ CONSTANTES
+  const MESES = {
+    'January': 'Enero',
+    'February': 'Febrero',
+    'March': 'Marzo',
+    'April': 'Abril',
+    'May': 'Mayo',
+    'June': 'Junio',
+    'July': 'Julio',
+    'August': 'Agosto',
+    'September': 'Setiembre',
+    'October': 'Octubre',
+    'November': 'Noviembre',
+    'December': 'Diciembre',
+  }
+  const REGEX_DATE_POST = /([0-9]+) ([a-zA-Z]+) ([0-9]+)/
+  // ------
   // ------ Esto es para adaptar el nav y el header
   let mobile = () => {
     $("#header").css({
@@ -21,6 +38,19 @@ $(document).ready((e) => {
   $('.card__data').on('click', e => {
     let container = $($(e.target).parents('.card__container')[0])
     container.toggleClass('show__data')
+  })
+  // ------
+  // ------ Retoques en los cards
+  $('.card__container').each( (i, card) => {
+    // ------ Acortar descripcion de los post a 255 caracteres
+    $(card).find('.description__sms').text( (i, text) => {
+      return `${text.slice(0, 255)} ...`
+    })
+    // ------ Cambiar los meses
+    $(card).find('.card__date').text( (i, text) => {
+      let mes = REGEX_DATE_POST.exec(text)[2]
+      return text.replace(mes, MESES[mes])
+    })
   })
   // ------
 })

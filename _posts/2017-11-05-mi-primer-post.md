@@ -3,7 +3,7 @@ layout: post
 title: 'Xonsh: Mi SHELL predeterminada'
 tags: ['xonsh', 'shell', 'devblog']
 videoId: '8KCEQpg65aw'
-image: http://ccea.org.uk/sites/default/files/images/subsites/digital_skills/blog/python.png
+image: https://scontent.flim16-2.fna.fbcdn.net/v/t1.0-9/51145449_2114113665347137_2690838805270757376_n.jpg?_nc_cat=107&_nc_ht=scontent.flim16-2.fna&oh=53d07893d6d3e3cc89486faab6987767&oe=5CFE3F6E
 dateModified: '2018-09-23'
 ---
 
