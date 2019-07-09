@@ -1,12 +1,8 @@
 import '../_sass/libs/stix-grid/es6/main.es6'
 import $ from 'jquery'
+import './src/components/TabLink'
+
 $(document).ready((e) => {
-    let paths = ["/", "/series", "/projects", "/categories"]
-    let links = $("#links span")
-    $.each(links, (index, link) => {
-        if (index == paths.indexOf(window.location.pathname))
-            $(link).addClass('active')
-    })
     let items = $("#social-header, #links")
     items.each((i, item) => {
         $(item).addClass('hide-until-tablet')

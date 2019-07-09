@@ -1,10 +1,10 @@
 {
   "commands": [
     {
-      "text": "$(rocket) Develop",
+      "text": "$(rocket) Production",
       "command": "workbench.action.tasks.runTask",
-      "arguments": ["Develop"],
-      "tooltip": "Develop"
+      "arguments": ["Production"],
+      "tooltip": "Production"
     },
     {
       "text": "$(server) Server",

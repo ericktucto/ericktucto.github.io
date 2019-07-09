@@ -17,7 +17,7 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "npm run build",
+            "command": "npm run hot",
             "presentation": {
                 "reveal": "always",
                 "focus": true,
@@ -25,9 +25,9 @@
             }
         },
         {
-            "label": "Develop",
+            "label": "Production",
             "type": "shell",
-            "command": "npm run dev",
+            "command": "npm run production",
             "presentation": {
                 "reveal": "always",
                 "focus": true,
