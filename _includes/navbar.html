@@ -1,20 +1,20 @@
 <nav-bar>
-    <i slot="icon-menu" class="fas fa-bars"></i>
-    <div id="links" class="grid-4 content-between narrow col-1-from-desktop col-3-until-tablet">
-      <tab-link ref="{{ "/" | relative_url }}">Historia</tab-link>
-      <tab-link ref="{{ "/series" | relative_url }}">Series</tab-link>
-      <tab-link ref="{{ "/projects" | relative_url }}">Proyectos</tab-link>
-      <tab-link ref="{{ "/categories" | relative_url }}">Categorias</tab-link>
-    </div>
-    <div id="social-header" class="grid-3 col-1-from-desktop col-3-until-tablet narrow items-center">
-      <social-link class="icon24" ref="{{ site.github }}">
-        <i class="fab fa-github"></i>
-      </social-link>
-      <social-link class="icon24" ref="{{ site.youtube }}">
-        <i class="fab fa-youtube"></i>
-      </social-link>
-      <social-link class="icon24" ref="{{ site.twitter }}">
-        <i class="fab fa-twitter"></i>
-      </social-link>
-    </div>
+  <i slot="icon-menu" class="fas fa-bars"></i>
+  <div id="links" class="grid-4 content-between narrow col-1-from-desktop col-3-until-tablet">
+    <tab-link class="col-4-until-tablet" ref="{{ "/" | relative_url }}">Historia</tab-link>
+    <tab-link class="col-4-until-tablet" ref="{{ "/series" | relative_url }}">Series</tab-link>
+    <tab-link class="col-4-until-tablet" ref="{{ "/projects" | relative_url }}">Proyectos</tab-link>
+    <tab-link class="col-4-until-tablet" ref="{{ "/categories" | relative_url }}">Categorias</tab-link>
+  </div>
+  <div id="social-header" class="grid-3 col-1-from-desktop col-3-until-tablet narrow items-center">
+    <social-link class="icon24" ref="{{ site.github }}">
+      <i class="fab fa-github"></i>
+    </social-link>
+    <social-link class="icon24" ref="{{ site.youtube }}">
+      <i class="fab fa-youtube"></i>
+    </social-link>
+    <social-link class="icon24" ref="{{ site.twitter }}">
+      <i class="fab fa-twitter"></i>
+    </social-link>
+  </div>
 </nav-bar>
