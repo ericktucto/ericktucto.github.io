@@ -11,11 +11,8 @@ const TabLink = {
     get: ({ ref }) => window.location.pathname == ref
   },
   render: ({ ref, active }) => html`
-  <a id="host" class="grid-1 narrow items-v-middle col-1-from-tablet col-4-until-tablet"
-     href="${ref}">
-    <span class="${{ active }}">
-      <slot></slot>
-    </span>
+  <a href="${ref}" class="${{ active }}">
+    <slot></slot>
   </a>`.style(styles)
 }
 

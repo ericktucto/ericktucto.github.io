@@ -4,13 +4,13 @@
             <i class="fas fa-bars"></i>
         </div>
     </div>
-    <tab-group>
+    <div id="links" class="grid-4 content-between narrow col-1-from-desktop col-3-until-tablet">
       <tab-link ref="{{ "/" | relative_url }}">Historia</tab-link>
       <tab-link ref="{{ "/series" | relative_url }}">Series</tab-link>
       <tab-link ref="{{ "/projects" | relative_url }}">Proyectos</tab-link>
       <tab-link ref="{{ "/categories" | relative_url }}">Categorias</tab-link>
-    </tab-group>
-    <social-header>
+    </div>
+    <div id="social-header" class="grid-3 col-1-from-desktop col-3-until-tablet narrow items-center">
       <social-link class="icon24" ref="{{ site.github }}">
         <i class="fab fa-github"></i>
       </social-link>
@@ -20,5 +20,5 @@
       <social-link class="icon24" ref="{{ site.twitter }}">
         <i class="fab fa-twitter"></i>
       </social-link>
-    </social-header>
+    </div>
 </div>

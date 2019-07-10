@@ -1,14 +1,16 @@
-@import '../../../_sass/libs/stix-grid/sass/config/main.sass', '../../../_sass/libs/stix-grid/sass/grid/main.sass'
-
-#host
+$component: "tab-link, :host"
+#{$component}
+  display: grid
+  grid-template: 1fr
+  align-items: center
+  justify-items: stretch
   text-align: center
-  font-size: 16px
-  color: white
-  padding: 24px 8px
-  text-decoration: none
-  span
+  a
+    font-size: 16px
+    padding: 8px 0
     border-radius: 4px
-    padding: 8px 12px
-    &:hover, &.active
-      background-color: white
-      color: #AC4CFF
+    color: white
+    text-decoration: none
+  a:hover, a.active
+    background-color: white
+    color: #AC4CFF
