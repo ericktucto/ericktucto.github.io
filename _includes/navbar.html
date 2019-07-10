@@ -1,9 +1,5 @@
-<div id="nav" class="grid-3-auto narrow content-between col-12">
-    <div class="col-1-from-desktop col-3-until-tablet">
-        <div id="menu" class="icon24 hide-from-desktop">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
+<nav-bar>
+    <i slot="icon-menu" class="fas fa-bars"></i>
     <div id="links" class="grid-4 content-between narrow col-1-from-desktop col-3-until-tablet">
       <tab-link ref="{{ "/" | relative_url }}">Historia</tab-link>
       <tab-link ref="{{ "/series" | relative_url }}">Series</tab-link>
@@ -21,4 +17,4 @@
         <i class="fab fa-twitter"></i>
       </social-link>
     </div>
-</div>
+</nav-bar>

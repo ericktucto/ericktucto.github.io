@@ -1,0 +1,17 @@
+$component: "nav-button-menu, :host"
+
+#menu
+  color: white
+  padding: 12px 16px
+  font-size: 32px
+@media (min-width: 1024px)
+  #{$component}
+    grid-column-end: span 1
+    #menu
+      display: none
+
+@media (max-width: 1023px)
+  #{$component}
+    grid-column-end: span 3
+    #menu
+      display: inline-block
