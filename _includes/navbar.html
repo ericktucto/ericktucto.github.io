@@ -5,26 +5,20 @@
         </div>
     </div>
     <tab-group>
-      <tab-link ref="{{ "/" | relative_url }}"><span>Historia</span></tab-link>
-      <tab-link ref="{{ "/series" | relative_url }}"><span>Series</span></tab-link>
-      <tab-link ref="{{ "/projects" | relative_url }}"><span>Proyectos</span></tab-link>
-      <tab-link ref="{{ "/categories" | relative_url }}"><span>Categorias</span></tab-link>
+      <tab-link ref="{{ "/" | relative_url }}">Historia</tab-link>
+      <tab-link ref="{{ "/series" | relative_url }}">Series</tab-link>
+      <tab-link ref="{{ "/projects" | relative_url }}">Proyectos</tab-link>
+      <tab-link ref="{{ "/categories" | relative_url }}">Categorias</tab-link>
     </tab-group>
     <div id="social-header" class="grid-3 col-1-from-desktop col-3-until-tablet narrow items-center">
-        <div class="icon24">
-            <a href="{{ site.github }}" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <div class="icon24">
-            <a href="{{ site.youtube }}" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
-        <div class="icon24">
-            <a href="{{ site.twitter }}" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
+      <social-link class="icon24" ref="{{ site.github }}">
+        <i class="fab fa-github"></i>
+      </social-link>
+      <social-link class="icon24" ref="{{ site.youtube }}">
+        <i class="fab fa-youtube"></i>
+      </social-link>
+      <social-link class="icon24" ref="{{ site.twitter }}">
+        <i class="fab fa-twitter"></i>
+      </social-link>
     </div>
 </div>

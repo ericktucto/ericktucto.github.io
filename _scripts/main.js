@@ -3,6 +3,7 @@ import $ from 'jquery'
 import '@webcomponents/webcomponentsjs'
 import './src/components/TabLink'
 import './src/components/TabGroup'
+import './src/components/SocialLink'
 
 $(document).ready((e) => {
     let items = $("#social-header, #links")
