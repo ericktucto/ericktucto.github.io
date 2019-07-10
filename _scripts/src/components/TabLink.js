@@ -1,6 +1,5 @@
 import { html, define } from 'hybrids'
 import styles from './TabLink.sass'
-import stix from '../../../_sass/libs/stix-grid/sass/_stix-grid.sass'
 
 function hola() {
   console.log("Hola")
@@ -17,7 +16,7 @@ const TabLink = {
     <span class="${{ active }}">
       <slot></slot>
     </span>
-  </a>`.style(styles, stix)
+  </a>`.style(styles)
 }
 
 export default define('tab-link', TabLink)
