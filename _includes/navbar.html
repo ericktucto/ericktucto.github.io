@@ -4,12 +4,12 @@
             <i class="fas fa-bars"></i>
         </div>
     </div>
-    <div id="links" class="grid-4 content-between narrow col-1-from-desktop col-3-until-tablet">
-        <tab-link ref="{{ "/" | relative_url }}"><span>Historia</span></tab-link>
-        <tab-link ref="{{ "/series" | relative_url }}"><span>Series</span></tab-link>
-        <tab-link ref="{{ "/projects" | relative_url }}"><span>Proyectos</span></tab-link>
-        <tab-link ref="{{ "/categories" | relative_url }}"><span>Categorias</span></tab-link>
-    </div>
+    <tab-group>
+      <tab-link ref="{{ "/" | relative_url }}"><span>Historia</span></tab-link>
+      <tab-link ref="{{ "/series" | relative_url }}"><span>Series</span></tab-link>
+      <tab-link ref="{{ "/projects" | relative_url }}"><span>Proyectos</span></tab-link>
+      <tab-link ref="{{ "/categories" | relative_url }}"><span>Categorias</span></tab-link>
+    </tab-group>
     <div id="social-header" class="grid-3 col-1-from-desktop col-3-until-tablet narrow items-center">
         <div class="icon24">
             <a href="{{ site.github }}" target="_blank">

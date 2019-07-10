@@ -1,6 +1,8 @@
 import '../_sass/libs/stix-grid/es6/main.es6'
 import $ from 'jquery'
+import '@webcomponents/webcomponentsjs'
 import './src/components/TabLink'
+import './src/components/TabGroup'
 
 $(document).ready((e) => {
     let items = $("#social-header, #links")
