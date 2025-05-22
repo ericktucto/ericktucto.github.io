@@ -1,11 +1,18 @@
-<nav-bar>
-  <i slot="icon-menu" class="fas fa-bars"></i>
-  <div id="links" class="grid-4 content-between narrow col-1-from-desktop col-3-until-tablet">
-    <tab-link class="col-4-until-tablet" ref="{{ "/" | relative_url }}">Historia</tab-link>
-    <tab-link class="col-4-until-tablet" ref="{{ "/series" | relative_url }}">Series</tab-link>
-    <tab-link class="col-4-until-tablet" ref="{{ "/projects" | relative_url }}">Proyectos</tab-link>
-    <tab-link class="col-4-until-tablet" ref="{{ "/categories" | relative_url }}">Categorias</tab-link>
+<aside>
+  <input type="checkbox" id="cb-menu">
+  <div id="menu-toggle" class="two-between">
+    <h2>ERICK TUCTO</h2>
+    <label class="toggle-menu" for="cb-menu">
+      <fa-icon icon="bars"></fa-icon>
+    </label>
   </div>
+  <div id="links" class="stack-vertical page-{{ page.activedLink }}">
+    <a data-link="history" class="col-4-until-tablet" href="{{ "/" | relative_url }}">Historia</a>
+    <a data-link="series" class="col-4-until-tablet" href="{{ "/series" | relative_url }}">Series</a>
+    <a data-link="projects" class="col-4-until-tablet" href="{{ "/projects" | relative_url }}">Proyectos</a>
+    <a data-link="categories" class="col-4-until-tablet" href="{{ "/categories" | relative_url }}">Categorias</a>
+  </div>
+  <!--
   <div id="social-header" class="grid-3 col-1-from-desktop col-3-until-tablet narrow items-center">
     <social-link class="icon24" ref="{{ site.github }}">
       <i class="fab fa-github"></i>
@@ -17,4 +24,5 @@
       <i class="fab fa-twitter"></i>
     </social-link>
   </div>
-</nav-bar>
+-->
+</aside>

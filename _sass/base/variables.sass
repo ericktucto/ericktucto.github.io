@@ -1,0 +1,33 @@
+@use "base/vars" as vars
+
+body
+  --primary-100:#3498DB
+  --primary-200:#007cbd
+  --primary-300:#004079
+  --accent-100:#E74C3C
+  --accent-200:#ffe6c7
+  --text-100:#ECF0F1
+  --text-200:#ced1d2
+  --bg-100: #F5F5DC
+  --bg-200: #EBEBD3
+  --bg-300: #D9D9C2
+  --bg-dark-100:#2C3E50
+  --bg-dark-200:#3d4f61
+  --bg-dark-300:#57687c
+  --btn-bg: var(--primary-300)
+  --btn-text: var(--text-100)
+  --title-size: 48px
+  --subtitle-size: 32px
+  --middle-text-size: 24px
+  --paragraph-size: 16px
+  --small-size: 12px
+  --br-margin-x: 16px
+
+@media(max-width: vars.$mobile)
+  body
+    --title-size: 32px
+    --subtitle-size: 24px
+    --middle-text-size: 18px
+    --paragraph-size: 14px
+    --small-size: 8px
+    --br-padding-x: 12px

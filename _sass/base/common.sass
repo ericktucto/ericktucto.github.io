@@ -1,0 +1,153 @@
+@use "base/vars" as vars
+@use "base/variables"
+@use "base/typography"
+
+*
+  font-family: 'Space Mono'
+  margin: 0
+  padding: 0
+fa-icon
+  width: 24px
+  display: block
+  line-height: 0
+
+/** elements */
+.two-between
+  display: grid
+  grid-template-columns: auto auto
+  justify-content: space-between
+  align-items: center
+
+.stack-vertical
+  display: grid
+  width: 100%
+
+.title,
+h1
+  font-size: var(--title-size)
+  font-weight: bold
+.subtitle,
+h3
+  font-size: var(--subtitle-size)
+  font-weight: bold
+.paragraph,
+p
+  font-size: var(--paragraph-size)
+  font-weight: normal
+.small-note,
+small
+  font-size: var(--small-size)
+  font-weight: normal
+
+.shadow
+  box-shadow: 0 2px 6px rgba(0,0,0,.2)
+
+.super-title
+  display: grid
+  width: 100%
+  align-items: center
+  text-align: center
+  margin-bottom: 16px
+
+.br-bg
+  display: block
+  border-bottom: 1px solid var(--bg-300)
+  margin: var(--br-margin-x) 0
+
+.btn-primary
+  height: 40px
+  box-sizing: border-box
+  color: var(--btn-text)
+  background: var(--primary-300)
+  padding: 8px 12px
+  text-decoration: none
+  border: none
+  border-radius: 0
+
+/** on home page */
+#main-container
+  display: grid
+  grid-template-columns: 220px auto
+  background: var(--bg-100)
+  aside
+    grid-column-start: 1
+    grid-row-start: 1
+    h2
+      font-size: var(--middle-text-size)
+    #cb-menu
+      display: none
+    background: var(--primary-300)
+    height: 100vh
+    color: white
+    #links
+      &.page-
+        &history
+          a[data-link=history]
+            &::before
+              content: '>>>'
+              display: none
+              margin-right: 12px
+            &::after
+              --size: 10px
+              content: ' '
+              display: inline-block
+              border: var(--size) solid transparent
+              border-right-color: var(--bg-100)
+      a
+        @extend .two-between
+        text-transform: uppercase
+        padding: 12px 16px
+        padding-right: 0
+        color: white
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+  #content-page
+    justify-self: center
+    grid-column-end: 3
+    max-width: 860px
+    height: 100vh
+    overflow-x: scroll
+
+#content
+  padding: 28px
+  background: var(--bg-100)
+#menu-toggle
+  padding: 12px 16px
+  .toggle-menu
+    display: none
+
+@media (max-width: vars.$mobile)
+  #content-page
+    width: 100vw
+  #menu-toggle
+    .toggle-menu
+      display: grid
+      place-content: center
+      position: fixed
+      bottom: 20px
+      right: 20px
+      background: var(--btn-bg)
+      color: var(--text-bg)
+      padding: 8px
+      width: 48px
+      height: 48px
+      box-sizing: border-box
+  #main-container
+    grid-template-columns: 0 auto
+    aside
+      position: fixed
+      overflow: hidden
+      width: 0
+      transition: width 0.2s ease-in-out
+      white-space: nowrap
+      #links a
+        display: inline-block
+        &::before
+          display: inline-block !important
+        &::after
+          display: none !important
+    aside:has(#cb-menu:checked)
+      width: 100vw
+      z-index: 1
+

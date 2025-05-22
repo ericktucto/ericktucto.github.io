@@ -1,62 +1,47 @@
-@import "libs/stix-grid/sass/config/_variables"
-@import "base/pygments"
-@import "base/markdown"
-@import "base/clipboardjs"
-@import "plugins/youtube"
+@use "base/vars" as vars
+@use "base/pygments"
+@use "base/markdown"
+@use "base/clipboardjs"
+@use "plugins/youtube"
 
+@media(min-width: vars.$mobile)
+  #content
+    display: grid
+    justify-content: center
+    article
+      width: 1024px
+
+#user-data
+  margin-bottom: 12px
+  .profile
+    display: grid
+    grid-template-columns: 48px auto
+    grid-template-rows: 24px 24px
+    column-gap: 8px
+    img
+      width: 48px
+      height: 48px
+      object-fit: cover
+      border-radius: 50%
+      grid-column-end: 2
+    small
+      grid-column-start: 2
 #post
   width: 100%
-  background: $white
-  font-size: 1.8vmax
-  font-family: 'Open Sans'
-  box-shadow: 0 0 25px rgba(0,0,0,.2)
-  .post-data
-    padding: .5em 1em
-    .data
-      display: inline-block
-      padding: 0
-      padding-right: 1em
-      font-size: .6em
-      *
-        color: #777777
-
-.post-title
-  font-size: 1.6em
-  padding: .6em .8em
-  background: #FFA619
-  color: $white
+  line-height: 1.5
+  .post-header
+    margin-bottom: 12px
+  .post-image
+    img
+      width: 100%
+  .post-body
+    p:nth-child(1)
+      margin-bottom: var(--br-margin-x)
+      font-weight: bold
 
 #tags
-  margin-bottom: 1.2em
-  padding: .5em 1em
-  padding-top: 0
-
+  font-size: var(--paragraph-size)
   .tag
-    font-size: .6em
-    background: #ECEEED
-    color: $purple
+    color: var(--primary-100)
     padding: 1px 5px
-    box-shadow: 0 2px 2px rgba(0,0,0,.2)
     margin-right: 1em
-
-.post-body
-  font-size: .8em
-  padding-left: 1.5em
-  padding-right: 1.5em
-  p
-    margin: 0
-    margin-bottom: 2em
-
-@media (max-width: $max-tablet)
-  #post
-    .post-body
-      font-size: 1.4em
-    .post-data
-      padding: 1em
-      .data
-        font-size: 1em
-        padding-right: .4em
-
-  #tags
-    .tag
-      font-size: 1.2em

@@ -1,4 +1,36 @@
 ---
 ---
 
-@import "pages/home"
+@use "base/vars" as vars
+@use "partials/cards"
+
+#presentation
+  --width-image: 300px
+  display: grid
+  grid-template-columns: var(--width-image) auto
+  justify-content: center
+  margin: 0 auto
+  margin-top: 5rem
+  gap: 3rem
+  img
+    width: var(--width-image)
+
+#history
+  display: grid
+  grid-template-columns: 400px 400px
+  gap: 12px
+
+@media(max-width: vars.$mobile)
+  #presentation
+    --width-image: 200px
+    grid-template-columns: 1fr
+    img
+      justify-self: center
+  #history
+    grid-template-columns: 1fr
+    justify-items: center
+
+@media(max-width: vars.$mobile) and (min-width: 600px)
+  #history
+    grid-template-columns: 300px 300px
+    justify-content: center

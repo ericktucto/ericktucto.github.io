@@ -3,6 +3,7 @@ Gemfile.lock
 package-lock.json
 
 # Folders
+vendor/
 .sass-cache/
 _site/
 node_modules/

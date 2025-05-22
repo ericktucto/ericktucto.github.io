@@ -1,56 +1,77 @@
+@use "base/vars" as vars
+
 .card__container
   width: 400px
-  box-shadow: 4px 4px 8px #aaaaaa
-  border-radius: 0.8em
+  height: 313px
+  box-sizing: border-box
   .card__date
-    border-radius: 0.8em 0.8em 0 0
-    color: white
-    background: $purple
+    border: var(--bg-300) solid 1px
+    border-bottom: none
+    box-sizing: border-box
+  .card__image
+    border: var(--bg-300) solid 1px
+    border-top: none
+    border-bottom: none
+    box-sizing: border-box
+  .card__data
+    border: var(--bg-300) solid 1px
+    border-top: none
+    box-sizing: border-box
+  .card__date
     padding: 8px
-    font-size: 16px
+    font-size: var(--paragraph-size)
     text-transform: uppercase
   .card__image
+    display: block
     width: 400px
     height: 225px
-    background-size: contain
+    background-size: cover
     background-repeat: no-repeat
+    background-position: center
+    transition: height 0.2s ease-in-out
+    position: relative
+
   .card__data
-    background-color: white
+    display: grid
     grid-template-rows: [start] 48px auto [end]
-    border-radius: 0 0 0.8em 0.8em
     .card__title
       display: grid
       grid-template-columns: auto 40px
       padding: 12px 16px
-      i
-        font-size: 24px
+      fa-icon
+        justify-self: end
     .card__description
       display: none
+      height: 0
       padding: 16px
-      .description__sms
+      box-sizing: border-box
+      overflow-x: hidden
+      transition: height 0.2s ease-in-out
+      .description__sms strong
+        font-weight: normal
       .description__readmore
-        padding: 8px 12px
-        color: $purple
-        border: solid 2px $purple
-        background: white
-        text-decoration: none
-        &:hover
-          color: white
-          background: $purple
+        display: flex
+        justify-content: end
+        .btn-primary:hover
+          text-decoration: underline
 
-.show__data
-  .card__image
-    height: 0
-  .card__data
-    height: 273px
-    .card__description
-      display: grid
-      height: 100%
-      align-content: space-between
+@media(min-width: vars.$mobile)
+  .card__container.show__data
+    .card__image
+      height: 0
+    .card__data
+      height: 273px
+      .card__description
+        display: grid
+        grid-template-rows: auto 40px
+        height: 225px
 
-@media (max-width: 420px)
+@media (max-width: vars.$mobile)
   .card__container
+    display: grid
+    grid-template-rows: 40px 168.75px 273px
     width: 300px
+    height: auto
     .card__image
       width: 300px
       height: 168.75px
@@ -60,6 +81,3 @@
         display: grid
         height: 100%
         align-content: space-between
-        .description__readmore
-          color: white
-          background: $purple

@@ -41,14 +41,14 @@ $(document).ready((e) => {
   })
   // ------
   // ------ Acortar descripcion de los post a 255 caracteres
-  $('.description__sms').each( (i, description) => {
-    $(description).text( (i, text) => `${text.slice(0, 255)} ...` )
+  $('.description__sms').each((i, description) => {
+    //$(description).text((i, text) => `${text.slice(0, 100)} ...`)
   })
   // ------
   // ------ Cambiar los meses
-  $('.card__date').each( (i, date) => {
+  $('.card__date').each((i, date) => {
     let dateToSpanish = (match, day, month, year) => `${day} ${MESES[month]} ${year}`
-    $(date).text( (i, text) => text.replace(REGEX_DATE_POST, dateToSpanish))
+    $(date).text((i, text) => text.replace(REGEX_DATE_POST, dateToSpanish))
   })
   // ------
 })

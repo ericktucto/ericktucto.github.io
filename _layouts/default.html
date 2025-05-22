@@ -2,11 +2,17 @@
 <html lang="es">
 <head>
     {% include head.html %}
+    <link rel="stylesheet" href="{{ "/assets/css/common.css" | relative_url }}" />
 </head>
 <body>
-    <div class="grid-12">
-        {{ content }}
+  <div id="main-container">
+    <div id="content-page">
+      {{ content }}
+        <!--
         {% include footer.html %}
+        -->
     </div>
+    {% include navbar.html %}
+  </div>
 </body>
 </html>
