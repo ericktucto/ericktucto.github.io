@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Nuevo aspecto a mi web'
-tags: ['changelog']
+categories: ['changelog']
 videoId: '8KCEQpg65aw'
 image: https://i.postimg.cc/J0383Xdc/web.jpg
 dateModified: '2025-05-19'

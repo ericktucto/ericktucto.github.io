@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Cree una aplicación con Rust y GTK para compartir redes wifi'
-tags: ['rust', 'gtk']
+categories: ['rust', 'gtk']
 videoId: 'zdUhljHZVvo'
 image: https://i.ytimg.com/vi/zdUhljHZVvo/sddefault.jpg
 dateModified: '2025-05-22'
