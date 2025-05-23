@@ -25,14 +25,16 @@ activedLink: history
 <div id="history" class="grid-12 narrow col-12 items-center">
   {% for post in site.posts %}
     <div class="card__container shadow">
-      <div class="card__date">{{ post.date | date: "%-d %B %Y" }}</div>
-      <div class="card__image" style="background-image: url({{ post.image  }});"></div>
+      <div class="card__image">
+        <img src="{{ post.image  }}"/>
+      </div>
       <div class="card__data">
-        <div class="card__title two-between">
-          <span class="me-left me-v-middle">{{ post.title }}</span><fa-icon icon="ellipsis-h"></fa-icon>
+        <div class="card__date">{{ post.date | date: "%-d %B %Y" }}</div>
+        <div class="card__title">
+          <span>{{ post.title }}</span>
         </div>
         <div class="card__description">
-          <div class="description__sms">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
+          <div class="description__sms">{{ post.excerpt | remove: '<strong> | remove: '</strong> }}</div>
           <div class="description__readmore">
             <a class="btn-primary" href="{{ post.url }}">LEER MÁS</a>
           </div>
