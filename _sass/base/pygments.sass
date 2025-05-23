@@ -1,201 +1,27 @@
-/*! Based on tomorrow night eighties: https://github.com/MozMorris/tomorrow-pygments */
-.highlight, .highlight pre, .highlight table
-  background: #2d2d2d !important
-  color: #cccccc !important
-.highlight .hll
-    background-color: #515151 !important
-/* Comment */
-.highlight .c
-  color: #999999 !important
-/* Error */
-.highlight .err
-  color: #f2777a !important
-/* Keyword */
-.highlight .k
-  color: #cc99cc !important
-/* Literal */
-.highlight .l
-  color: #f99157 !important
-/* Name */
-.highlight .n, .highlight .h
-  color: #cccccc !important
-/* Operator */
-.highlight .o
-  color: #66cccc !important
-/* Punctuation */
-.highlight .p
-  color: #cccccc !important
-/* Comment.Multiline */
-.highlight .cm
-  color: #999999 !important
-/* Comment.Preproc */
-.highlight .cp
-  color: #999999 !important
-/* Comment.Single */
-.highlight .c1
-  color: #999999 !important
-/* Comment.Special */
-.highlight .cs
-  color: #999999 !important
-/* Generic.Deleted */
-.highlight .gd
-  color: #f2777a !important
-/* Generic.Emph */
-.highlight .ge
-  font-style: italic !important
-/* Generic.Heading */
-.highlight .gh
-  color: #cccccc !important
-  font-weight: bold !important
-/* Generic.Inserted */
-.highlight .gi
-  color: #99cc99 !important
-/* Generic.Prompt */
-.highlight .gp
-  color: #999999 !important
-  font-weight: bold !important
-/* Generic.Strong */
-.highlight .gs
-  font-weight: bold !important
-/* Generic.Subheading */
-.highlight .gu
-  color: #66cccc !important
-  font-weight: bold !important
-/* Keyword.Constant */
-.highlight .kc
-  color: #cc99cc !important
-/* Keyword.Declaration */
-.highlight .kd
-  color: #cc99cc !important
-/* Keyword.Namespace */
-.highlight .kn
-  color: #66cccc !important
-/* Keyword.Pseudo */
-.highlight .kp
-  color: #cc99cc !important
-/* Keyword.Reserved */
-.highlight .kr
-  color: #cc99cc !important
-/* Keyword.Type */
-.highlight .kt
-  color: #ffcc66 !important
-/* Literal.Date */
-.highlight .ld
-  color: #99cc99 !important
-/* Literal.Number */
-.highlight .m
-  color: #f99157 !important
-/* Literal.String */
-.highlight .s
-  color: #99cc99 !important
-/* Name.Attribute */
-.highlight .na
-  color: #6699cc !important
-/* Name.Builtin */
-.highlight .nb
-  color: #cccccc !important
-/* Name.Class */
-.highlight .nc
-  color: #ffcc66 !important
-/* Name.Constant */
-.highlight .no
-  color: #f2777a !important
-/* Name.Decorator */
-.highlight .nd
-  color: #66cccc !important
-/* Name.Entity */
-.highlight .ni
-  color: #cccccc !important
-/* Name.Exception */
-.highlight .ne
-  color: #f2777a !important
-/* Name.Function */
-.highlight .nf
-  color: #6699cc !important
-/* Name.Label */
-.highlight .nl
-  color: #cccccc !important
-/* Name.Namespace */
-.highlight .nn
-  color: #ffcc66 !important
-/* Name.Other */
-.highlight .nx
-  color: #6699cc !important
-/* Name.Property */
-.highlight .py
-  color: #cccccc !important
-/* Name.Tag */
-.highlight .nt
-  color: #66cccc !important
-/* Name.Variable */
-.highlight .nv
-  color: #f2777a !important
-/* Operator.Word */
-.highlight .ow
-  color: #66cccc !important
-/* Text.Whitespace */
-.highlight .w
-  color: #cccccc !important
-/* Literal.Number.Float */
-.highlight .mf
-  color: #f99157 !important
-/* Literal.Number.Hex */
-.highlight .mh
-  color: #f99157 !important
-/* Literal.Number.Integer */
-.highlight .mi
-  color: #f99157 !important
-/* Literal.Number.Oct */
-.highlight .mo
-  color: #f99157 !important
-/* Literal.String.Backtick */
-.highlight .sb
-  color: #99cc99 !important
-/* Literal.String.Char */
-.highlight .sc
-  color: #cccccc !important
-/* Literal.String.Doc */
-.highlight .sd
-  color: #999999 !important
-/* Literal.String.Double */
-.highlight .s2
-  color: #99cc99 !important
-/* Literal.String.Escape */
-.highlight .se
-  color: #f99157 !important
-/* Literal.String.Heredoc */
-.highlight .sh
-  color: #99cc99 !important
-/* Literal.String.Interpol */
-.highlight .si
-  color: #f99157 !important
-/* Literal.String.Other */
-.highlight .sx
-  color: #99cc99 !important
-/* Literal.String.Regex */
-.highlight .sr
-  color: #99cc99 !important
-/* Literal.String.Single */
-.highlight .s1
-  color: #99cc99 !important
-/* Literal.String.Symbol */
-.highlight .ss
-  color: #99cc99 !important
-/* Name.Builtin.Pseudo */
-.highlight .bp
-  color: #cccccc !important
-/* Name.Variable.Class */
-.highlight .vc
-  color: #f2777a !important
-/* Name.Variable.Global */
-.highlight .vg
-  color: #f2777a !important
-/* Name.Variable.Instance */
-.highlight .vi
-  color: #f2777a !important
-/* Literal.Number.Integer.Long */
-.highlight .il
-  color: #f99157 !important
+@import 'base/clipboardjs'
+
+/** container */
+figure.highlight
+  width: 860px
+  line-height: 1.6em
+  font-size: .9em
+  *:not(.btn-copy)
+    font-family: 'Space Mono'
+  pre
+    overflow: auto
+blockquote
+  margin: 0
+  padding: 0 32px
+  margin-bottom: 16px
+  border-left: 4px solid #dfe2e5 // I don't know
+blockquote p
+  color: #6a737d
+code.highlighter-rouge
+  background: #ECEEED
+  color: #f4645f
+  padding: 1px 5px
+  box-shadow: 0 1px 1px rgba(0,0,0,.125)
+
 .highlight .gutter
   padding: 1.6vmax 2vmax
 .highlight .lineno
@@ -205,3 +31,175 @@
   > pre
     margin-top: 8px
     margin-bottom: 8px
+
+/** colors **/
+.highlight
+  background: #1d2021
+  color: #ebdbb2
+  .hll
+    background-color: #7c6f54
+  .c
+    color: #928374
+  .err
+    color: #ebdbb2
+    border: 1px solid #fb4934
+  .esc
+    color: #fe8019
+  .g
+    color: #ebdbb2
+  .k
+    color: #fe8019
+  .l
+    color: #458588
+  .n
+    color: #ebdbb2
+  .o
+    color: #b8bb26
+  .x
+    color: #ebdbb2
+  .p
+    color: #ebdbb2
+  .ch
+    color: #928374
+  .cm
+    color: #b8bb26
+  .cp
+    color: #8ec07c
+  .cpf
+    color: #928374
+  .c1
+    color: #b8bb26
+  .cs
+    color: #928374
+  .gd
+    color: #fb4934
+  .ge
+    color: #ebdbb2
+  .g-Emphasis
+    color: #ebdbb2
+    font-style: italic
+  .gr
+    color: #fb4934
+  .gh
+    color: #cc241d
+    font-weight: bold
+  .gi
+    color: #b8bb26
+  .go
+    color: #ebdbb2
+    font-style: italic
+  .gp
+    color: #928374
+    font-weight: bold
+  .gs
+    color: #ebdbb2
+    font-weight: bold
+  .gu
+    color: #b8bb26
+    font-weight: bold
+  .gt
+    color: #ebdbb2
+  .kc
+    color: #d3869b
+  .kd
+    color: #fe8019
+  .kn
+    color: #458588
+  .kp
+    color: #b8bb26
+    font-style: italic
+  .kr
+    color: #fe8019
+  .kt
+    color: #fabd2f
+  .ld
+    color: #b8bb26
+  .m
+    color: #d3869b
+  .s
+    color: #b8bb26
+  .na
+    color: #458588
+  .nb
+    color: #fabd2f
+  .nc
+    color: #8ec07c
+  .no
+    color: #fb4934
+  .nd
+    color: #fb4934
+  .ni
+    color: #ebdbb2
+  .ne
+    color: #d3869b
+  .nf
+    color: #b8bb26
+  .nl
+    color: #ebdbb2
+  .nn
+    color: #ebdbb2
+  .nx
+    color: #458588
+  .py
+    color: #ebdbb2
+  .nt
+    color: #8ec07c
+  .nv
+    color: #fb4934
+  .ow
+    color: #fe8019
+  .w
+    color: #fb4934
+  .mb
+    color: #d3869b
+  .mf
+    color: #d3869b
+  .mh
+    color: #d3869b
+  .mi
+    color: #d3869b
+  .mo
+    color: #d3869b
+  .sa
+    color: #b8bb26
+    text-decoration: underline
+  .sb
+    color: #b8bb26
+  .sc
+    color: #ebdbb2
+  .dl
+    color: #b8bb26
+  .sd
+    color: #b8bb26
+  .s2
+    color: #b8bb26
+  .se
+    color: #fe8019
+  .sh
+    color: #b8bb26
+  .si
+    color: #fe8019
+  .sx
+    color: #b8bb26
+  .sr
+    color: #b8bb26
+  .s1
+    color: #b8bb26
+  .ss
+    color: #b8bb26
+  .bp
+    color: #fe8019
+  .fm
+    color: #8ec07c
+  .vc
+    color: #458588
+    font-weight: bold
+  .vg
+    color: #fb4934
+  .vi
+    color: #fb4934
+  .vm
+    color: #8ec07c
+  .il
+    color: #d3869b
+
