@@ -1,6 +1,5 @@
-@use "base/vars" as vars
-@use "base/variables"
-@use "base/typography"
+@import "base/variables"
+@import "base/typography"
 
 *
   font-family: 'Space Mono'
@@ -116,8 +115,7 @@ small
   padding: 12px 16px
   .toggle-menu
     display: none
-
-@media (max-width: vars.$mobile)
+@media (max-width: 1024px)
   #content-page
     width: 100vw
   #menu-toggle

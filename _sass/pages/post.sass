@@ -1,10 +1,9 @@
-@use "base/vars" as vars
-@use "base/pygments"
-@use "base/markdown"
-@use "base/clipboardjs"
-@use "plugins/youtube"
+@import "base/pygments"
+@import "base/markdown"
+@import "base/clipboardjs"
+@import "plugins/youtube"
 
-@media(min-width: vars.$mobile)
+@media(min-width: 1024px)
   #content
     display: grid
     justify-content: center

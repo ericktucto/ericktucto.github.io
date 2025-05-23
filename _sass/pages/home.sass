@@ -1,8 +1,4 @@
----
----
-
-@use "base/vars" as vars
-@use "partials/cards"
+@import "partials/cards"
 
 #presentation
   --width-image: 300px
@@ -20,7 +16,7 @@
   grid-template-columns: 400px 400px
   gap: 12px
 
-@media(max-width: vars.$mobile)
+@media(max-width: 1024px)
   #presentation
     --width-image: 200px
     grid-template-columns: 1fr
@@ -30,7 +26,7 @@
     grid-template-columns: 1fr
     justify-items: center
 
-@media(max-width: vars.$mobile) and (min-width: 600px)
+@media(max-width: 1024px) and (min-width: 600px)
   #history
     grid-template-columns: 300px 300px
     justify-content: center
