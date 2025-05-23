@@ -7,10 +7,11 @@
   #content
     display: grid
     justify-content: center
-    article
-      width: 1024px
 
 #user-data
+  display: flex
+  justify-content: space-between
+  align-items: center
   margin-bottom: 12px
   .profile
     display: grid
@@ -24,15 +25,38 @@
       border-radius: 50%
       grid-column-end: 2
     small
+      font-size: 12px
       grid-column-start: 2
+  .actions
+    display: flex
+    align-items: center
+    column-gap: 12px
+    color: var(--text-muted)
+    fa-icon
+      display: inline-block
+      width: 32px
+      height: 32px
+      box-sizing: border-box
+      padding: 8px
+      &[icon=share-nodes]
+        width: 36px
+        height: 36px
 #post
   width: 100%
-  line-height: 1.5
+  line-height: 1.3
   .post-header
     margin-bottom: 12px
   .post-image
+    width: 100%
+    position: relative
+    aspect-ratio: 16/9
+    overflow: hidden
     img
+      display: block
       width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
   .post-body
     p:nth-child(1)
       margin-bottom: var(--br-margin-x)

@@ -10,7 +10,11 @@ layout: default
           alt="una foto de @ericktucto sosteniendo unos cubos rubik"
         />
         <strong>Erick Tucto</strong>
-        <small>{{ page.date | date: "%m-%d-%Y" }}</small>
+        <small>{{ page.date | date: "%-d %B %Y" }}</small>
+      </div>
+      <div class="actions">
+        <fa-icon prefix="far" icon="bookmark"></fa-icon>
+        <fa-icon icon="share-nodes"></fa-icon>
       </div>
     </div>
     <div id="post" class="col-12-until-mobile col-10-from-tablet h-center">
@@ -18,7 +22,7 @@ layout: default
             <h1>{{ page.title }}</h1>
             <div id="tags">
                 {% for tag in page.categories %}
-                    <a href="https//google.com" class="tag">#{{ tag }}</a>
+                  <a href="{{ site.baseurl }}/categories/{{ tag }}" class="tag">#{{ tag }}</a>
                 {% endfor %}
             </div>
         </div>

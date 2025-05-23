@@ -13,3 +13,4 @@ excerpt_separator: <!--more-->
 comprender el uso de Rust y GTK para la crearcion de aplicaciones nativas.**
 <!--more-->
 
+{% include templates/youtube-player.html id=page.videoId %}

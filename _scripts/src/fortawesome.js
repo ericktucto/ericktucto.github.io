@@ -1,7 +1,14 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-//import { far } from '@fortawesome/free-regular-svg-icons';
+import {
+  faBars,
+  faShareNodes,
+  faBookmark,
+} from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as farBookmark } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
   faBars,
+  faShareNodes,
+  faBookmark,
+  farBookmark,
 );
