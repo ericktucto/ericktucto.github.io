@@ -22,6 +22,12 @@ Antes de seguir, ten invito a que veas el video que hice sobre esta app
 
 {% include templates/youtube-player.html id=page.videoId %}
 
-Como se observa en el video, es sencillo, pero no fue facil. Tenia problemas al
-compilar, la consola arrojaba salidas a cada rato sobre: _las estructuras no
-estan siendo correctamente implementadas_
+Como se observa en el video, la aplicación resulta sencilla de usar, solo dando
+click en el boton QR, sin embargo no fue facil de construirla. Tenia problemas
+al compilar, la consola arrojaba salidas a cada rato sobre: _las estructuras no
+estan siendo correctamente implementadas, permisos de usuarios, problemas de
+dependencias_, poco a poco fui resolviendo dichos errores. Algo que me ayudó
+mucho fue usar [Cambalache](https://gitlab.gnome.org/jpu/cambalache) una muy
+util herramienta para crear interfaces graficas de GTK-4.
+
+### ¿Cómo se obtiene los codigos QR y las contraseñas?
