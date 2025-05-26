@@ -2,29 +2,28 @@ const path = require('path');
 
 module.exports = {
   entry: {
-      main: './_scripts/main.js',
-      home: './_scripts/home.js',
-      post: './_scripts/post.js',
-      404: './_scripts/404.js',
+    main: './_scripts/main.ts',
+    home: './_scripts/home.ts',
+    post: './_scripts/post.ts',
+    404: './_scripts/404.ts',
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'assets/js'),
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        loader: 'ts-loader',
       },
       {
-        test: /\.sass$/,
-        exclude: /(node_modules)/,
-        use: [
-          'raw-loader',
-          'sass-loader',
-        ],
+        test: /\.svg$/,
+        type: 'asset/source',
       },
     ],
   },

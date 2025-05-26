@@ -10,11 +10,11 @@ layout: default
           alt="una foto de @ericktucto sosteniendo unos cubos rubik"
         />
         <strong>Erick Tucto</strong>
-        <small>{{ page.date | date: "%-d %B %Y" }}</small>
+        <small data-datees='{{ page.date | date: "%-d %B %Y" }}'>{{ page.date | date: "%-d %B %Y" }}</small>
       </div>
       <div class="actions">
-        <fa-icon prefix="far" icon="bookmark"></fa-icon>
-        <fa-icon icon="share-nodes"></fa-icon>
+        <span class="x-icon" data-icon="bookmark"></span>
+        <span class="x-icon" data-icon="share-nodes"></span>
       </div>
     </div>
     <div id="post" class="col-12-until-mobile col-10-from-tablet h-center">

@@ -14,10 +14,7 @@ const MESES = {
   'November': 'Noviembre',
   'December': 'Diciembre',
 }
-/**
- * @param {HTMLElement} date
- */
-export function monthToSpanish(date) {
+export function monthToSpanish(date: HTMLElement) {
   date.innerHTML = date.innerHTML
     .replace(
       REGEX_DATE_POST,

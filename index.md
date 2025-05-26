@@ -29,7 +29,7 @@ activedLink: history
         <img src="{{ post.image  }}"/>
       </div>
       <div class="card__data">
-        <div class="card__date">{{ post.date | date: "%-d %B %Y" }}</div>
+        <div class="card__date" data-datees='{{ post.date | date: "%-d %B %Y" }}'>{{ post.date | date: "%-d %B %Y" }}</div>
         <div class="card__title">
           <span>{{ post.title }}</span>
           <small>

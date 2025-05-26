@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "module": "esnext",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node"
+  },
+  "include": ["./_scripts/**/*.ts", "custom.d.ts"]
+}
