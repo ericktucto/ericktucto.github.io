@@ -126,6 +126,8 @@ small
   #content-page
     width: 100vw
   #menu-toggle
+    padding-right: 20px
+    padding-bottom: 20px
     .toggle-menu
       display: grid
       place-content: center
@@ -143,17 +145,26 @@ small
   #main-container
     grid-template-columns: 0 auto
     aside
+      display: flex
+      flex-direction: column-reverse
       position: fixed
       overflow: hidden
       width: 0
+      height: 100%
       transition: width 0.2s ease-in-out
       white-space: nowrap
-      #links a
-        display: inline-block
-        &::before
-          display: inline-block !important
-        &::after
-          display: none !important
+      h2
+        height: 48px
+        align-content: center
+      #links
+        justify-items: end
+        a
+          display: inline-block
+          padding: 20px
+          &::before
+            display: inline-block !important
+          &::after
+            display: none !important
     aside:has(#cb-menu:checked)
       width: 100vw
       z-index: 1

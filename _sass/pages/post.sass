@@ -1,6 +1,9 @@
 @import "base/pygments"
 @import "plugins/youtube"
 
+@media(max-width: 1024px)
+  .post-body
+    line-height: 1.8
 @media(min-width: 1024px)
   #content
     display: grid
@@ -57,6 +60,7 @@
       object-fit: cover
       object-position: center
   .post-body
+    line-height: 1.8
     p:nth-child(1)
       margin-bottom: var(--br-margin-x)
       font-weight: bold
