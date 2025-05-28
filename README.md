@@ -1,7 +1,12 @@
 ### Todos
-- [ ] boton de copiar en los codigos inline
+- [X] boton de copiar en los codigos inline
 - [ ] funcion de compartir
+- [ ] boton de subir arriba
+- [ ] terminar seccion categorias
+- [ ] terminar seccion proyectos
+- [ ] terminar seccion series
+- [ ] agregar feed RSS
+- [ ] cargar solo los iconos necesarios
 - [ ] funcion de guardar
 - [ ] funciones para aumentar o disminuir el tamaño de la fuente
-- [ ] boton de subir arriba
 - [ ] dark mode

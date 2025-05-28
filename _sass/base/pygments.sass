@@ -17,10 +17,21 @@ blockquote
 blockquote p
   color: #6a737d
 code.highlighter-rouge
+  display: inline-grid
+  grid-template-columns: auto 24px
+  place-items: center
+  box-sizing: border-box
   background: var(--bg-200)
   color: var(--primary-300)
-  padding: 1px 5px
+  padding-left: 5px
   border: 1px solid var(--bg-300)
+  cursor: pointer
+  .x-icon
+    display: inline-block
+    width: 24px
+    padding: 5px
+    fill: var(--text-muted)
+    box-sizing: border-box
 
 .highlight .gutter
   padding: 1.6vmax 2vmax
