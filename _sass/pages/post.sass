@@ -33,6 +33,7 @@
     column-gap: 12px
     color: var(--text-muted)
     fill: var(--text-muted)
+    position: relative
     span.x-icon
       display: inline-block
       width: 32px
@@ -42,6 +43,28 @@
       &[data-icon=share-nodes]
         width: 36px
         height: 36px
+  #action-share
+    .container__share
+      position: absolute
+      min-width: 200px
+      max-width: 600px
+      right: 0
+      display: none
+      padding: 12px
+      box-sizing: border-box
+      background: var(--bg-300)
+      place-items: center
+      span:first-child
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+      span.x-icon
+        display: grid
+        place-items: center
+        cursor: pointer
+    &:focus
+      .container__share
+        display: flex
 #post
   width: 100%
   line-height: 1.3

@@ -1,6 +1,7 @@
 import { monthToSpanish } from './src/utils/datetime';
 import load from './icons/load';
 import * as ClipboardJS from 'clipboard';
+import { copy } from './helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll("*[data-datees]").forEach((el: HTMLElement) => {
@@ -12,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       el.innerHTML = load(el.dataset.icon);
+      if (el.dataset.click) {
+        copy(el)
+      }
     } catch (e) {
       console.error(e);
     }

@@ -14,7 +14,19 @@ layout: default
       </div>
       <div class="actions">
         <span class="x-icon" data-icon="bookmark"></span>
-        <span class="x-icon" data-icon="share-nodes"></span>
+        <div id="action-share" tabindex="0">
+          <span class="x-icon" data-icon="share-nodes"></span>
+          <div class="container__share">
+            <span id="text__share">{{ page.url }}</span>
+            <span
+              class="x-icon"
+              id="btn__share"
+              data-text="text__share"
+              data-click="btn__share"
+              data-icon="clipboard"
+            ></span>
+          </div>
+        </div>
       </div>
     </div>
     <div id="post" class="col-12-until-mobile col-10-from-tablet h-center">

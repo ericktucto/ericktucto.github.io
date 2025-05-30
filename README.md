@@ -1,6 +1,6 @@
 ### Todos
 - [X] boton de copiar en los codigos inline
-- [ ] funcion de compartir
+- [X] funcion de compartir
 - [ ] boton de subir arriba
 - [ ] terminar seccion categorias
 - [ ] terminar seccion proyectos
