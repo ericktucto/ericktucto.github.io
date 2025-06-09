@@ -4,6 +4,15 @@ import * as ClipboardJS from 'clipboard';
 import { copy } from './helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector("#btn-up").addEventListener("click", () => {
+    const targetElement: HTMLDivElement = document.querySelector("#content-page");
+    if (targetElement) {
+      targetElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  });
   document.querySelectorAll("*[data-datees]").forEach((el: HTMLElement) => {
     monthToSpanish(el)
   });

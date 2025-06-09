@@ -2,9 +2,17 @@
   <input type="checkbox" id="cb-menu">
   <div id="menu-toggle" class="two-between">
     <h2>ERICK TUCTO</h2>
-    <label class="toggle-menu" for="cb-menu">
-      <span class="x-icon" data-icon="bars"></span>
-    </label>
+    <div id="nav-options">
+      <label class="btn-option" id="btn-up">
+        <span class="x-icon" data-icon="chevron-up"></span>
+      </label>
+      <label class="btn-option" id="btn-settings" style="display:none;">
+        <span class="x-icon" data-icon="gear"></span>
+      </label>
+      <label class="btn-option" id="btn-menu" for="cb-menu">
+        <span class="x-icon" data-icon="bars"></span>
+      </label>
+    </div>
   </div>
   <div id="links" class="stack-vertical page-{{ page.activedLink }}">
     <a data-link="history" class="col-4-until-tablet" href="{{ "/" | relative_url }}">Historia</a>

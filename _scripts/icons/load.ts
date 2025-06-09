@@ -3,6 +3,8 @@ import iShareNodes from './share-nodes.svg';
 import iBookmark from './bookmark.svg';
 import iClipboard from './clipboard.svg';
 import iClipboardCheck from './clipboard-check.svg';
+import iChevronUp from './chevron-up.svg';
+import iGear from './gear.svg';
 
 const icons = {
   bars: iBars,
@@ -10,6 +12,8 @@ const icons = {
   "bookmark": iBookmark,
   "clipboard": iClipboard,
   "clipboard-check": iClipboardCheck,
+  "chevron-up": iChevronUp,
+  "gear": iGear,
 }
 
 export default function(icon: string) {
