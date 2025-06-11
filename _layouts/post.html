@@ -34,7 +34,7 @@ layout: default
             <h1>{{ page.title }}</h1>
             <div id="tags">
                 {% for tag in page.categories %}
-                  <a href="{{ site.baseurl }}/categories/{{ tag }}" class="tag">#{{ tag }}</a>
+                  <a href="{{ site.baseurl }}/categories#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
                 {% endfor %}
             </div>
         </div>

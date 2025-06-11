@@ -84,6 +84,18 @@ small
     color: var(--text-100)
     #links
       &.page-
+        &categories
+          a[data-link=categories]
+            &::before
+              content: '>>>'
+              display: none
+              margin-right: 12px
+            &::after
+              --size: 10px
+              content: ' '
+              display: inline-block
+              border: var(--size) solid transparent
+              border-right-color: var(--bg-100)
         &history
           a[data-link=history]
             &::before

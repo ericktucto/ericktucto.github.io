@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",(function(){["/","/series","/projects","/categories"].indexOf(window.location.pathname)&&(document.querySelector("#message").innerHTML="ESTÁ EN CONSTRUCCIÓN")}));
+document.addEventListener("DOMContentLoaded",(function(){["/","/series","/projects","/categories"].indexOf(window.location.pathname)>=0&&(document.querySelector("#message").innerHTML="ESTÁ EN CONSTRUCCIÓN")}));

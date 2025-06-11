@@ -34,7 +34,7 @@ activedLink: history
           <span>{{ post.title }}</span>
           <small>
             {% for tag in post.categories %}
-                <a href="{{ site.baseurl }}/categories/{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+                <a href="{{ site.baseurl }}/categories#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
             {% endfor %}
           </small>
         </div>

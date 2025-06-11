@@ -1,0 +1,25 @@
+#content
+  line-height: 1.5
+h1
+  text-align: center
+.category
+  margin-left: 12px
+  h3
+    position: relative
+    &:hover:before
+      content: '#'
+      display: block
+      position: absolute
+      left: -1em
+  ul
+    list-style: none
+    li
+      span.list__date
+        color: var(--text-muted)
+      a
+        color: var(--primary-100)
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+        &:visited
+          color: var(--primary-100)

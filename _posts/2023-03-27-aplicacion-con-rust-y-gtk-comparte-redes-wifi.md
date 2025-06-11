@@ -51,7 +51,7 @@ creo hacerlo por ahora.
 Espero que te guste la aplicacion y al auditar el repositorio te ayude a como
 crear aplicaciones con Rust y GTK.
 
-[rust]: {{ site.baseurl }}/categories/rust
+[rust]: {{ site.baseurl }}/categories#rust
 [cambalache]: https://gitlab.gnome.org/jpu/cambalache
 [qrencode]: https://crates.io/crates/qrcode
 [locos]: https://loc-os.com/
