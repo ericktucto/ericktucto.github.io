@@ -4,7 +4,8 @@
 - [X] boton de subir arriba
 - [X] terminar seccion categorias
 - [X] arreglar la pagina 404
-- [ ] terminar seccion proyectos
+- [X] terminar seccion proyectos
+  - [ ] Terminar los articulos de cada proyecto
 - [ ] terminar seccion series
 - [ ] agregar feed RSS
 - [ ] images con lazy loading

@@ -1,7 +1,22 @@
+.pack__cards
+  display: grid
+  grid-template-columns: 400px 400px
+  gap: 12px
+
+@media(max-width: 1024px)
+  .pack__cards
+    grid-template-columns: 1fr
+    justify-items: center
+
+@media(max-width: 1024px) and (min-width: 600px)
+  .pack__cards
+    grid-template-columns: 300px 300px
+    justify-content: center
+
 .card__container
   display: grid
   grid-template-rows: auto 1fr
-  width: 400px
+  width: 394px
   box-sizing: border-box
   .card__image
     width: 100%

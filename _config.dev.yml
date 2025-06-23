@@ -1,3 +1,5 @@
+port: 3030
+host: 0.0.0.0
 author: Erick Tucto
 github: "https://github.com/ericktucto"
 twitter: "https://twitter.com/erick_tucto"
@@ -7,11 +9,3 @@ collections:
     projects:
         output: true
         permalink: /projects/:slug
-markdown: kramdown
-# exclude:
-#   - .git/
-#   - node_modules/
-#   - Gemfile
-#   - Gemfile.lock
-#   - package.json
-#   - package-lock.json

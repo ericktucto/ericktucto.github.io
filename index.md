@@ -24,27 +24,15 @@ activedLink: history
 
 <div id="history" class="grid-12 narrow col-12 items-center">
   {% for post in site.posts %}
-    <div class="card__container shadow">
-      <div class="card__image">
-        <img src="{{ post.image  }}"/>
-      </div>
-      <div class="card__data">
-        <div class="card__date" data-datees='{{ post.date | date: "%-d %B %Y" }}'>{{ post.date | date: "%-d %B %Y" }}</div>
-        <div class="card__title">
-          <span>{{ post.title }}</span>
-          <small>
-            {% for tag in post.categories %}
-                <a href="{{ site.baseurl }}/categories#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
-            {% endfor %}
-          </small>
-        </div>
-        <div class="card__description">
-          <div class="description__sms">{{ post.excerpt | remove: '<strong>' | remove: '</strong>' }}</div>
-          <div class="description__readmore">
-            <a class="btn-primary" href="{{ post.url }}">LEER MÁS</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% assign short_description = post.excerpt | remove: '<strong>' | remove: '</strong>' %}
+    {% assign post_date = post.date | date: "%-d %B %Y" %}
+    {% include templates/card.html
+      title=post.title
+      image=post.image
+      date=post_date
+      categories=post.categories
+      short_description=short_description
+      url=post.url
+    %}
   {% endfor %}
 </div>

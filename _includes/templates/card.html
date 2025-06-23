@@ -1,0 +1,36 @@
+{% comment %}
+  PROPERTIES:
+    - title: string
+    - image: string
+    - btn_text='LEER MÁS'
+    - date: string
+    - categories: string[]
+    - short_description: string
+    - url: Url
+{% endcomment %}
+{% assign text_btn = 'LEER MÁS' %}
+{% if include.btn_text %}
+  {% assign text_btn = include.btn_text %}
+{% endif %}
+<div class="card__container shadow">
+  <div class="card__image">
+    <img src="{{ include.image  }}"/>
+  </div>
+  <div class="card__data">
+    <div class="card__date" data-datees='{{ include.date }}'>{{ include.date }}</div>
+    <div class="card__title">
+      <span>{{ include.title }}</span>
+      <small>
+        {% for category in include.categories %}
+            <a href="/categories#{{ category | slugify }}" class="tag">#{{ category }}</a>
+        {% endfor %}
+      </small>
+    </div>
+    <div class="card__description">
+      <div class="description__sms">{{ include.short_description }}</div>
+      <div class="description__readmore">
+        <a class="btn-primary" href="{{ include.url }}">{{ text_btn }}</a>
+      </div>
+    </div>
+  </div>
+</div>
