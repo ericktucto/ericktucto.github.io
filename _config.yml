@@ -3,7 +3,7 @@ github: "https://github.com/ericktucto"
 twitter: "https://twitter.com/erick_tucto"
 youtube: "https://www.youtube.com/@ericktucto"
 permalink: /:year-:month-:day-:title
-repository: ericktucto/ericktucto.github.io
+#repository: ericktucto/ericktucto.github.io
 collections:
     projects:
         output: true
