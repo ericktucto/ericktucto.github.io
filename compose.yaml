@@ -1,0 +1,17 @@
+# use this file to development
+services:
+  webpack:
+    image: node:24
+    command: npm run hot
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+  jekyll:
+    image: ruby:3.3
+    command: bundle exec jekyll serve --host=0.0.0.0
+    ports:
+      - "4040:4000"
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+      - ./bundle:/usr/local/bundle
