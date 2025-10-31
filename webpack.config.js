@@ -12,7 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, 'assets/js'),
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.scss', '.css', '.svg'],
   },
   module: {
     rules: [
@@ -24,6 +24,17 @@ module.exports = {
       {
         test: /\.svg$/,
         type: 'asset/source',
+      },
+      {
+        test: /\.s?css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader', options: { importLoaders: 1 }
+          },
+          'postcss-loader',
+        ],
+        exclude: /\.module\.s?(c|a)ss$/,
       },
     ],
   },

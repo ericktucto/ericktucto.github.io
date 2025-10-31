@@ -4,6 +4,7 @@ package-lock.json
 
 # Folders
 vendor/
+bundle/
 .sass-cache/
 _site/
 node_modules/

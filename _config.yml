@@ -8,10 +8,12 @@ collections:
         output: true
         permalink: /projects/:slug
 markdown: kramdown
-# exclude:
-#   - .git/
-#   - node_modules/
-#   - Gemfile
-#   - Gemfile.lock
-#   - package.json
-#   - package-lock.json
+exclude:
+    - vendor/
+    - bundle/
+    - .git/
+    - node_modules/
+    - Gemfile
+    - Gemfile.lock
+    - package.json
+    - package-lock.json
