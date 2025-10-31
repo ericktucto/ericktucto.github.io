@@ -1,7 +1,3 @@
-# Files
-Gemfile.lock
-package-lock.json
-
 # Folders
 vendor/
 bundle/
