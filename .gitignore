@@ -4,3 +4,4 @@ bundle/
 .sass-cache/
 _site/
 node_modules/
+/assets/js/
