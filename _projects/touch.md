@@ -6,6 +6,7 @@ slug: touch
 release: "alpha-1"
 categories: ["php", "framework", "project"]
 image: https://i.postimg.cc/J0383Xdc/web.jpg
+imageDescription: 'Una ventana generica'
 ---
 
 **Este es un pequeño microframework en php, para la creacion de aplicaciones web.
