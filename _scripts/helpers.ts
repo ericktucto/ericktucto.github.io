@@ -25,8 +25,12 @@ export function copy(
       if (onCopy) {
         onCopy(evt, $span, text());
       } else {
-        $span.innerHTML = clipboardchecksvg;
-        setTimeout(() => { $span.innerHTML = clipboardsvg }, 1000);
+        $span.innerHTML = '';
+        $span.appendChild(clipboardchecksvg);
+        setTimeout(() => {
+          $span.innerHTML = '';
+          $span.appendChild(clipboardsvg);
+        }, 1000);
       }
     })
 }

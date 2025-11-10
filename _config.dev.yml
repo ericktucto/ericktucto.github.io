@@ -1,11 +1,26 @@
-port: 3030
-host: 0.0.0.0
 author: Erick Tucto
 github: "https://github.com/ericktucto"
 twitter: "https://twitter.com/erick_tucto"
 youtube: "https://www.youtube.com/@ericktucto"
 permalink: /:year-:month-:day-:title
+url: "https://page.stixcode.icu"
+baseurl: ""
+host: 0.0.0.0
+livereload: true
+repository: ericktucto/ericktucto.github.io
 collections:
     projects:
         output: true
         permalink: /projects/:slug
+markdown: kramdown
+plugins:
+    - jekyll-feed
+exclude:
+    - vendor/
+    - bundle/
+    - .git/
+    - node_modules/
+    - Gemfile
+    - Gemfile.lock
+    - package.json
+    - package-lock.json

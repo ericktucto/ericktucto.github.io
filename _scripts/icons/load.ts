@@ -16,6 +16,11 @@ const icons = {
   "gear": iGear,
 }
 
-export default function(icon: string) {
-  return icons[icon];
+export default function (icon: string, size: string = '24px') {
+  const svg = document.createElement('span');
+  svg.innerHTML = icons[icon];
+  const i = svg.querySelector('svg')
+  i.classList.add('inline-block')
+  i.classList.add(`size-[${size}]`)
+  return i;
 }

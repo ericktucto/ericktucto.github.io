@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (el.children.length > 0) {
         return;
       }
-      el.innerHTML = load(el.dataset.icon);
+      el.appendChild(load(el.dataset.icon));
       if (el.dataset.click) {
         copy(el)
       }
@@ -36,14 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
     .forEach((el: HTMLElement) => {
       const $span = document.createElement("span");
       const text = el.innerText;
-      $span.innerHTML = clipboardsvg
+      $span.appendChild(clipboardsvg);
       $span.classList.add("x-icon");
       $span.dataset.icon = "clipboard";
       el.appendChild($span);
       new ClipboardJS(el, { text: () => text })
         .on('success', (_) => {
-          $span.innerHTML = clipboardchecksvg;
-          setTimeout(() => { $span.innerHTML = clipboardsvg }, 1000);
+          $span.innerHTML = '';
+          $span.appendChild(clipboardchecksvg);
+          setTimeout(() => {
+            $span.innerHTML = '';
+            $span.appendChild(clipboardsvg);
+          }, 1000);
         })
     });
   document.querySelectorAll("*[data-imagebb]").forEach((e) => {

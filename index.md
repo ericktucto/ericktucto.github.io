@@ -11,7 +11,7 @@ activedLink: history
     alt="una foto de @ericktucto sosteniendo unos cubos rubik"
   />
   <div class="mt-[20px]">
-    <h3><strong>Erick Tucto</strong></h3>
+    <h1><strong>Erick Tucto</strong></h1>
     <p><em>Full Stack Developer · PHP · JavaScript · Linux · Docker</em></p>
     <br>
     <p>Soy <strong>Erick Tucto</strong>, programador y desarrollador web.</p>
@@ -25,7 +25,7 @@ activedLink: history
 <div class="br-bg"></div>
 
 <div class="super-title">
-  <h1>Publicaciones</h1>
+  <h1>Changelog</h1>
 </div>
 
 <div id="history">

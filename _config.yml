@@ -11,6 +11,8 @@ collections:
         output: true
         permalink: /projects/:slug
 markdown: kramdown
+plugins:
+    - jekyll-feed
 exclude:
     - vendor/
     - bundle/
