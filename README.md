@@ -5,9 +5,10 @@
 - [X] terminar seccion categorias
 - [X] arreglar la pagina 404
 - [X] terminar seccion proyectos
-  - [ ] Terminar los articulos de cada proyecto
+  - [X] Terminar los articulos de cada proyecto
 - [ ] terminar seccion series
-- [ ] agregar feed RSS
+- [X] agregar feed RSS
+- [X] agregar footer
 - [ ] images con lazy loading
 - [ ] cargar solo los iconos necesarios
 - [ ] funcion de guardar

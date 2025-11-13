@@ -1,5 +1,6 @@
 ---
 layout: projects
+name: Tic Tac Server
 github: https://github.com/ericktucto/tictacserver
 title: "Servidor websocket para jugar Tic Tac"
 slug: tictac

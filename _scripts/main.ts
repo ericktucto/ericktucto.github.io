@@ -1,4 +1,4 @@
-import 'tailwindcss/index.css';
+import './styles.scss';
 import { monthToSpanish } from './src/utils/datetime';
 import load from './icons/load';
 import * as ClipboardJS from 'clipboard';
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (el.children.length > 0) {
         return;
       }
-      el.appendChild(load(el.dataset.icon));
+      el.appendChild(load(el.dataset.icon, el.dataset.size));
       if (el.dataset.click) {
         copy(el)
       }
@@ -52,5 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   document.querySelectorAll("*[data-imagebb]").forEach((e) => {
     console.log(e)
+  })
+  document.querySelector("#loginform").addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("pronto", e)
   })
 })

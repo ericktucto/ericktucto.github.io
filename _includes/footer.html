@@ -1,46 +1,36 @@
-<footer class="grid-12 col-12">
-    <div class="col-12-until-tablet col-4-from-desktop narrow">
-        <div class="col-all section">Stix Code:</div>
-        <div class="line"></div>
-        <div class="col-all content">
-            Es un pequeño projecto donde expresaré todos mis conocimientos sobre el mundo de la programación
-        </div>
+<footer class="py-[36px] px-[20px] border-t-1 border-(--bg-300)">
+  <div class="flex justify-around flex-col min-[1212px]:flex-row gap-8">
+    <form id="loginform" class="grid items-center justify-center">
+      <div class="flex">
+        <input type="email" required placeholder="Ingresa tu email" name="email" aria-label="Ingresa tu email para iniciar sesión" class="bg-white px-2 py-1 h-[40px] border-1 border-(--bg-300)"/>
+        <button class="btn-primary">Ingresar</button>
+      </div>
+    </form>
+    <div class="min-w-[200px]">
+      <h2 class="border-b-1 border-(--bg-300) pb-2 mb-2"><strong>Proyectos</strong></h2>
+      <ul>
+        {% for project in site.projects %}
+          {% capture url %}/projects/{{ project.slug }}{% endcapture %}
+          <li><a class="text-primary-100 hover:underline" href="{{ url }}">{{ project.name }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
-    <div class="offset-1 hide-until-tablet"></div>
-    <div class="col-12-until-tablet col-3-from-desktop narrow">
-        <div class="col-all section">Proyectos:</div>
-        <div class="line"></div>
-        <div class="col-all content">
-            <div class="col-all"><a href="#">Stix GRID</a></div>
-            <div class="col-all"><a href="#">Powerline Xonsh</a></div>
-            <div class="col-all"><a href="#">Theme Stix</a></div>
-        </div>
+    <div>
+      <h2 class="border-b-1 border-(--bg-300) pb-2 mb-2"><strong>Contacto</strong></h2>
+      <ul>
+        <li><strong>Correo:</strong> <a class="text-primary-100 hover:underline" href="mailto:erick@ericktucto.com">erick@ericktucto.com</a></li>
+      </ul>
     </div>
-    <div class="col-1 hide-until-tablet"></div>
-    <div class="col-12-until-tablet col-3-from-desktop narrow">
-        <div class="col-all section">Social:</div>
-        <div class="line"></div>
-        <div class="col-all content">
-            <ul class="list-group no-hover">
-                <li class="icon24">
-                    <a href="{{ site.github }}" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="icon24">
-                    <a href="{{ site.youtube }}" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-                <li class="icon24">
-                    <a href="{{ site.twitter }}" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div class="flex gap-2 mt-4">
+      <a href="{{ site.github }}" class="size-[36px] grid items-center justify-center border-1 border-(--bg-300) rounded-full">
+        <span class="x-icon text-center" data-icon="github" data-size="16px"></span>
+      </a>
+      <a href="{{ site.youtube }}" class="size-[36px] grid items-center justify-center border-1 border-(--bg-300) rounded-full">
+        <span class="x-icon text-center" data-icon="youtube" data-size="16px"></span>
+      </a>
+      <a href="{{ "/feed.xml" | absolute_url }}" class="size-[36px] grid items-center justify-center border-1 border-(--bg-300) rounded-full">
+        <span class="x-icon text-center" data-icon="rss" data-size="16px"></span>
+      </a>
     </div>
+  </div>
 </footer>
-<div id="all" class="col-all">
-    Creado por <a href="{{ site.github }}">@ErickTucto</a> con <a href="https://github.com/ErickTucto/stix-grid" target="_blank">Stix GRID</a>
-</div>

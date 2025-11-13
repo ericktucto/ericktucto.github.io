@@ -5,6 +5,9 @@ import iClipboard from './clipboard.svg';
 import iClipboardCheck from './clipboard-check.svg';
 import iChevronUp from './chevron-up.svg';
 import iGear from './gear.svg';
+import iRss from './rss.svg';
+import iYoutube from './youtube.svg';
+import iGithub from './github.svg';
 
 const icons = {
   bars: iBars,
@@ -14,6 +17,9 @@ const icons = {
   "clipboard-check": iClipboardCheck,
   "chevron-up": iChevronUp,
   "gear": iGear,
+  rss: iRss,
+  youtube: iYoutube,
+  github: iGithub,
 }
 
 export default function (icon: string, size: string = '24px') {
@@ -22,5 +28,7 @@ export default function (icon: string, size: string = '24px') {
   const i = svg.querySelector('svg')
   i.classList.add('inline-block')
   i.classList.add(`size-[${size}]`)
+  i.style.width = size;
+  i.style.height = size;
   return i;
 }
