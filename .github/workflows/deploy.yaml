@@ -38,8 +38,11 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - name: Configure bundler
+        run: bundler config set without 'development'
+
       - name: Install Gem dependencies
-        run: bundle install --without development
+        run: bundle install
 
       # Configurar GitHub Pages Action
       - name: Configure GitHub Pages
