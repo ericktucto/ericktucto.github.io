@@ -12,6 +12,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+<meta name="description" content="Blog personal de Erick Tucto - Senior Full-Stack Software Engineer, Web & Backend Solutions, especializado en PHP, JavaScript, Linux y Docker. Proyectos, tutoriales y más.">
+<meta property="og:title" content="@ErickTucto | Mi Blog">
+<meta property="og:description" content="Blog personal de Erick Tucto - Senior Full-Stack Software Engineer">
+<meta property="og:image" content="{{ '/assets/img/perfil.jpg' | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="Erick Tucto – Feed" href="{{ "/feed.xml" | absolute_url }}">
 <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
-<title>@ErickTucto | Mi Blog</title>
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | absolute_url }}">
+<title>{% if page.title %}{{ page.title }}{% else %}Erick Tucto - Senior Full-Stack Software Engineer | Blog de programación y tecnología{% endif %}</title>

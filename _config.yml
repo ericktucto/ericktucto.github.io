@@ -3,7 +3,7 @@ github: "https://github.com/ericktucto"
 twitter: "https://twitter.com/erick_tucto"
 youtube: "https://www.youtube.com/@ericktucto"
 permalink: /:year-:month-:day-:title
-#url: "https://ericktucto.com"
+url: "https://ericktucto.com"
 baseurl: ""
 repository: ericktucto/ericktucto.github.io
 collections:
@@ -13,6 +13,7 @@ collections:
 markdown: kramdown
 plugins:
     - jekyll-feed
+    - jekyll-sitemap
 exclude:
     - vendor/
     - bundle/
