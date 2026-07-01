@@ -33,6 +33,19 @@ activedLink: history
   </div>
 </div>
 
+<div id="technologies">
+  <div class="marquee">
+    <span class="x-icon" data-size="92px" data-icon="laravel"></span>
+    <span class="x-icon" data-size="92px" data-icon="vue"></span>
+    <span class="x-icon" data-size="92px" data-icon="python"></span>
+    <span class="x-icon" data-size="92px" data-icon="react"></span>
+    <span class="x-icon" data-size="92px" data-icon="typescript"></span>
+    <span class="x-icon" data-size="92px" data-icon="nodejs"></span>
+    <span class="x-icon" data-size="92px" data-icon="javascript"></span>
+    <span class="x-icon" data-size="92px" data-icon="symfony"></span>
+  </div>
+</div>
+
 <div class="br-bg"></div>
 
 <div class="super-title">

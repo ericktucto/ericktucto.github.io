@@ -13,6 +13,43 @@
   img
     width: var(--width-image)
 
+#technologies
+  margin: 48px 0
+  display: flex
+  gap: 12px
+
+  max-width: 860px
+  width: 100%
+  overflow: hidden
+  position: relative
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)
+  .marquee
+    display: flex
+    width: max-content
+    animation: scroll 22s linear infinite
+    span.x-icon
+      flex-shrink: 0
+      margin: 0 24px
+      width: 92px
+      color: var(--text-muted)
+      fill: var(--text-muted)
+
+  &:hover .marquee
+    animation-play-state: paused
+
+@keyframes scroll
+  from
+    transform: translateX(0)
+  to
+    transform: translateX(-50%)
+
+@media (prefers-reduced-motion: reduce)
+  #technologies .marquee
+    animation: none
+    flex-wrap: wrap
+    justify-content: center
+
 #history
   display: grid
   grid-template-columns: 400px 400px

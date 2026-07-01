@@ -8,9 +8,25 @@ import iGear from './gear.svg';
 import iRss from './rss.svg';
 import iYoutube from './youtube.svg';
 import iGithub from './github.svg';
+import iJavascript from './javascript.svg';
+import iLaravel from './laravel.svg';
+import iNodejs from './nodejs.svg';
+import iPython from './python.svg';
+import iReact from './react.svg';
+import iSymfony from './symfony.svg';
+import iTypescript from './typescript.svg';
+import iVue from './vue.svg';
 
 const icons = {
   bars: iBars,
+  javascript: iJavascript,
+  laravel: iLaravel,
+  nodejs: iNodejs,
+  python: iPython,
+  react: iReact,
+  symfony: iSymfony,
+  typescript: iTypescript,
+  vue: iVue,
   "share-nodes": iShareNodes,
   "bookmark": iBookmark,
   "clipboard": iClipboard,
