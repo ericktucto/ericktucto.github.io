@@ -27,11 +27,17 @@ importers:
       autoprefixer:
         specifier: ^10.4.21
         version: 10.5.2(postcss@8.5.16)
+      css-loader:
+        specifier: ^7.1.4
+        version: 7.1.4(webpack@5.108.3)
+      mini-css-extract-plugin:
+        specifier: ^2.10.2
+        version: 2.10.2(webpack@5.108.3)
       postcss:
         specifier: ^8.5.6
         version: 8.5.16
       postcss-loader:
-        specifier: ^8.2.0
+        specifier: ^8.2.1
         version: 8.2.1(postcss@8.5.16)(typescript@5.9.3)(webpack@5.108.3)
       style-loader:
         specifier: ^4.0.0
@@ -536,6 +542,18 @@ packages:
     peerDependencies:
       webpack: ^4.27.0 || ^5.0.0
 
+  css-loader@7.1.4:
+    resolution: {integrity: sha512-vv3J9tlOl04WjiMvHQI/9tmIrCxVrj6PFbHemBB1iihpeRbi/I4h033eoFIhwxBBqLhI0KYFS7yvynBFhIZfTw==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || ^1.0.0 || ^2.0.0-0
+      webpack: ^5.27.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
+
   cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
@@ -943,6 +961,12 @@ packages:
     resolution: {integrity: sha512-tqkh47FzKeCPD2PUiPB6pkbMzsCasjxAfC62/Wap5qrUWcb+sFasXUC5I3gYM5iBM8v/Qpn4UK0x+j0iHyFPDg==}
     engines: {node: '>=4.0.0'}
     hasBin: true
+
+  mini-css-extract-plugin@2.10.2:
+    resolution: {integrity: sha512-AOSS0IdEB95ayVkxn5oGzNQwqAi2J0Jb/kKm43t7H73s8+f5873g0yuj0PNvK4dO75mu5DHg4nlgp4k6Kga8eg==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
 
   minimatch@3.1.5:
     resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
@@ -1931,6 +1955,19 @@ snapshots:
       semver: 7.8.5
       webpack: 5.108.3(postcss@8.5.16)(webpack-cli@6.0.1)
 
+  css-loader@7.1.4(webpack@5.108.3):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.5.16)
+      postcss: 8.5.16
+      postcss-modules-extract-imports: 3.1.0(postcss@8.5.16)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.16)
+      postcss-modules-scope: 3.2.1(postcss@8.5.16)
+      postcss-modules-values: 4.0.0(postcss@8.5.16)
+      postcss-value-parser: 4.2.0
+      semver: 7.8.5
+    optionalDependencies:
+      webpack: 5.108.3(postcss@8.5.16)(webpack-cli@6.0.1)
+
   cssesc@3.0.0: {}
 
   cuint@0.2.2: {}
@@ -2239,6 +2276,12 @@ snapshots:
   mime-db@1.54.0: {}
 
   mime@2.5.2: {}
+
+  mini-css-extract-plugin@2.10.2(webpack@5.108.3):
+    dependencies:
+      schema-utils: 4.3.3
+      tapable: 2.3.3
+      webpack: 5.108.3(postcss@8.5.16)(webpack-cli@6.0.1)
 
   minimatch@3.1.5:
     dependencies:

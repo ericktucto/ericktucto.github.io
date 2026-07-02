@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@source "../_layouts/**/*.html";
+@source "../_includes/**/*.html";
+@source "../*.md";
+@source "../_posts/**/*.md";
+@source "../_projects/**/*";
+
 @theme {
   --color-primary-100: #3498DB;
   --color-primary-200: #007cbd;
