@@ -5,3 +5,4 @@ bundle/
 _site/
 node_modules/
 /assets/js/
+/assets/css/
