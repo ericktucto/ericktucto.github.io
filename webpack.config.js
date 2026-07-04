@@ -58,6 +58,12 @@ module.exports = {
     }),
   ],
   watchOptions: {
-    ignored: ['**/node_modules', '**/_site/**', '**/assets/js/**', '**/assets/css/**'],
+    ignored: [
+      '**/node_modules',
+      '**/_site/**',
+      '**/assets/js/**',
+      '**/assets/css/**',
+      '**/.git/**',
+    ],
   },
 };
