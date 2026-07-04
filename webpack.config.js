@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
   entry: {
@@ -27,13 +28,22 @@ module.exports = {
         type: 'asset/source',
       },
       {
-        test: /\.s?css$/,
+        test: /\.s[ac]ss$/,   // matchea .sass Y .scss
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 2 } },
+          'postcss-loader',
+          'sass-loader',        // detecta .sass=indentado, .scss=llaves por la extensión
+        ],
+        exclude: /\.module\.s[ac]ss$/,
+      },
+      {
+        test: /\.css$/,        // Tailwind, sin sass-loader
         use: [
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
         ],
-        exclude: /\.module\.s?(c|a)ss$/,
       },
     ],
   },
@@ -41,5 +51,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '../css/[name].css',
     }),
+    new WebpackNotifierPlugin({
+      title: 'Webpack',
+      alwaysNotify: true,
+      contentImage: undefined,
+    }),
   ],
+  watchOptions: {
+    ignored: ['**/node_modules', '**/_site/**', '**/assets/js/**', '**/assets/css/**'],
+  },
 };

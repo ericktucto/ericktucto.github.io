@@ -1,4 +1,5 @@
-import './styles.css';
+import './tailwind.css';
+import './styles.sass';
 import { monthToSpanish } from './src/utils/datetime';
 import load from './icons/load';
 import * as ClipboardJS from 'clipboard';

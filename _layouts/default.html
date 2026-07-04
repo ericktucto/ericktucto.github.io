@@ -2,14 +2,13 @@
 <html lang="es">
 <head>
     {% include head.html %}
-    <link rel="stylesheet" href="{{ "/assets/css/common.css" | relative_url }}" />
 </head>
 <body>
   <div id="main-container">
-    <div id="content-page" class="grid grid-col-1 w-full h-screen overflow-x-scroll">
-      <div class="justify-self-center">
+    <div id="content-page" class="grid grid-col-1">
+      <main class="mt md:mt-[54px]">
         {{ content }}
-      </div>
+      </main>
       {% include footer.html %}
     </div>
     {% include navbar.html %}

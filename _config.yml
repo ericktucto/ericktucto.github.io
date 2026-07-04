@@ -15,6 +15,7 @@ plugins:
     - jekyll-feed
     - jekyll-sitemap
 exclude:
+    - _scripts
     - vendor/
     - bundle/
     - .git/
@@ -23,3 +24,7 @@ exclude:
     - Gemfile.lock
     - package.json
     - package-lock.json
+
+keep_files:
+  - assets/js
+  - assets/css
