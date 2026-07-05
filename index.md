@@ -10,7 +10,7 @@ activedLink: history
       <div class="relative flex justify-center items-center">
         <img
           class="z-10 border-primary-300 border-4 size-[300px] animate-(--profile-morph) rounded-[30%_70%_70%_30%/30%_30%_70%_70%]"
-          src="{{ '/assets/img/perfil_300x300.webp' | relative_url }} "
+          src="{{ '/assets/img/perfil_600x600.webp' | relative_url }} "
           alt="una foto de @ericktucto sosteniendo unos cubos rubik"
         />
         <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="" class="block min-[800px]:hidden hero-bg" aria-hidden="true" fetchpriority="high" />
