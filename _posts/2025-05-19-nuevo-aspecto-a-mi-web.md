@@ -4,6 +4,7 @@ title: 'Nuevo aspecto a mi web'
 categories: ['changelog']
 videoId: '8KCEQpg65aw'
 image: https://i.postimg.cc/J0383Xdc/web.jpg
+alt_image: 'Mouse haciendo click en pagina web'
 dateModified: '2025-05-19'
 activedLink: history
 excerpt_separator: <!--more-->

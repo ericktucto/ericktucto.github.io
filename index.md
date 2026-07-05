@@ -4,7 +4,7 @@ activedLink: history
 ---
 
 <div id="presentation" class="relative md:h-[800px] grid place-items-center">
-  <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="" class="hero-bg hidden min-[800px]:block" aria-hidden="true" />
+  <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="" class="hero-bg hidden min-[800px]:block" aria-hidden="true" fetchpriority="high" />
   <div class="relative flex justify-center w-full">
     <div class="grid grid-cols-1 min-[800px]:grid-cols-[300px_auto] min-[800px]:px-0 gap-5 max-w-[800px]">
       <div class="relative flex justify-center items-center">
@@ -13,7 +13,7 @@ activedLink: history
           src="{{ '/assets/img/perfil.png' | relative_url }} "
           alt="una foto de @ericktucto sosteniendo unos cubos rubik"
         />
-        <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="" class="block min-[800px]:hidden hero-bg" aria-hidden="true" />
+        <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="" class="block min-[800px]:hidden hero-bg" aria-hidden="true" fetchpriority="high" />
       </div>
       <div class="mx-8 min-[800px]:mx-0 px-4 rounded-lg hero-content">
         <h1>
@@ -71,6 +71,7 @@ activedLink: history
       {% include templates/card.html
         title=post.title
         image=post.image
+        alt_image=post.alt_image
         date=post_date
         categories=post.categories
         short_description=short_description

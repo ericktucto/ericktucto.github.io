@@ -8,8 +8,8 @@
 
 @theme {
   --profile-morph: profile-morph 9s ease-in-out infinite;
-  --color-primary-100: #3498DB;
-  --color-primary-200: #007cbd;
+  --color-primary-100: #1f7ab5;
+  --color-primary-200: #0059a8;
   --color-primary-300: #004079;
   --color-accent-100: #E74C3C;
   --color-accent-200: #ffe6c7;
@@ -18,7 +18,7 @@
   --text-200: #ced1d2;
   --text-300: #2C2C2C;
   --text-400: #4A4A4A;
-  --text-muted: #999988;
+  --text-muted: #5C5C4D;
   --bg-100: #F5F5DC;
   --bg-200: #EBEBD3;
   --bg-300: #D9D9C2;

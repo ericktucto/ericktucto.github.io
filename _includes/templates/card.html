@@ -2,6 +2,8 @@
   PROPERTIES:
     - title: string
     - image: string
+    - alt_image: string
+    - short_description: string
     - btn_text='LEER MÁS'
     - date: string
     - categories: string[]
@@ -14,7 +16,7 @@
 {% endif %}
 <div class="card__container shadow">
   <div class="card__image">
-    <img src="{{ include.image  }}"/>
+    <img src="{{ include.image  }}" alt="{{ alt_image }}"/>
   </div>
   <div class="card__data">
     <div class="card__date" data-datees='{{ include.date }}'>{{ include.date }}</div>
@@ -29,7 +31,7 @@
     <div class="card__description">
       <div class="description__sms">{{ include.short_description }}</div>
       <div class="description__readmore">
-        <a class="btn-primary" href="{{ include.url }}">{{ text_btn }}</a>
+        <a class="btn-primary" href="{{ include.url }}" aria-label="Leer el artículo, {{ include.title }}">{{ text_btn }}</a>
       </div>
     </div>
   </div>
