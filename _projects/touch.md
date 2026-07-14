@@ -1,6 +1,8 @@
 ---
 layout: projects
 name: Touch
+featured: true
+order: 2
 github: https://github.com/ericktucto/touch
 title: "Touch: microframework php para aplicaciones web"
 slug: touch

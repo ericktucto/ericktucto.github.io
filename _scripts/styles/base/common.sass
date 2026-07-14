@@ -20,16 +20,13 @@ span.x-icon
   display: grid
   width: 100%
 
-.title,
-h1
+.title
   font-size: var(--title-size)
   font-weight: bold
-.subtitle,
-h3
+.subtitle
   font-size: var(--subtitle-size)
   font-weight: bold
-.paragraph,
-p
+.paragraph
   font-size: var(--paragraph-size)
   font-weight: normal
 .small-note,
@@ -52,16 +49,6 @@ small
   border-bottom: 1px solid var(--bg-300)
   margin: var(--br-margin-x) 0
 
-.btn-primary
-  height: 40px
-  box-sizing: border-box
-  color: var(--btn-text)
-  background: var(--primary-300)
-  padding: 8px 12px
-  text-decoration: none
-  border: none
-  border-radius: 0
-
 %link-arrow
   @media(min-width: 1024px)
     border-bottom: 2px solid white
@@ -80,6 +67,7 @@ small
     right: 0
     display: grid
     grid-template-columns: 1fr auto 1fr
+    height: 54px
     h2
       font-size: var(--middle-text-size)
     #cb-menu
@@ -118,6 +106,10 @@ small
     margin-bottom: 24px
   h3
     margin-top: 24px
+  #stack
+    h3
+      margin-top: 0
+
 #menu-toggle
   padding: 12px 16px
   #nav-options

@@ -7,13 +7,10 @@ import { copy } from './helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector("#btn-up").addEventListener("click", () => {
-    const targetElement: HTMLDivElement = document.querySelector("#content-page");
-    if (targetElement) {
-      targetElement.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
   document.querySelectorAll("*[data-datees]").forEach((el: HTMLElement) => {
     monthToSpanish(el)
@@ -53,9 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   document.querySelectorAll("*[data-imagebb]").forEach((e) => {
     console.log(e)
-  })
-  document.querySelector("#loginform").addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log("pronto", e)
   })
 })

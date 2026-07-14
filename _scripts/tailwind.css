@@ -55,17 +55,20 @@
   object-fit: cover;
   z-index: 0;
   pointer-events: none;
-  mask-image: radial-gradient(ellipse 60% 80% at center,
-              transparent 30%, black 70%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 80% at center,
-              transparent 30%, black 70%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,.35) 60%, #000 100%);
+          mask-image: linear-gradient(to right, transparent 0%, transparent 40%, rgba(0,0,0,.35) 60%, #000 100%);
 }
-.hero-content {
-  background: color-mix(in srgb, var(--bg-100) 92%, transparent);
-  backdrop-filter: blur(3px);        /* difumina las olas detrás → premium */
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 8px 32px rgba(44,62,80,.12);
+.btn-primary {
+  @apply bg-primary-300 text-white px-6 py-3 rounded-lg font-semibold transition;
+}
+.btn-primary:hover {
+  @apply bg-primary-200;
+}
+.btn-outline {
+  @apply border-2 border-primary-300 text-primary-300 px-6 py-3 rounded-lg font-semibold transition;
+}
+.btn-outline:hover {
+  @apply bg-primary-300 text-white;
 }
 .hero svg { --wave-color: #0a5fa8; }  /* o el que quieras */
 

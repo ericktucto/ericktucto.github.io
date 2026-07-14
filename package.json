@@ -12,6 +12,7 @@
     "@types/youtube-player": "^5.5.11",
     "astroturf": "^1.2.0",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^10.0.3",
     "css-loader": "^7.1.4",
     "mini-css-extract-plugin": "^2.10.2",
     "postcss": "^8.5.6",
@@ -31,7 +32,7 @@
     "build": "webpack --config webpack.config.js --mode=development",
     "hot": "npm run build -- --watch",
     "production": "webpack --config webpack.config.js --mode=production",
-    "dev": "npm run hot | npm run server"
+    "dev": "concurrently \"npm run hot\" \"npm run server\""
   },
   "keywords": [],
   "author": "Erick Tucto",

@@ -1,0 +1,39 @@
+- badge: "2024 – 2025"
+  cargo: "Full-Stack Developer"
+  empresa: "Novasoft"
+  periodo: "Enero 2024 – Diciembre 2025"
+  #stack: "Symfony + Vue"
+  descripcion: >-
+    Desarrollo backend con Symfony y construcción de interfaces dinámicas con Vue.
+    Implementación de pruebas automatizadas y desarrollo de servicios backend con Node.js.
+  logros:
+    - "Desarrollo backend con Symfony"
+    - "Construcción de interfaces dinámicas con Vue"
+    - "Implementación de pruebas automatizadas"
+    - "Desarrollo de servicios backend con Node.js"
+
+- badge: "2023"
+  cargo: "Desarrollador PHP"
+  empresa: "Grupo JB System"
+  periodo: "Enero 2023 – Diciembre 2023"
+  descripcion: >-
+    Desarrollo y mantenimiento de sistemas internos en PHP, con foco en la
+    optimización de consultas y la mejora del rendimiento general.
+  logros:
+    - "Desarrollo y mantenimiento de sistemas internos en PHP"
+    - "Optimización de consultas y mejora de rendimiento"
+
+- badge: "2016 – 2022"
+  cargo: "Full-Stack Developer"
+  empresa: "Technoglobal INC"
+  periodo: "Abril 2016 – Diciembre 2022"
+  #stack: "Laravel + Vue"
+  descripcion: >-
+    Desarrollo de aplicaciones web con Laravel y Vue, integración de APIs REST
+    y automatización de procesos de testing y despliegue.
+  logros:
+    - "Desarrollo de aplicaciones web con Laravel + Vue"
+    - "Implementación de APIs REST"
+    - "Automatización de pruebas con PHPUnit"
+    - "Mantenimiento y optimización de bases de datos MySQL"
+    - "Implementación de entornos Docker para desarrollo"

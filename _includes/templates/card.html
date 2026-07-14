@@ -7,32 +7,52 @@
     - btn_text='LEER MÁS'
     - date: string
     - categories: string[]
-    - short_description: string
     - url: Url
 {% endcomment %}
-{% assign text_btn = 'LEER MÁS' %}
-{% if include.btn_text %}
-  {% assign text_btn = include.btn_text %}
-{% endif %}
-<div class="card__container shadow">
-  <div class="card__image">
-    <img src="{{ include.image  }}" alt="{{ alt_image }}"/>
+{% assign text_btn = include.btn_text | default: 'LEER MÁS' %}
+
+<article class="flex h-full flex-col overflow-hidden rounded-xl border border-(--bg-300)
+                bg-(--bg-200) transition hover:-translate-y-1 hover:shadow-lg">
+
+  <img src="{{ include.image }}" alt="{{ include.alt_image }}" loading="lazy"
+       class="aspect-video w-full object-cover"/>
+
+  <div class="flex min-w-0 flex-1 flex-col p-5">
+
+    <time datetime="{{ include.date }}" class="text-(length:--small-size) text-(--text-muted)">
+      {{ include.date }}
+    </time>
+
+    <h3 class="mt-2 text-(length:--middle-text-size) font-bold leading-snug text-(--text-300)">
+      {{ include.title }}
+    </h3>
+
+    {% if include.categories %}
+    <ul class="mt-3 flex flex-wrap gap-x-2 gap-y-1">
+      {% for category in include.categories %}
+      <li>
+        <a href="/categories#{{ category | slugify }}"
+           class="block rounded border border-primary-100/30 px-2 py-0.5
+                  text-(length:--small-size) text-primary-100 transition
+                  hover:border-primary-300 hover:text-primary-300">
+          {{ category }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p class="mt-4 mb-6 text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
+      {{ include.short_description }}
+    </p>
+
+    <a href="{{ include.url }}" aria-label="Leer el artículo, {{ include.title }}"
+       class="mt-auto flex items-center justify-center gap-2 rounded-lg bg-primary-300
+              px-4 py-2.5 text-(length:--small-size) font-semibold text-(--text-100)
+              transition hover:bg-primary-200">
+      <span>{{ text_btn }}</span>
+      {% include icon.html class="h-4 w-4" %}
+    </a>
+
   </div>
-  <div class="card__data">
-    <div class="card__date" data-datees='{{ include.date }}'>{{ include.date }}</div>
-    <div class="card__title">
-      <span>{{ include.title }}</span>
-      <small>
-        {% for category in include.categories %}
-            <a href="/categories#{{ category | slugify }}" class="tag">#{{ category }}</a>
-        {% endfor %}
-      </small>
-    </div>
-    <div class="card__description">
-      <div class="description__sms">{{ include.short_description }}</div>
-      <div class="description__readmore">
-        <a class="btn-primary" href="{{ include.url }}" aria-label="Leer el artículo, {{ include.title }}">{{ text_btn }}</a>
-      </div>
-    </div>
-  </div>
-</div>
+</article>

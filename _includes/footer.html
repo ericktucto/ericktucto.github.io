@@ -1,36 +1,125 @@
-<footer class="py-[36px] px-[20px] border-t-1 border-(--bg-300)">
-  <div class="flex justify-around flex-col min-[1212px]:flex-row gap-8">
-    <form id="loginform" class="grid items-center justify-center">
-      <div class="flex">
-        <input type="email" required placeholder="Ingresa tu email" name="email" aria-label="Ingresa tu email para iniciar sesión" class="bg-white px-2 py-1 h-[40px] border-1 border-(--bg-300)"/>
-        <button class="btn-primary">Ingresar</button>
+<footer class="border-t border-(--bg-300) bg-(--bg-200)">
+  <div class="mx-auto max-w-6xl px-6 py-16">
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
+
+      <!-- Marca + social -->
+      <div class="flex flex-col gap-5">
+        <div>
+          <a href="/" class="text-(length:--middle-text-size) font-bold text-primary-300">
+            {{ site.author }}
+          </a>
+          <p class="mt-2 max-w-sm text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
+            Full Stack Developer. Construyo software escalable con PHP, Vue y Docker
+            desde Perú, para el mundo.
+          </p>
+        </div>
+
+        <ul class="flex gap-3">
+          {% assign redes = "github,linkedin,youtube,tiktok" | split: "," %}
+          {% for red in redes %}
+            {% assign url = site[red] %}
+            {% if url %}
+            <li>
+              <a href="{{ url }}" target="_blank" rel="noopener noreferrer"
+                 aria-label="Visita mi perfil de {{ red }}"
+                 class="grid size-10 place-items-center rounded-full border border-(--bg-300)
+                        bg-(--bg-100) text-(--text-400) transition
+                        hover:border-primary-300 hover:bg-primary-300 hover:text-(--text-100)">
+                {% include icon.html class="h-4 w-4" %}
+              </a>
+            </li>
+            {% endif %}
+          {% endfor %}
+          <li>
+            <a href="{{ "/feed.xml" | absolute_url }}"
+               aria-label="Suscríbete al feed RSS"
+               class="grid size-10 place-items-center rounded-full border border-(--bg-300)
+                      bg-(--bg-100) text-(--text-400) transition
+                      hover:border-accent-100 hover:bg-accent-100 hover:text-(--text-100)">
+              {% include icon.html class="h-4 w-4" %}
+            </a>
+          </li>
+        </ul>
       </div>
-    </form>
-    <div class="min-w-[200px]">
-      <h2 class="border-b-1 border-(--bg-300) pb-2 mb-2"><strong>Proyectos</strong></h2>
-      <ul>
-        {% for project in site.projects %}
-          {% capture url %}/projects/{{ project.slug }}{% endcapture %}
-          <li><a class="text-primary-100 hover:underline" href="{{ url }}">{{ project.name }}</a></li>
-        {% endfor %}
-      </ul>
+
+      <!-- Proyectos -->
+      <nav>
+        <h2 class="mb-4 text-(length:--small-size) font-bold uppercase tracking-wider text-(--text-300)">
+          Proyectos
+        </h2>
+        <ul class="flex flex-col gap-2.5">
+          {% assign proyectos = site.projects | sort: "order" %}
+          {% for project in proyectos limit:5 %}
+          <li>
+            <a href="{{ project.url | relative_url }}"
+               class="text-(length:--paragraph-size) text-(--text-400) transition
+                      hover:text-primary-300">
+              {{ project.name }}
+            </a>
+          </li>
+          {% endfor %}
+          <li>
+            <a href="/projects"
+               class="flex items-center gap-1.5 text-(length:--paragraph-size)
+                      font-semibold text-primary-300 transition hover:gap-2.5">
+              <span>Ver todos</span>
+              {% include icon.html class="h-3.5 w-3.5" %}
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navegación + contacto -->
+      <div class="flex flex-col gap-8">
+        <nav>
+          <h2 class="mb-4 text-(length:--small-size) font-bold uppercase tracking-wider text-(--text-300)">
+            Navegación
+          </h2>
+          <ul class="flex flex-col gap-2.5">
+            {% assign enlaces = "Experiencia,experiencia|Proyectos,proyectos|Stack,stack|Blog,blog|Contacto,contacto" | split: "|" %}
+            {% for enlace in enlaces %}
+              {% assign partes = enlace | split: "," %}
+              <li>
+                <a href="/#{{ partes[1] }}"
+                   class="text-(length:--paragraph-size) text-(--text-400) transition
+                          hover:text-primary-300">
+                  {{ partes[0] }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="mb-3 text-(length:--small-size) font-bold uppercase tracking-wider text-(--text-300)">
+            Contacto
+          </h2>
+          <a href="mailto:{{ site.email }}"
+             class="flex items-center gap-2 text-(length:--paragraph-size) text-primary-100
+                    transition hover:text-primary-300">
+            {% include icon.html class="h-4 w-4 shrink-0" %}
+            <span>{{ site.email }}</span>
+          </a>
+        </div>
+      </div>
+
     </div>
-    <div>
-      <h2 class="border-b-1 border-(--bg-300) pb-2 mb-2"><strong>Contacto</strong></h2>
-      <ul>
-        <li><strong>Correo:</strong> <a class="text-primary-100 hover:underline" href="mailto:erick@ericktucto.com">erick@ericktucto.com</a></li>
-      </ul>
+
+    <!-- Barra inferior -->
+    <div class="mt-12 flex flex-col items-center gap-3 border-t border-(--bg-300) pt-8
+                sm:flex-row sm:justify-between">
+      <p class="text-(length:--small-size) text-(--text-muted)">
+        © {{ site.time | date: "%Y" }} {{ site.author }}. Código abierto en
+        <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer"
+           class="text-primary-100 transition hover:text-primary-300 hover:underline">
+          GitHub
+        </a>.
+      </p>
+      <p class="flex items-center gap-1.5 text-(length:--small-size) text-(--text-muted)">
+        <span>Hecho con Jekyll y Tailwind CSS</span>
+      </p>
     </div>
-    <div class="flex gap-2 mt-4">
-      <a href="{{ site.github }}" aria-label="Link para visitar mi perfil de github ericktucto" class="size-[36px] grid items-center justify-center border-1 border-(--bg-300) rounded-full">
-        <span class="x-icon text-center" data-icon="github" data-size="16px"></span>
-      </a>
-      <a href="{{ site.youtube }}" aria-label="Link para visitar mi canal de youtube ericktucto" class="size-[36px] grid items-center justify-center border-1 border-(--bg-300) rounded-full">
-        <span class="x-icon text-center" data-icon="youtube" data-size="16px"></span>
-      </a>
-      <a href="{{ "/feed.xml" | absolute_url }}" aria-label="Link para suscribirte al feed RSS" class="size-[36px] grid items-center justify-center border-1 border-(--bg-300) rounded-full">
-        <span class="x-icon text-center" data-icon="rss" data-size="16px"></span>
-      </a>
-    </div>
+
   </div>
 </footer>

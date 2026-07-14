@@ -1,6 +1,8 @@
 ---
 layout: projects
 name: WifiQR-GTK
+featured: true
+order: 1
 github: https://github.com/ericktucto/wifiqr-gtk
 title: "Comparte tus redes wifi de tu pc con WiFiQR-GTK"
 slug: wifiqr-gtk
