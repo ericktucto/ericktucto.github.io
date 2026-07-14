@@ -16,6 +16,15 @@ import iReact from './react.svg';
 import iSymfony from './symfony.svg';
 import iTypescript from './typescript.svg';
 import iVue from './vue.svg';
+import iDownloadFile from './download-file.svg';
+import iMail from './mail.svg';
+import iLightbulb from './lightbulb.svg';
+import iOpenGo from './open-go.svg';
+import iLayers from './layers.svg';
+import iBook from './book.svg';
+import iSend from './send.svg';
+import iLinkedin from './linkedin.svg';
+import iTiktok from './tiktok.svg';
 
 const icons = {
   bars: iBars,
@@ -33,6 +42,15 @@ const icons = {
   "clipboard-check": iClipboardCheck,
   "chevron-up": iChevronUp,
   "gear": iGear,
+  "download-file": iDownloadFile,
+  mail: iMail,
+  lightbulb: iLightbulb,
+  "open-go": iOpenGo,
+  layers: iLayers,
+  book: iBook,
+  send: iSend,
+  linkedin: iLinkedin,
+  tiktok: iTiktok,
   rss: iRss,
   youtube: iYoutube,
   github: iGithub,

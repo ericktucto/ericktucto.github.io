@@ -21,10 +21,10 @@ activedLink: history
           </p>
           <div class="flex gap-4 mt-[20px]">
             <a href="/assets/cv.pdf" class="btn-primary flex items-center gap-2" download>
-              📄 Descargar CV
+              <span class="x-icon fill-white" data-size="20px" data-icon="download-file"></span> Descargar CV
             </a>
-            <a href="/contacto" class="btn-outline flex items-center gap-2">
-              ✉️ Contactar
+            <a href="/contacto" class="btn-outline flex items-center gap-2 text-primary-300 hover:text-white">
+              <span class="x-icon" data-size="20px" data-icon="mail"></span> Contactar
             </a>
           </div>
         </div>
@@ -100,7 +100,7 @@ activedLink: history
 <section id="proyectos" class="bg-(--bg-100) py-20 px-6">
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 flex items-start gap-4">
-      {% include icon.html class="mt-1 h-9 w-9 shrink-0 text-primary-300" %}
+      <span data-size="36px" data-icon="lightbulb" class="x-icon text-primary-300 mt-1"></span>
       <div>
         <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
           Proyectos Destacados
@@ -118,8 +118,8 @@ activedLink: history
         <img src="{{ project.image }}" alt="{{ project.imageDescription }}"
              loading="lazy" class="aspect-video w-full object-cover">
         <div class="flex min-w-0 flex-1 flex-col p-5">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-(length:--middle-text-size) font-bold text-(--text-300)">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="text-(length:--middle-text-size) font-bold text-(--text-300) mt-0!">
               {{ project.name }}
             </h3>
             {% if project.release %}
@@ -129,7 +129,7 @@ activedLink: history
             </span>
             {% endif %}
           </div>
-          <p class="mt-1 text-(length:--small-size) text-(--text-muted)">
+          <p class="mt-1 text-(length:--small-size) text-(--text-muted) mb-0!">
             {{ project.title }}
           </p>
           <ul class="mt-3 flex flex-wrap gap-x-2 gap-y-1">
@@ -148,8 +148,8 @@ activedLink: history
                class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary-300
                       px-4 py-2.5 text-(length:--small-size) font-semibold text-(--text-100)
                       transition hover:bg-primary-200">
-              <span>Ver caso</span>
-              {% include icon.html class="h-4 w-4" %}
+              <span>Conocer proyecto</span>
+              <span class="x-icon" data-size="16px" data-icon="open-go"></span>
             </a>
             {% if project.github %}
             <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer"
@@ -157,7 +157,7 @@ activedLink: history
                class="flex items-center justify-center rounded-lg border border-(--bg-300)
                       bg-(--bg-100) px-3 py-2.5 text-(--text-400) transition
                       hover:border-primary-300 hover:text-primary-300">
-              {% include icon.html class="h-4 w-4" %}
+              <span class="x-icon flex! justify-center" data-size="18px" data-icon="github"></span>
             </a>
             {% endif %}
           </div>
@@ -171,7 +171,7 @@ activedLink: history
                 text-(length:--paragraph-size) font-semibold text-primary-300 transition
                 hover:bg-primary-300 hover:text-(--text-100)">
         <span>Ver todos los proyectos</span>
-        {% include icon.html class="h-4 w-4" %}
+        <span class="x-icon" data-size="16px" data-icon="open-go"></span>
       </a>
     </div>
   </div>
@@ -180,7 +180,7 @@ activedLink: history
 <section id="stack" class="bg-(--bg-100) py-20 px-6">
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 flex items-start gap-4">
-      {% include icon.html class="mt-1 h-9 w-9 shrink-0 text-primary-300" %}
+      <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="layers"></span>
       <div>
         <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
           Stack Tecnológico
@@ -235,7 +235,7 @@ activedLink: history
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div class="flex items-start gap-4">
-        {% include icon.html class="mt-1 h-9 w-9 shrink-0 text-primary-300" %}
+        <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="book"></span>
         <div>
           <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
             Publicaciones Recientes
@@ -249,7 +249,7 @@ activedLink: history
          class="flex shrink-0 items-center gap-2 text-(length:--small-size) font-semibold
                 text-(--text-400) transition hover:text-primary-300 sm:mt-2">
         <span>Ver todas las publicaciones</span>
-        {% include icon.html class="h-4 w-4" %}
+        <span class="x-icon" data-size="16px" data-icon="open-go"></span>
       </a>
     </header>
     <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -275,7 +275,7 @@ activedLink: history
 <section id="contcto" class="bg-(--bg-100) py-20 px-6">
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 flex items-start gap-4">
-      {% include icon.html class="mt-1 h-9 w-9 shrink-0 text-primary-300" %}
+      <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="send"></span>
       <div>
         <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
           Hablemos
@@ -371,12 +371,12 @@ activedLink: history
             <span class="text-accent-100">*</span> Campos obligatorios
           </p>
           <button type="submit"
-                  class="flex items-center justify-center gap-2 rounded-lg bg-primary-300 px-6 py-3
+                  class="flex items-center justify-center rounded-lg bg-primary-300 px-6 py-3
                          text-(length:--paragraph-size) font-semibold text-(--text-100) transition
                          hover:bg-primary-200 focus:outline-none focus:ring-2
                          focus:ring-primary-100/50 focus:ring-offset-2 focus:ring-offset-(--bg-200)">
             <span>Enviar mensaje</span>
-            {% include icon.html class="h-4 w-4" %}
+            <span class="x-icon" data-size="16px" data-icon="send"></span>
           </button>
         </div>
       </form>
@@ -388,18 +388,18 @@ activedLink: history
           </h3>
           <ul class="flex flex-col gap-3">
             <li>
-              <a href="mailto:hola@ericktucto.com"
+              <a href="mailto:erick@ericktucto.com"
                  class="flex items-center gap-3 text-(length:--paragraph-size) text-(--text-400)
                         transition hover:text-primary-300">
-                {% include icon.html class="h-5 w-5 shrink-0 text-primary-100" %}
-                <span>hola@ericktucto.com</span>
+                <span class="x-icon text-primary-300" data-size="20px" data-icon="mail"></span>
+                <span>erick@ericktucto.com</span>
               </a>
             </li>
             <li>
               <a href="https://github.com/ericktucto" target="_blank" rel="noopener noreferrer"
                  class="flex items-center gap-3 text-(length:--paragraph-size) text-(--text-400)
                         transition hover:text-primary-300">
-                {% include icon.html class="h-5 w-5 shrink-0 text-primary-100" %}
+                <span class="x-icon text-primary-300" data-size="20px" data-icon="github"></span>
                 <span>github.com/ericktucto</span>
               </a>
             </li>
@@ -407,7 +407,7 @@ activedLink: history
               <a href="https://linkedin.com/in/ericktucto" target="_blank" rel="noopener noreferrer"
                  class="flex items-center gap-3 text-(length:--paragraph-size) text-(--text-400)
                         transition hover:text-primary-300">
-                {% include icon.html class="h-5 w-5 shrink-0 text-primary-100" %}
+                <span class="x-icon text-primary-300" data-size="20px" data-icon="linkedin"></span>
                 <span>linkedin.com/in/ericktucto</span>
               </a>
             </li>

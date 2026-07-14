@@ -26,7 +26,7 @@
                  class="grid size-10 place-items-center rounded-full border border-(--bg-300)
                         bg-(--bg-100) text-(--text-400) transition
                         hover:border-primary-300 hover:bg-primary-300 hover:text-(--text-100)">
-                {% include icon.html class="h-4 w-4" %}
+                <span class="x-icon flex! justify-center text-center" data-icon="{{ red }}" data-size="16px"></span>
               </a>
             </li>
             {% endif %}
@@ -37,7 +37,7 @@
                class="grid size-10 place-items-center rounded-full border border-(--bg-300)
                       bg-(--bg-100) text-(--text-400) transition
                       hover:border-accent-100 hover:bg-accent-100 hover:text-(--text-100)">
-              {% include icon.html class="h-4 w-4" %}
+              <span class="x-icon flex! justify-center" data-icon="rss" data-size="16px"></span>
             </a>
           </li>
         </ul>
@@ -64,7 +64,7 @@
                class="flex items-center gap-1.5 text-(length:--paragraph-size)
                       font-semibold text-primary-300 transition hover:gap-2.5">
               <span>Ver todos</span>
-              {% include icon.html class="h-3.5 w-3.5" %}
+              <span class="x-icon" data-icon="open-go" data-size="16px"></span>
             </a>
           </li>
         </ul>
@@ -96,9 +96,9 @@
             Contacto
           </h2>
           <a href="mailto:{{ site.email }}"
-             class="flex items-center gap-2 text-(length:--paragraph-size) text-primary-100
+             class="flex items-center text-(length:--paragraph-size) text-primary-100
                     transition hover:text-primary-300">
-            {% include icon.html class="h-4 w-4 shrink-0" %}
+            <span class="x-icon shink-0" data-size="20px" data-icon="mail"></span>
             <span>{{ site.email }}</span>
           </a>
         </div>

@@ -23,7 +23,7 @@
       {{ include.date }}
     </time>
 
-    <h3 class="mt-2 text-(length:--middle-text-size) font-bold leading-snug text-(--text-300)">
+    <h3 class="mt-2! text-(length:--middle-text-size) font-bold leading-snug text-(--text-300)">
       {{ include.title }}
     </h3>
 
@@ -42,7 +42,7 @@
     </ul>
     {% endif %}
 
-    <p class="mt-4 mb-6 text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
+    <p class="mt-4! mb-6! text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
       {{ include.short_description }}
     </p>
 
@@ -51,7 +51,7 @@
               px-4 py-2.5 text-(length:--small-size) font-semibold text-(--text-100)
               transition hover:bg-primary-200">
       <span>{{ text_btn }}</span>
-      {% include icon.html class="h-4 w-4" %}
+      <span class="x-icon" data-size="16px" data-icon="open-go"></span>
     </a>
 
   </div>
