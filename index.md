@@ -23,7 +23,7 @@ activedLink: history
             <a href="/assets/cv.pdf" class="btn-primary flex items-center gap-2" download>
               <span class="x-icon fill-white" data-size="20px" data-icon="download-file"></span> Descargar CV
             </a>
-            <a href="/contacto" class="btn-outline flex items-center gap-2 text-primary-300 hover:text-white">
+            <a href="#contacto" class="btn-outline flex items-center gap-2 text-primary-300 hover:text-white">
               <span class="x-icon" data-size="20px" data-icon="mail"></span> Contactar
             </a>
           </div>
@@ -272,7 +272,7 @@ activedLink: history
   </div>
 </section>
 
-<section id="contcto" class="bg-(--bg-100) py-20 px-6">
+<section id="contacto" class="bg-(--bg-100) py-20 px-6">
   <div class="mx-auto max-w-6xl">
     <header class="mb-12 flex items-start gap-4">
       <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="send"></span>
