@@ -6,6 +6,17 @@ import * as ClipboardJS from 'clipboard';
 import { copy } from './helpers';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a[data-scroll]')
+  links.forEach((link) => {
+    link.addEventListener('click', (evt) => {
+      evt.preventDefault()
+      const href = link.getAttribute('href')
+      document.querySelector(href)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    })
+  })
   document.querySelector("#btn-up").addEventListener("click", () => {
     window.scrollTo({
       top: 0,

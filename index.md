@@ -23,7 +23,7 @@ activedLink: history
             <a href="/assets/cv.pdf" class="btn-primary flex items-center gap-2" download>
               <span class="x-icon fill-white" data-size="20px" data-icon="download-file"></span> Descargar CV
             </a>
-            <a href="#contacto" class="btn-outline flex items-center gap-2 text-primary-300 hover:text-white">
+            <a href="#contacto" class="btn-outline flex items-center gap-2 text-primary-300 hover:text-white" data-scroll="true">
               <span class="x-icon" data-size="20px" data-icon="mail"></span> Contactar
             </a>
           </div>
@@ -202,7 +202,11 @@ activedLink: history
           {% for tech in grupo.items %}
           <li class="flex flex-col items-center gap-2 text-center">
             <!-- PLACEHOLDER: reemplazar por el icono real de {{ tech.slug }} -->
-            {% include icon.html class="h-9 w-9 text-(--text-400)" %}
+            {% if tech.color %}
+              <span class="x-icon w-auto!" data-size="54px" data-icon="{{ tech.slug }}" style="color: {{ tech.color }};"></span>
+            {% else %}
+              <img src="{{ tech.slug }}" width="54px" height="54px" />
+            {% endif %}
             <span class="text-(length:--small-size) leading-tight text-(--text-400)">
               {{ tech.nombre }}
             </span>

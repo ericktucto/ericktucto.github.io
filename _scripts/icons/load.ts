@@ -25,6 +25,21 @@ import iBook from './book.svg';
 import iSend from './send.svg';
 import iLinkedin from './linkedin.svg';
 import iTiktok from './tiktok.svg';
+import iPhp from './php.svg';
+import iHtml from './html.svg';
+import iDocker from './docker.svg';
+import iFlutter from './flutter.svg';
+import iNginx from './nginx.svg';
+import iLinux from './linux.svg';
+import iGit from './git.svg';
+import iCss from './css.svg';
+import iTailwind from './tailwind.svg';
+import iPostgresql from './postgresql.svg';
+import iMysql from './mysql.svg';
+import iJava from './java.svg';
+import iSpring from './spring.svg';
+import iApirest from './api.svg';
+import iCicd from './cicd.svg';
 
 const icons = {
   bars: iBars,
@@ -54,6 +69,21 @@ const icons = {
   rss: iRss,
   youtube: iYoutube,
   github: iGithub,
+  php: iPhp,
+  html: iHtml,
+  docker: iDocker,
+  flutter: iFlutter,
+  nginx: iNginx,
+  linux: iLinux,
+  git: iGit,
+  css: iCss,
+  tailwind: iTailwind,
+  postgresql: iPostgresql,
+  java: iJava,
+  spring: iSpring,
+  mysql: iMysql,
+  api: iApirest,
+  cicd: iCicd,
 }
 
 export default function (icon: string, size: string = '24px') {
