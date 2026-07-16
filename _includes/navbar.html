@@ -15,11 +15,10 @@
     </div>
   </div>
   <div class="grid content-center">
-    <div id="links" class="stack-vertical page-{{ page.activedLink }}">
-      <a data-link="history" class="col-4-until-tablet" href="{{ "/" | relative_url }}">Historia</a>
-      <a data-link="series" class="col-4-until-tablet" href="{{ "/series" | relative_url }}">Series</a>
+    <div id="links" class="hidden lg:flex lg:gap-4 max-lg:grid max-lg:justify-items-end w-full page-{{ page.activedLink }}">
       <a data-link="projects" class="col-4-until-tablet" href="{{ "/projects" | relative_url }}">Proyectos</a>
-      <a data-link="categories" class="col-4-until-tablet" href="{{ "/categories" | relative_url }}">Categorias</a>
+      <a data-link="series" class="col-4-until-tablet" href="{{ "/blog" | relative_url }}">Blog</a>
+      <a data-link="categories" class="col-4-until-tablet" href="{{ "/#contacto" | relative_url }}">Contacto</a>
     </div>
   </div>
   <!--

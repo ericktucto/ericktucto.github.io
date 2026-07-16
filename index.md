@@ -195,7 +195,7 @@ activedLink: history
       <article class="rounded-xl border border-(--bg-300) bg-(--bg-200) p-6">
         <h3 class="mb-6 flex items-center gap-2.5 text-(length:--middle-text-size)
                    font-bold text-(--text-300)">
-          {% include icon.html class="h-5 w-5 shrink-0 text-primary-300" %}
+          <span class="x-icon shrink-0 text-primary-300" data-icon="{{ grupo.icon }}" data-size="28px"></span>
           <span>{{ grupo.categoria }}</span>
         </h3>
         <ul class="grid grid-cols-3 gap-x-4 gap-y-6">
