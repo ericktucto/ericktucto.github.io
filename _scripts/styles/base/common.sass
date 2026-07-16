@@ -75,13 +75,8 @@ small
     background: var(--primary-300)
     color: var(--text-100)
     #links
-      &.page-
-        &categories
-          a[data-link=categories]
-            @extend %link-arrow
-        &history
-          a[data-link=history]
-            @extend %link-arrow
+      a.actived
+        @extend %link-arrow
       a
         @extend .two-between
         text-transform: uppercase

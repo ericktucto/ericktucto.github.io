@@ -16,6 +16,7 @@ markdown: kramdown
 plugins:
     - jekyll-feed
     - jekyll-sitemap
+    - jekyll-paginate-v2
 exclude:
     - _scripts
     - vendor/
@@ -30,3 +31,9 @@ exclude:
 keep_files:
   - assets/js
   - assets/css
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page/:num/'   # /page/2/, /page/3/...
+  sort_field: 'date'
+  sort_reverse: true

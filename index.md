@@ -1,6 +1,6 @@
 ---
 layout: home
-activedLink: history
+activedLink: home
 ---
 
 <div id="presentation">

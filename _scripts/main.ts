@@ -8,6 +8,14 @@ import { loadForm } from './src/contact';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadForm()
+  const activedLink = (document.querySelector("#links") as HTMLElement).dataset.actived
+
+  document.querySelectorAll("#links a[data-link]").forEach((a: HTMLAnchorElement) => {
+    if (a.dataset.link === activedLink) {
+      a.classList.add("actived")
+    }
+  })
+
   const links = document.querySelectorAll('a[data-scroll]')
   links.forEach((link) => {
     link.addEventListener('click', (evt) => {

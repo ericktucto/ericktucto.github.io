@@ -1,0 +1,83 @@
+---
+layout: default
+title: Blog
+activedLink: blog
+pagination:
+  enabled: true
+---
+
+<div class="max-w-[900px] mx-auto px-7 pb-30">
+  <div class="super-title">
+    <h1 class="title">Blog</h1>
+    <p class="paragraph text-bg-300">Ideas, aprendizajes y experiencias sobre desarrollo de software.</p>
+  </div>
+
+  <ul class="grid gap-6">
+    {% for post in paginator.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}"
+         class="group bg-(--bg-200) grid md:grid-cols-[280px_1fr] gap-0 md:gap-6 shadow rounded-lg overflow-hidden no-underline text-text-100 hover:shadow-lg transition-shadow">
+
+        {% if post.image %}
+        <div class="aspect-video md:aspect-auto md:h-full bg-bg-300 overflow-hidden">
+          <img src="{{ post.image }}" alt="{{ post.alt_image }}"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+               loading="lazy">
+        </div>
+        {% endif %}
+
+        <div class="grid content-center p-6 gap-2">
+          {% if post.categories.first %}
+          <span class="small-note uppercase text-primary-300 font-bold tracking-wide">
+            {{ post.categories.first }}
+          </span>
+          {% endif %}
+
+          <h2 class="subtitle group-hover:text-primary-300 transition-colors">{{ post.title }}</h2>
+
+          <p class="paragraph text-bg-300">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+
+          <div class="flex gap-4 small-note text-bg-300 mt-1">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%d %b %Y" }}
+            </time>
+            <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min de lectura</span>
+          </div>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="flex items-center justify-between mt-10" aria-label="Paginación">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}"
+         class="px-3 py-2 border border-primary-300 no-underline text-text-100 hover:link-arrow">← Anterior</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+
+    <div class="flex gap-1">
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="px-3 py-2 font-bold text-primary-300">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="{{ '/blog/' | relative_url }}"
+             class="px-3 py-2 no-underline text-text-100 hover:text-primary-300">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.pagination.permalink | replace: ':num', page | relative_url }}"
+             class="px-3 py-2 no-underline text-text-100 hover:text-primary-300">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}"
+         class="px-3 py-2 border border-primary-300 no-underline text-text-100 hover:link-arrow">Siguiente →</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>
