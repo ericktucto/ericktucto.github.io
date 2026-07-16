@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.1",
     "@types/youtube-player": "^5.5.11",
     "astroturf": "^1.2.0",
     "autoprefixer": "^10.5.2",

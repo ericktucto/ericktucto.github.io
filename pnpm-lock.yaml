@@ -18,6 +18,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.3.2
         version: 4.3.2
+      '@types/node':
+        specifier: ^26.1.1
+        version: 26.1.1
       '@types/youtube-player':
         specifier: ^5.5.11
         version: 5.5.11
