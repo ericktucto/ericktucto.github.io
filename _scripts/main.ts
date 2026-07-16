@@ -4,8 +4,10 @@ import { monthToSpanish } from './src/utils/datetime';
 import load from './icons/load';
 import * as ClipboardJS from 'clipboard';
 import { copy } from './helpers';
+import { loadForm } from './src/contact';
 
 document.addEventListener('DOMContentLoaded', () => {
+  loadForm()
   const links = document.querySelectorAll('a[data-scroll]')
   links.forEach((link) => {
     link.addEventListener('click', (evt) => {
