@@ -13,8 +13,8 @@ imageDescription: 'Una ventana generica para jugar al tictac'
 ---
 
 **Un servidor para jugar tic tact, esta hecho en typescript y express. Este
-proyecto solo es el servidor, necesitarias un cliente para jugarlo, aun así es
-muy divertido, y entretenido**
+ proyecto solo es el servidor, necesitarias un cliente para jugarlo, aun así es
+ muy divertido, y entretenido**
 
 
 Este proyecto empezó en una conversación con Matias, un canal de youtube sobre

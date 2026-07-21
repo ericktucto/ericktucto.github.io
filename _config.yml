@@ -1,10 +1,13 @@
+title: "Erick Tucto | Desarrollador Full Stack Laravel y Vue"
+description: "Desarrollador full stack con 10 años en PHP, Laravel, Symfony, Vue y Docker. Construyo APIs, aplicaciones web escalables y despliegues en Linux. Disponible para proyectos remotos desde Perú."
+
 author: Erick Tucto
 email: "erick@ericktucto.com"
 linkedin: "https://www.linkedin.com/in/ericktucto"
 tiktok: "https://www.tiktok.com/@erickenelcodigo"
 github: "https://github.com/ericktucto"
 youtube: "https://www.youtube.com/@ericktucto"
-permalink: /:year-:month-:day-:title
+permalink: /blog/:year-:month-:day-:title
 url: "https://ericktucto.com"
 baseurl: ""
 repository: ericktucto/ericktucto.github.io

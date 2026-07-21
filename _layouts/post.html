@@ -35,12 +35,12 @@ layout: default
             <h1>{{ page.title }}</h1>
             <div id="tags">
                 {% for tag in page.categories %}
-                  <a href="{{ site.baseurl }}/categories#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
+                  <a href="{{ site.baseurl }}/categories#{{ tag | slugify }}" class="text-base mr-1 text-primary-100 tag">#{{ tag }}</a>
                 {% endfor %}
             </div>
         </div>
         <div class="post-image"><img src="{{ page.image }}" alt="imagen del post" /></div>
-        <div class="br-bg"></div>
+        <div class="border-b-1 border-(--bg-300) my-8"></div>
         <div class="post-body">
             {{ content }}
         </div>

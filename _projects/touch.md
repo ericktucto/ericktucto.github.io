@@ -13,7 +13,7 @@ imageDescription: 'Una ventana generica'
 ---
 
 **Este es un pequeño microframework en php, para la creacion de aplicaciones web.
-Tu podras aprender que con php es facil crear un backend.**
+ Tu podras aprender que con php es facil crear un backend.**
 
 
 Existen varios que hacen su propio framework con php, recuerdo ese tiempo donde

@@ -9,7 +9,7 @@
           <a href="/" class="text-(length:--middle-text-size) font-bold text-primary-300">
             {{ site.author }}
           </a>
-          <p class="mt-2 max-w-sm text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
+          <p class="mt-2 max-w-sm text-base leading-relaxed text-(--text-400)">
             Full Stack Developer. Construyo software escalable con PHP, Vue y Docker
             desde Perú, para el mundo.
           </p>
@@ -53,7 +53,7 @@
           {% for project in proyectos limit:5 %}
           <li>
             <a href="{{ project.url | relative_url }}"
-               class="text-(length:--paragraph-size) text-(--text-400) transition
+               class="text-base text-(--text-400) transition
                       hover:text-primary-300">
               {{ project.name }}
             </a>
@@ -61,7 +61,7 @@
           {% endfor %}
           <li>
             <a href="/projects"
-               class="flex items-center gap-1.5 text-(length:--paragraph-size)
+               class="flex items-center gap-1.5 text-base
                       font-semibold text-primary-300 transition hover:gap-2.5">
               <span>Ver todos</span>
               <span class="x-icon" data-icon="open-go" data-size="16px"></span>
@@ -82,7 +82,7 @@
               {% assign partes = enlace | split: "," %}
               <li>
                 <a href="/#{{ partes[1] }}"
-                   class="text-(length:--paragraph-size) text-(--text-400) transition
+                   class="text-base text-(--text-400) transition
                           hover:text-primary-300">
                   {{ partes[0] }}
                 </a>
@@ -96,7 +96,7 @@
             Contacto
           </h2>
           <a href="mailto:{{ site.email }}"
-             class="flex items-center text-(length:--paragraph-size) text-primary-100
+             class="flex items-center text-base text-primary-100
                     transition hover:text-primary-300">
             <span class="x-icon shink-0" data-size="20px" data-icon="mail"></span>
             <span>{{ site.email }}</span>

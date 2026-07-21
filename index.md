@@ -5,11 +5,15 @@ activedLink: home
 
 <div id="presentation">
   <div class="relative w-full gap-8">
-      <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="" class="hero-bg" aria-hidden="true" fetchpriority="high" />
+      <img src="{{ '/assets/img/waves.svg' | relative_url }}" alt="ondas azules usadas de fondo" class="hero-bg" aria-hidden="true" fetchpriority="high" />
       <div class="grid md:grid-cols-2 items-center justify-items-between pt-4 md:pt-16 pb-16 min-h-[calc(100vh-54px)] mx-auto max-w-[1200px] md:min-w-[600px] gap-20 md:px-8 px-4">
         <div class="bg-100">
-          <h1 class="text-4xl md:text-7xl font-extrabold leading-none">Erick Tucto</h1>
-          <p class="text-primary-200 text-xl"><em>Senior Full Stack Developer</em></p>
+          <h1 class="mb-4">
+            <span class="block text-4xl md:text-7xl font-extrabold leading-none">
+              Erick Tucto
+            </span>
+            <span class="text-primary-200 text-xl italic">Desarrollador Senior Full Stack en Perú</span>
+          </h1>
           <p class="text-md leading-10">
             Soy <strong>Erick Tucto</strong>, programador y desarrollador web con
             más de 10 años construyendo software escalable y eficiente.
@@ -31,7 +35,9 @@ activedLink: home
         <img
           class="relative border-primary-300 border-4 md:size-[360px] lg:size-[400px] size-[300px] animate-(--profile-morph) rounded-[30%_70%_70%_30%/30%_30%_70%_70%] justify-self-center md:justify-self-end"
           src="{{ '/assets/img/perfil_600x600.webp' | relative_url }}"
-          alt="una foto de @ericktucto sosteniendo unos cubos rubik"
+          alt="Erick Tucto, desarrllador full stack"
+          fetchpriority="high"
+          decoding="async"
         />
       </div>
   </div>
@@ -46,10 +52,10 @@ activedLink: home
         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
       </svg>
       <div>
-        <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
+        <h2 class="text-4xl font-bold leading-tight text-(--text-300)">
           Experiencia Profesional
         </h2>
-        <p class="mt-1 text-(length:--paragraph-size) text-primary-100">
+        <p class="mt-1 text-base text-primary-100">
           Más de 10 años construyendo soluciones robustas y escalables
         </p>
       </div>
@@ -75,7 +81,7 @@ activedLink: home
             <p class="mt-1 text-(length:--small-size) text-primary-100">
               {{ job.empresa }} · {{ job.periodo }}
             </p>
-            <p class="mt-3 text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
+            <p class="mt-3 text-base leading-relaxed text-(--text-400)">
               {{ job.descripcion }}
             </p>
           </div>
@@ -102,10 +108,10 @@ activedLink: home
     <header class="mb-12 flex items-start gap-4">
       <span data-size="36px" data-icon="lightbulb" class="x-icon text-primary-300 mt-1"></span>
       <div>
-        <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
+        <h2 class="text-4xl font-bold leading-tight text-(--text-300)">
           Proyectos Destacados
         </h2>
-        <p class="mt-1 text-(length:--paragraph-size) text-primary-100">
+        <p class="mt-1 text-base text-primary-100">
           Algunas soluciones que he diseñado y desarrollado
         </p>
       </div>
@@ -116,7 +122,7 @@ activedLink: home
       <li class="flex flex-col overflow-hidden rounded-xl border border-(--bg-300) bg-(--bg-200)
                  transition hover:-translate-y-1 hover:shadow-lg">
         <img src="{{ project.image }}" alt="{{ project.imageDescription }}"
-             loading="lazy" class="aspect-video w-full object-cover">
+             loading="lazy" class="aspect-video w-full object-cover" decoding="async">
         <div class="flex min-w-0 flex-1 flex-col p-5">
           <div class="flex items-center justify-between gap-2">
             <h3 class="text-(length:--middle-text-size) font-bold text-(--text-300) mt-0!">
@@ -140,7 +146,7 @@ activedLink: home
             </li>
             {% endfor %}
           </ul>
-          <p class="mt-4 mb-6 text-(length:--paragraph-size) leading-relaxed text-(--text-400)">
+          <p class="mt-4 mb-6 text-base leading-relaxed text-(--text-400)">
             {{ project.excerpt | strip_html | strip_newlines | truncate: 160 }}
           </p>
           <div class="mt-auto flex gap-2">
@@ -168,7 +174,7 @@ activedLink: home
     <div class="mt-10 text-center">
       <a href="/projects"
          class="inline-flex items-center gap-2 rounded-lg border-2 border-primary-300 px-6 py-3
-                text-(length:--paragraph-size) font-semibold text-primary-300 transition
+                text-base font-semibold text-primary-300 transition
                 hover:bg-primary-300 hover:text-(--text-100)">
         <span>Ver todos los proyectos</span>
         <span class="x-icon" data-size="16px" data-icon="open-go"></span>
@@ -182,10 +188,10 @@ activedLink: home
     <header class="mb-12 flex items-start gap-4">
       <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="layers"></span>
       <div>
-        <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
+        <h2 class="text-4xl font-bold leading-tight text-(--text-300)">
           Stack Tecnológico
         </h2>
-        <p class="mt-1 text-(length:--paragraph-size) text-primary-100">
+        <p class="mt-1 text-base text-primary-100">
           Herramientas y tecnologías que uso para construir soluciones de calidad
         </p>
       </div>
@@ -233,7 +239,7 @@ activedLink: home
     </div>
   </div>-->
 
-  <div class="br-bg"></div>
+  <div class="border-b-1 border-(--bg-300) my-8"></div>
 
 <section id="blog" class="bg-(--bg-100) py-20 px-6">
   <div class="mx-auto max-w-6xl">
@@ -241,10 +247,10 @@ activedLink: home
       <div class="flex items-start gap-4">
         <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="book"></span>
         <div>
-          <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
+          <h2 class="text-4xl font-bold leading-tight text-(--text-300)">
             Publicaciones Recientes
           </h2>
-          <p class="mt-1 text-(length:--paragraph-size) text-primary-100">
+          <p class="mt-1 text-base text-primary-100">
             Compartiendo conocimiento y experiencias de desarrollo
           </p>
         </div>
@@ -281,10 +287,10 @@ activedLink: home
     <header class="mb-12 flex items-start gap-4">
       <span class="x-icon shrink-0 text-primary-300 mt-1" data-size="36px" data-icon="send"></span>
       <div>
-        <h2 class="text-(length:--subtitle-size) font-bold leading-tight text-(--text-300)">
+        <h2 class="text-4xl font-bold leading-tight text-(--text-300)">
           Hablemos
         </h2>
-        <p class="mt-1 text-(length:--paragraph-size) text-primary-100">
+        <p class="mt-1 text-base text-primary-100">
           ¿Tienes un proyecto en mente? Escríbeme y te respondo en menos de 24 horas
         </p>
       </div>
@@ -301,7 +307,7 @@ activedLink: home
             <input type="text" id="nombre" name="nombre" required autocomplete="name"
                    placeholder="Tu nombre"
                    class="rounded-lg border border-(--bg-300) bg-(--bg-100) px-4 py-2.5
-                          text-(length:--paragraph-size) text-(--text-300)
+                          text-base text-(--text-300)
                           placeholder:text-(--text-muted) transition
                           focus:border-primary-300 focus:outline-none
                           focus:ring-2 focus:ring-primary-100/30"/>
@@ -313,7 +319,7 @@ activedLink: home
             <input type="email" id="email" name="email" required autocomplete="email"
                    placeholder="tu@correo.com"
                    class="rounded-lg border border-(--bg-300) bg-(--bg-100) px-4 py-2.5
-                          text-(length:--paragraph-size) text-(--text-300)
+                          text-base text-(--text-300)
                           placeholder:text-(--text-muted) transition
                           focus:border-primary-300 focus:outline-none
                           focus:ring-2 focus:ring-primary-100/30"/>
@@ -325,7 +331,7 @@ activedLink: home
             <input type="text" id="empresa" name="empresa" autocomplete="organization"
                    placeholder="Nombre de tu empresa"
                    class="rounded-lg border border-(--bg-300) bg-(--bg-100) px-4 py-2.5
-                          text-(length:--paragraph-size) text-(--text-300)
+                          text-base text-(--text-300)
                           placeholder:text-(--text-muted) transition
                           focus:border-primary-300 focus:outline-none
                           focus:ring-2 focus:ring-primary-100/30"/>
@@ -336,7 +342,7 @@ activedLink: home
             </label>
             <select id="tipo" name="tipo"
                     class="rounded-lg border border-(--bg-300) bg-(--bg-100) px-4 py-2.5
-                           text-(length:--paragraph-size) text-(--text-300) transition
+                           text-base text-(--text-300) transition
                            focus:border-primary-300 focus:outline-none
                            focus:ring-2 focus:ring-primary-100/30">
               <option value="proyecto">Proyecto freelance</option>
@@ -352,7 +358,7 @@ activedLink: home
             <input type="text" id="asunto" name="_subject" required
                    placeholder="¿De qué se trata?"
                    class="rounded-lg border border-(--bg-300) bg-(--bg-100) px-4 py-2.5
-                          text-(length:--paragraph-size) text-(--text-300)
+                          text-base text-(--text-300)
                           placeholder:text-(--text-muted) transition
                           focus:border-primary-300 focus:outline-none
                           focus:ring-2 focus:ring-primary-100/30"/>
@@ -364,7 +370,7 @@ activedLink: home
             <textarea id="mensaje" name="mensaje" required rows="5"
                       placeholder="Cuéntame sobre tu proyecto, plazos y presupuesto estimado…"
                       class="resize-y rounded-lg border border-(--bg-300) bg-(--bg-100) px-4 py-2.5
-                             text-(length:--paragraph-size) leading-relaxed text-(--text-300)
+                             text-base leading-relaxed text-(--text-300)
                              placeholder:text-(--text-muted) transition
                              focus:border-primary-300 focus:outline-none
                              focus:ring-2 focus:ring-primary-100/30"></textarea>
@@ -376,7 +382,7 @@ activedLink: home
           </p>
           <button type="submit"
                   class="flex items-center justify-center rounded-lg bg-primary-300 px-6 py-3
-                         text-(length:--paragraph-size) font-semibold text-(--text-100) transition
+                         text-base font-semibold text-(--text-100) transition
                          hover:bg-primary-200 focus:outline-none focus:ring-2
                          focus:ring-primary-100/50 focus:ring-offset-2 focus:ring-offset-(--bg-200)">
             <span>Enviar mensaje</span>
@@ -393,7 +399,7 @@ activedLink: home
           <ul class="flex flex-col gap-3">
             <li>
               <a href="mailto:erick@ericktucto.com"
-                 class="flex items-center gap-3 text-(length:--paragraph-size) text-(--text-400)
+                 class="flex items-center gap-3 text-base text-(--text-400)
                         transition hover:text-primary-300">
                 <span class="x-icon text-primary-300" data-size="20px" data-icon="mail"></span>
                 <span>erick@ericktucto.com</span>
@@ -401,7 +407,7 @@ activedLink: home
             </li>
             <li>
               <a href="https://github.com/ericktucto" target="_blank" rel="noopener noreferrer"
-                 class="flex items-center gap-3 text-(length:--paragraph-size) text-(--text-400)
+                 class="flex items-center gap-3 text-base text-(--text-400)
                         transition hover:text-primary-300">
                 <span class="x-icon text-primary-300" data-size="20px" data-icon="github"></span>
                 <span>github.com/ericktucto</span>
@@ -409,7 +415,7 @@ activedLink: home
             </li>
             <li>
               <a href="https://linkedin.com/in/ericktucto" target="_blank" rel="noopener noreferrer"
-                 class="flex items-center gap-3 text-(length:--paragraph-size) text-(--text-400)
+                 class="flex items-center gap-3 text-base text-(--text-400)
                         transition hover:text-primary-300">
                 <span class="x-icon text-primary-300" data-size="20px" data-icon="linkedin"></span>
                 <span>linkedin.com/in/ericktucto</span>

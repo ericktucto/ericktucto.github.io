@@ -4,9 +4,9 @@ activedLink: projects
 ---
 
 <div class="max-w-[900px] mx-auto px-7 pb-30">
-  <div class="super-title">
-    <h1 class="title">Lista de proyectos</h1>
-    <p class="paragraph text-bg-300">Ideas, aprendizajes y experiencias sobre desarrollo de software.</p>
+  <div class="grid w-full text-center my-8 gap-4">
+    <h1 class="font-bold text-5xl">Lista de proyectos</h1>
+    <p class="text-base text-bg-300">Ideas, aprendizajes y experiencias sobre desarrollo de software.</p>
   </div>
 
   <div class="pack__cards">
