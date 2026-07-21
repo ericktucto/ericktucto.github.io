@@ -50,6 +50,8 @@
   --br-margin-x: 16px
 }
 
+@custom-variant menu-open (&:has(.burger:checked));
+
 @keyframes profile-morph {
   0%, 100% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;

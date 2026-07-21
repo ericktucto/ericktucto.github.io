@@ -1,7 +1,12 @@
-<aside>
-  <input type="checkbox" id="cb-menu">
+<aside class="
+    fixed top-0 left-0 w-0 lg:w-full flex flex-col-reverse lg:grid
+    grid-cols-[1fr_auto_1fr] h-[54px] bg-primary-300 text-(--text-100)
+    has-checked:w-screen! has-checked:z-10 transition-[width] duration-300
+    ease-in-out overflow-hidden h-screen lg:h-auto whitespace-nowrap
+  ">
+  <input type="checkbox" id="cb-menu" class="burger">
   <div id="menu-toggle" class="grid grid-cols-[auto_auto] justify-content items-center">
-    <h2><a href="{{ '/' | relative_url }}">ERICK TUCTO</a></h2>
+    <a href="{{ '/' | relative_url }}" class="text-xl">ERICK TUCTO</a>
     <div id="nav-options">
       <label class="btn-option" id="btn-up">
         <span class="x-icon" data-icon="chevron-up"></span>

@@ -22,22 +22,9 @@ small
     margin-right: 12px
 /** on home page */
 #main-container
-  display: grid
-  background: var(--bg-100)
   aside
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    display: grid
-    grid-template-columns: 1fr auto 1fr
-    height: 54px
-    h2
-      font-size: var(--middle-text-size)
     #cb-menu
       display: none
-    background: var(--primary-300)
-    color: var(--text-100)
     #links
       a.actived
         @extend %link-arrow
@@ -50,7 +37,6 @@ small
         padding: 6px 8px
         color: var(--text-100)
         text-decoration: none
-        border: 1px solid var(--primary-300)
         &:hover
           text-decoration: none
           @extend %link-arrow
@@ -114,19 +100,7 @@ small
       &menu
         display: grid
   #main-container
-    grid-template-columns: 0 auto
     aside
-      display: flex
-      flex-direction: column-reverse
-      position: fixed
-      overflow: hidden
-      width: 0
-      height: 100%
-      transition: width 0.2s ease-in-out
-      white-space: nowrap
-      h2
-        height: 48px
-        align-content: center
       #links
         a
           display: inline-block
@@ -136,8 +110,6 @@ small
           &::after
             display: none !important
     aside:has(#cb-menu:checked)
-      width: 100vw
-      z-index: 1
       #btn-up
         display: none
 
