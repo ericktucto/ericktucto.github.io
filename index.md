@@ -199,7 +199,7 @@ activedLink: home
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {% for grupo in site.data.tecnologias %}
       <article class="rounded-xl border border-(--bg-300) bg-(--bg-200) p-6">
-        <h3 class="mb-6 flex items-center gap-2.5 text-(length:--middle-text-size)
+        <h3 class="mb-6 mt-0! flex items-center gap-2.5 text-(length:--middle-text-size)
                    font-bold text-(--text-300)">
           <span class="x-icon shrink-0 text-primary-300" data-icon="{{ grupo.icon }}" data-size="28px"></span>
           <span>{{ grupo.categoria }}</span>

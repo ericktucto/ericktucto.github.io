@@ -1,30 +1,37 @@
 <aside class="
-    fixed top-0 left-0 w-0 lg:w-full flex flex-col-reverse lg:grid
-    grid-cols-[1fr_auto_1fr] h-[54px] bg-primary-300 text-(--text-100)
+    group fixed top-0 left-0 w-0 lg:w-full flex flex-col-reverse lg:grid
+    grid-cols-[1fr_auto_1fr] h-20 bg-primary-300 text-(--text-100)
     has-checked:w-screen! has-checked:z-10 transition-[width] duration-300
     ease-in-out overflow-hidden h-screen lg:h-auto whitespace-nowrap
   ">
-  <input type="checkbox" id="cb-menu" class="burger">
-  <div id="menu-toggle" class="grid grid-cols-[auto_auto] justify-content items-center">
-    <a href="{{ '/' | relative_url }}" class="text-xl">ERICK TUCTO</a>
-    <div id="nav-options">
-      <label class="btn-option" id="btn-up">
+  <input type="checkbox" id="cb-menu" class="hidden">
+  <div id="menu-toggle" class="grid grid-cols-[auto_auto] justify-content items-center py-4 px-6">
+    <a href="{{ '/' | relative_url }}" class="text-xl h-12 grid items-center">ERICK TUCTO</a>
+    <div
+      id="nav-options"
+      class="
+        fixed bottom-4 right-4 grid grid-cols-[48px_48px] grid-rows-[48px_48px]
+        place-items-center gap-4 direction-row
+      "
+    >
+      <div></div>
+      <label class="btn-option max-lg:group-has-checked:hidden" id="btn-up">
         <span class="x-icon" data-icon="chevron-up"></span>
       </label>
       <label class="btn-option" id="btn-settings" style="display:none;">
         <span class="x-icon" data-icon="gear"></span>
       </label>
-      <label class="btn-option" id="btn-menu" for="cb-menu">
+      <label class="btn-option grid lg:hidden" id="btn-menu" for="cb-menu">
         <span class="x-icon" data-icon="bars"></span>
       </label>
     </div>
   </div>
   <div class="grid content-center">
     <div id="links" class="hidden lg:flex lg:gap-4 max-lg:grid max-lg:justify-items-end w-full" data-actived="{{ page.activedLink }}">
-      <a data-link="home" class="col-4-until-tablet" href="{{ "/" | relative_url }}">Inicio</a>
-      <a data-link="projects" class="col-4-until-tablet" href="{{ "/projects" | relative_url }}">Proyectos</a>
-      <a data-link="blog" class="col-4-until-tablet" href="{{ "/blog" | relative_url }}">Blog</a>
-      <a data-link="disabled" class="col-4-until-tablet" href="{{ "/#contacto" | relative_url }}">Contacto</a>
+      <a data-link="home" class="nav-link" href="{{ "/" | relative_url }}">Inicio</a>
+      <a data-link="projects" class="nav-link" href="{{ "/projects" | relative_url }}">Proyectos</a>
+      <a data-link="blog" class="nav-link" href="{{ "/blog" | relative_url }}">Blog</a>
+      <a data-link="disabled" class="nav-link" href="{{ "/#contacto" | relative_url }}">Contacto</a>
     </div>
   </div>
 </aside>

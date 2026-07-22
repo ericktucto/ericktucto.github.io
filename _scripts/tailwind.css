@@ -50,7 +50,15 @@
   --br-margin-x: 16px
 }
 
-@custom-variant menu-open (&:has(.burger:checked));
+@utility btn-option {
+  @apply grid place-content-center bg-primary-300 text-white p-4 size-12
+        hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed
+        box-border;
+}
+
+@utility nav-link {
+  @apply uppercase text-white text-center no-underline px-4 h-12 block lg:grid items-center
+}
 
 @keyframes profile-morph {
   0%, 100% {
