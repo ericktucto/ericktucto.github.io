@@ -7,6 +7,10 @@
 @source "../_projects/**/*";
 
 @theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
   --profile-morph: profile-morph 9s ease-in-out infinite;
 
   /* Azul pizarra: menos saturado, no compite con el crema */
@@ -71,6 +75,22 @@
     border-radius: 18% 82% 41% 59% / 59% 54% 46% 41%;
   }
 }
+body {
+  font-family: var(--font-sans)
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display)
+}
+
+h4, h5, h6 {
+  font-family: var(--font-sans)
+}
+
+code, pre, figure.highlight {
+  font-family: var(--font-mono)
+}
+
 .hero-bg {
   position: absolute; inset: 0;
   width: 100%; height: 100%;

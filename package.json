@@ -4,6 +4,9 @@
   "description": "This is my jekyll page",
   "main": "index.js",
   "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/space-grotesk": "^5.3.0",
     "clipboard": "^2.0.11",
     "youtube-player": "^5.6.0"
   },
