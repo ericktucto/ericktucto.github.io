@@ -11,19 +11,19 @@
 {% endcomment %}
 {% assign text_btn = include.btn_text | default: 'LEER MÁS' %}
 
-<article class="flex h-full flex-col overflow-hidden rounded-xl border border-(--bg-300)
-                bg-(--bg-200) transition hover:-translate-y-1 hover:shadow-lg">
+<article class="flex h-full flex-col overflow-hidden rounded-xl border border-surface-300
+                bg-surface-200 transition hover:-translate-y-1 hover:shadow-lg">
 
   <img src="{{ include.image }}" alt="{{ include.alt_image }}" loading="lazy"
        class="aspect-video w-full object-cover"/>
 
   <div class="flex min-w-0 flex-1 flex-col p-5">
 
-    <time datetime="{{ include.date }}" class="text-(length:--small-size) text-(--text-muted)">
+    <time datetime="{{ include.date }}" class="text-small text-text-muted">
       {{ include.date }}
     </time>
 
-    <h3 class="mt-2! text-(length:--middle-text-size) font-bold leading-snug text-(--text-300)">
+    <h3 class="mt-2! text-middle font-bold leading-snug text-text-300">
       {{ include.title }}
     </h3>
 
@@ -33,7 +33,7 @@
       <li>
         <a href="/categories#{{ category | slugify }}"
            class="block rounded border border-primary-100/30 px-2 py-0.5
-                  text-(length:--small-size) text-primary-100 transition
+                  text-small text-primary-100 transition
                   hover:border-primary-300 hover:text-primary-300">
           {{ category }}
         </a>
@@ -42,13 +42,13 @@
     </ul>
     {% endif %}
 
-    <p class="mt-4! mb-6! text-base leading-relaxed text-(--text-400)">
+    <p class="mt-4! mb-6! text-base leading-relaxed text-text-400">
       {{ include.short_description }}
     </p>
 
     <a href="{{ include.url }}" aria-label="Leer el artículo, {{ include.title }}"
        class="mt-auto flex items-center justify-center gap-2 rounded-lg bg-primary-300
-              px-4 py-2.5 text-(length:--small-size) font-semibold text-(--text-100)
+              px-4 py-2.5 text-small font-semibold text-text-100
               transition hover:bg-primary-200">
       <span>{{ text_btn }}</span>
       <span class="x-icon" data-size="16px" data-icon="open-go"></span>

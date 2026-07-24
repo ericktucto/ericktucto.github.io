@@ -1,4 +1,4 @@
-<footer class="border-t border-(--bg-300) bg-(--bg-200)">
+<footer class="border-t border-surface-300 bg-surface-200">
   <div class="mx-auto max-w-6xl px-6 py-16">
 
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
@@ -6,10 +6,10 @@
       <!-- Marca + social -->
       <div class="flex flex-col gap-5">
         <div>
-          <a href="/" class="text-(length:--middle-text-size) font-bold text-primary-300">
+          <a href="/" class="font-display text-middle font-bold text-primary-300">
             {{ site.author }}
           </a>
-          <p class="mt-2 max-w-sm text-base leading-relaxed text-(--text-400)">
+          <p class="mt-2 max-w-sm text-base leading-relaxed text-text-400">
             Full Stack Developer. Construyo software escalable con PHP, Vue y Docker
             desde Perú, para el mundo.
           </p>
@@ -23,9 +23,9 @@
             <li>
               <a href="{{ url }}" target="_blank" rel="noopener noreferrer"
                  aria-label="Visita mi perfil de {{ red }}"
-                 class="grid size-10 place-items-center rounded-full border border-(--bg-300)
-                        bg-(--bg-100) text-(--text-400) transition
-                        hover:border-primary-300 hover:bg-primary-300 hover:text-(--text-100)">
+                 class="grid size-10 place-items-center rounded-full border border-surface-300
+                        bg-surface-100 text-text-400 transition
+                        hover:border-primary-300 hover:bg-primary-300 hover:text-text-100">
                 <span class="x-icon flex! justify-center text-center" data-icon="{{ red }}" data-size="16px"></span>
               </a>
             </li>
@@ -34,9 +34,9 @@
           <li>
             <a href="{{ "/feed.xml" | absolute_url }}"
                aria-label="Suscríbete al feed RSS"
-               class="grid size-10 place-items-center rounded-full border border-(--bg-300)
-                      bg-(--bg-100) text-(--text-400) transition
-                      hover:border-accent-100 hover:bg-accent-100 hover:text-(--text-100)">
+               class="grid size-10 place-items-center rounded-full border border-surface-300
+                      bg-surface-100 text-text-400 transition
+                      hover:border-accent-100 hover:bg-accent-100 hover:text-text-100">
               <span class="x-icon flex! justify-center" data-icon="rss" data-size="16px"></span>
             </a>
           </li>
@@ -45,7 +45,7 @@
 
       <!-- Proyectos -->
       <nav>
-        <h2 class="mb-4 text-(length:--small-size) font-bold uppercase tracking-wider text-(--text-300)">
+        <h2 class="mb-4 text-small font-bold uppercase tracking-wider text-text-300">
           Proyectos
         </h2>
         <ul class="flex flex-col gap-2.5">
@@ -53,7 +53,7 @@
           {% for project in proyectos limit:5 %}
           <li>
             <a href="{{ project.url | relative_url }}"
-               class="text-base text-(--text-400) transition
+               class="text-base text-text-400 transition
                       hover:text-primary-300">
               {{ project.name }}
             </a>
@@ -73,7 +73,7 @@
       <!-- Navegación + contacto -->
       <div class="flex flex-col gap-8">
         <nav>
-          <h2 class="mb-4 text-(length:--small-size) font-bold uppercase tracking-wider text-(--text-300)">
+          <h2 class="mb-4 text-small font-bold uppercase tracking-wider text-text-300">
             Navegación
           </h2>
           <ul class="flex flex-col gap-2.5">
@@ -82,7 +82,7 @@
               {% assign partes = enlace | split: "," %}
               <li>
                 <a href="/#{{ partes[1] }}"
-                   class="text-base text-(--text-400) transition
+                   class="text-base text-text-400 transition
                           hover:text-primary-300">
                   {{ partes[0] }}
                 </a>
@@ -92,7 +92,7 @@
         </nav>
 
         <div>
-          <h2 class="mb-3 text-(length:--small-size) font-bold uppercase tracking-wider text-(--text-300)">
+          <h2 class="mb-3 text-small font-bold uppercase tracking-wider text-text-300">
             Contacto
           </h2>
           <a href="mailto:{{ site.email }}"
@@ -107,16 +107,16 @@
     </div>
 
     <!-- Barra inferior -->
-    <div class="mt-12 flex flex-col items-center gap-3 border-t border-(--bg-300) pt-8
+    <div class="mt-12 flex flex-col items-center gap-3 border-t border-surface-300 pt-8
                 sm:flex-row sm:justify-between">
-      <p class="text-(length:--small-size) text-(--text-muted)">
+      <p class="text-small text-text-muted">
         © {{ site.time | date: "%Y" }} {{ site.author }}. Código abierto en
         <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer"
            class="text-primary-100 transition hover:text-primary-300 hover:underline">
           GitHub
         </a>.
       </p>
-      <p class="flex items-center gap-1.5 text-(length:--small-size) text-(--text-muted)">
+      <p class="flex items-center gap-1.5 text-small text-text-muted">
         <span>Hecho con Jekyll y Tailwind CSS</span>
       </p>
     </div>

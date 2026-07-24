@@ -26,32 +26,35 @@
   --color-neutral-100: #8a8a78;
   --color-neutral-200: #6b6b5c;
 
-  --text-100: #ECF0F1;
-  --text-200: #ced1d2;
-  --text-300: #2C2C2C;
-  --text-400: #4A4A4A;
-  --text-muted: #5C5C4D;
 
-  --bg-100: #F5F5DC;
-  --bg-200: #EBEBD3;
-  --bg-300: #D9D9C2;
 
   --bg-dark-100: #2C3E50;
   --bg-dark-200: #3d4f61;
   --bg-dark-300: #57687c;
 
   --btn-bg: var(--color-primary-300);
-  --btn-text: var(--text-100);
+  --btn-text: var(--color-text-100);
   --btn-hover-bg: var(--color-primary-200);
   --btn-disabled-bg: #a3a394;
   --btn-disabled-text: #e8e8db;
 
-  --title-size: 48px;
-  --subtitle-size: 32px;
-  --middle-text-size: 20px;
-  --paragraph-size: 16px;
-  --small-size: 12px;
-  --br-margin-x: 16px
+  --br-margin-x: 16px;
+
+  --text-title: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --text-subtitle: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --text-middle: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-paragraph: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --text-small: clamp(0.8125rem, 0.78rem + 0.16vw, 0.875rem);
+
+  --color-text-100: #ECF0F1;
+  --color-text-200: #ced1d2;
+  --color-text-300: #2C2C2C;
+  --color-text-400: #4A4A4A;
+  --color-text-muted: #5C5C4D;
+
+  --color-surface-100: #F5F5DC;
+  --color-surface-200: #EBEBD3;
+  --color-surface-300: #D9D9C2;
 }
 
 @utility btn-option {
