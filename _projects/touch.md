@@ -2,13 +2,13 @@
 layout: projects
 name: Touch
 featured: true
-order: 2
+order: 1
 github: https://github.com/ericktucto/touch
 title: "Conoce Touch: microframework PHP sobre estándares PSR"
 slug: touch
-release: "alpha-1"
+release: "v0.1.0"
 categories: ["php", "framework", "project", "backend"]
-image: https://i.postimg.cc/J0383Xdc/web.jpg
+image: https://cdn.stixcode.icu/ericktucto.com/touch.webp
 imageDescription: 'Una ventana generica'
 activedLink: projects
 excerpt_separator: <!--more-->

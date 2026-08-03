@@ -60,7 +60,7 @@
           </li>
           {% endfor %}
           <li>
-            <a href="/projects"
+            <a href="/projects/"
                class="flex items-center gap-1.5 text-base
                       font-semibold text-primary-300 transition hover:gap-2.5">
               <span>Ver todos</span>
@@ -95,11 +95,11 @@
           <h2 class="mb-3 text-small font-bold uppercase tracking-wider text-text-300">
             Contacto
           </h2>
-          <a href="mailto:{{ site.email }}"
+          <a href="mailto:{{ site.author.email }}"
              class="flex items-center text-base text-primary-100
                     transition hover:text-primary-300">
             <span class="x-icon shink-0" data-size="20px" data-icon="mail"></span>
-            <span>{{ site.email }}</span>
+            <span>{{ site.author.email }}</span>
           </a>
         </div>
       </div>
@@ -110,7 +110,7 @@
     <div class="mt-12 flex flex-col items-center gap-3 border-t border-surface-300 pt-8
                 sm:flex-row sm:justify-between">
       <p class="text-small text-text-muted">
-        © {{ site.time | date: "%Y" }} {{ site.author }}. Código abierto en
+        © {{ site.time | date: "%Y" }} {{ site.author.name }}. Código abierto en
         <a href="https://github.com/{{ site.repository }}" target="_blank" rel="noopener noreferrer"
            class="text-primary-100 transition hover:text-primary-300 hover:underline">
           GitHub
