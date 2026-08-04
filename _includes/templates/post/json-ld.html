@@ -1,29 +1,101 @@
+{%- comment -%}
+  ============================================================================
+  META TAGS + JSON-LD para posts del blog
+  ============================================================================
+
+  ANTES DE USAR, verifica en tu _config.yml que tengas estas variables:
+
+    url: https://ericktucto.com          # tu dominio (SIN barra final)
+    cdn_image: https://cdn.stixcode.icu/ericktucto.com   # base genérica (sin /blog),
+                                                         # reutilizable en proyectos, home, etc.
+    author:
+      name: Erick Tucto
+      youtube: https://www.youtube.com/@ericktucto
+      linkedin: https://www.linkedin.com/in/ericktucto/
+      tiktok: https://www.tiktok.com/@erickenelcodigo
+      github: https://github.com/ericktucto
+
+  Y en el front matter de cada post:
+    slug_image: touch-microframework-php   # carpeta en R2 (corta y estable)
+    alt_image: '...'
+    dateModified: '2026-08-01'
+
+  Este partial asume que se incluye dentro del <head> SOLO en layout de post.
+  Si lo usas también en páginas normales, protege con {% if page.layout == 'post' %}.
+  ============================================================================
+{%- endcomment -%}
+
+{%- comment -%} --- Variables derivadas (una sola fuente de verdad) --- {%- endcomment -%}
+{%- assign img_slug = page.slug_image | default: page.slug -%}
+{%- assign cover_16x9 = site.cdn_image | append: '/blog/' | append: img_slug | append: '/cover-16x9.webp' -%}
+{%- assign cover_4x3 = site.cdn_image | append: '/blog/' | append: img_slug | append: '/cover-4x3.webp' -%}
+{%- assign canonical = page.url | absolute_url -%}
+{%- assign description = page.excerpt | default: page.title | strip_html | strip_newlines | truncate: 160 -%}
+
+{%- comment -%} ============ SEO BÁSICO ============ {%- endcomment -%}
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="author" content="{{ site.author.name }}">
+
+{%- comment -%} ============ OPEN GRAPH (Facebook, LinkedIn, WhatsApp, etc.) ============ {%- endcomment -%}
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="es_PE">
+<meta property="og:image" content="{{ cover_16x9 }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="{{ page.alt_image | default: page.title }}">
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- if page.dateModified %}
+<meta property="article:modified_time" content="{{ page.dateModified | date_to_xmlschema }}">
+{%- endif %}
+<meta property="article:author" content="{{ site.author.name }}">
+{%- for category in page.categories %}
+<meta property="article:tag" content="{{ category }}">
+{%- endfor %}
+
+{%- comment -%} ============ TWITTER CARD (también leída por Slack, Discord, Telegram) ============ {%- endcomment -%}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ cover_16x9 }}">
+<meta name="twitter:image:alt" content="{{ page.alt_image | default: page.title }}">
+
+{%- comment -%} ============ JSON-LD (BlogPosting) ============ {%- endcomment -%}
 <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "{{ page.title }}",
-        "datePublished": "{{ page.date }}",
-        "dateModified": "{{ page.dateModified }}",
-        "image": {
-            "@type": "ImageObject",
-            "url": "{{ page.videoId | image_youtube }}"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ site.url }}"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "{{ site.author }}",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://raw.githubusercontent.com/ErickTucto/ericktucto.github.io/master/favicon.ico"
-            }
-        },
-        "author": {
-            "@type": "Person",
-            "name": "{{ site.author }}"
-        }
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical | jsonify }}
+  },
+  "headline": {{ page.title | jsonify }},
+  "description": {{ description | jsonify }},
+  "image": {{ cover_16x9 | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.dateModified | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "sameAs": [
+      {{ site.author.youtube | jsonify }},
+      {{ site.author.linkedin | jsonify }},
+      {{ site.author.tiktok | jsonify }},
+      {{ site.author.github | jsonify }}
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "keywords": {{ page.categories | join: ', ' | jsonify }},
+  "inLanguage": "es"
+}
 </script>

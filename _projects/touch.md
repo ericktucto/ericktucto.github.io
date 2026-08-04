@@ -8,8 +8,7 @@ title: "Conoce Touch: microframework PHP sobre estándares PSR"
 slug: touch
 release: "v0.1.0"
 categories: ["php", "framework", "project", "backend"]
-image: https://cdn.stixcode.icu/ericktucto.com/touch.webp
-imageDescription: 'Una ventana generica'
+imageDescription: 'Diagrama de Touch en el backend'
 activedLink: projects
 excerpt_separator: <!--more-->
 ---

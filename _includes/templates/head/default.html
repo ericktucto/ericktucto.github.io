@@ -1,0 +1,57 @@
+{%- comment -%}
+  META + JSON-LD por defecto: home y páginas sueltas (about, categories, etc.).
+  Usa la imagen de perfil como OG por defecto, o page.image si la página la define.
+{%- endcomment -%}
+{%- capture page_title -%}
+  {%- if page.title -%}{{ page.title }} | Erick Tucto
+  {%- else -%}{{ site.title }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign page_title = page_title | strip -%}
+{%- assign description = page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 -%}
+{%- assign og_img = page.image | default: '/assets/img/perfil.jpg' | absolute_url -%}
+{%- assign canonical = page.url | absolute_url -%}
+
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Erick Tucto">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.og_title | default: page_title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_img }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_PE">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.og_title | default: page_title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ og_img }}">
+
+<!-- JSON-LD: identidad del sitio / autor -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Erick Tucto",
+  "url": {{ site.url | jsonify }},
+  "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
+  "inLanguage": "es",
+  "author": {
+    "@type": "Person",
+    "name": "Erick Tucto",
+    "url": {{ site.url | jsonify }},
+    "sameAs": [
+      {{ site.author.youtube | jsonify }},
+      {{ site.author.linkedin | jsonify }},
+      {{ site.author.tiktok | jsonify }},
+      {{ site.author.github | jsonify }}
+    ]
+  }
+}
+</script>

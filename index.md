@@ -121,7 +121,7 @@ activedLink: home
       {% for project in proyectos %}
       <li class="flex flex-col overflow-hidden rounded-xl border border-surface-300 bg-surface-200
                  transition hover:-translate-y-1 hover:shadow-lg">
-        <img src="{{ project.image }}" alt="{{ project.imageDescription }}"
+        <img src="{{ site.cdn_image }}/projects/{{ project.slug }}/cover-16x9.webp" alt="{{ project.imageDescription }}"
              loading="lazy" class="aspect-video w-full object-cover" decoding="async">
         <div class="flex min-w-0 flex-1 flex-col p-5">
           <div class="flex items-center justify-between gap-2">
@@ -266,10 +266,12 @@ activedLink: home
       {% for post in site.posts limit:3 %}
         {% assign short_description = post.excerpt | remove: '<strong>' | remove: '</strong>' %}
         {% assign post_date = post.date | date: "%-d %B %Y" %}
+        {% assign img_slug = post.slug_image | default: post.slug %}
+        {% assign card_image = site.cdn_image | append: '/blog/' | append: img_slug | append: '/cover-16x9.webp' %}
         <li>
           {% include templates/card.html
             title=post.title
-            image=post.image
+            image=card_image
             alt_image=post.alt_image
             date=post_date
             categories=post.categories

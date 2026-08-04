@@ -1,0 +1,73 @@
+{%- comment -%}
+  META + JSON-LD para POSTS del blog.
+  Requiere en _config.yml:
+    cdn_image: https://cdn.stixcode.icu/ericktucto.com
+    author: { name, youtube, linkedin, tiktok, github }
+  Requiere en front matter del post:
+    slug_image, alt_image, dateModified
+{%- endcomment -%}
+{%- assign img_slug = page.slug_image | default: page.slug -%}
+{%- assign cover_16x9 = site.cdn_image | append: '/blog/' | append: img_slug | append: '/cover-16x9.webp' -%}
+{%- assign canonical = page.url | absolute_url -%}
+{%- assign description = page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 160 -%}
+{%- assign page_title = page.title | append: ' | Erick Tucto' -%}
+
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="author" content="Erick Tucto">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Erick Tucto">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.og_title | default: page.title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ cover_16x9 }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="{{ page.alt_image | default: page.title }}">
+<meta property="og:locale" content="es_PE">
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{%- if page.dateModified %}
+<meta property="article:modified_time" content="{{ page.dateModified | date_to_xmlschema }}">
+{%- endif %}
+<meta property="article:author" content="Erick Tucto">
+{%- for cat in page.categories %}
+<meta property="article:tag" content="{{ cat }}">
+{%- endfor %}
+
+<!-- Twitter (también leída por WhatsApp, Slack, Telegram, Discord) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ cover_16x9 }}">
+<meta name="twitter:image:alt" content="{{ page.alt_image | default: page.title }}">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical | jsonify }} },
+  "headline": {{ page.title | jsonify }},
+  "description": {{ description | jsonify }},
+  "image": {{ cover_16x9 | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.dateModified | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "Erick Tucto",
+    "url": {{ site.url | jsonify }},
+    "sameAs": [
+      {{ site.author.youtube | jsonify }},
+      {{ site.author.linkedin | jsonify }},
+      {{ site.author.tiktok | jsonify }},
+      {{ site.author.github | jsonify }}
+    ]
+  },
+  "publisher": { "@type": "Person", "name": "Erick Tucto", "url": {{ site.url | jsonify }} },
+  "keywords": {{ page.categories | join: ', ' | jsonify }},
+  "inLanguage": "es"
+}
+</script>

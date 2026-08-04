@@ -12,10 +12,13 @@ activedLink: projects
   <div class="pack__cards">
   {% for project in site.projects %}
     {% assign short_description = project.excerpt | remove: '<strong>' | remove: '</strong>' %}
-    {% capture url %}/projects/{{ project.slug }}{% endcapture %}
+    {% assign img_slug = project.slug_image | default: project.slug %}
+    {% assign card_image = site.cdn_image | append: '/projects/' | append: img_slug | append: '/cover-16x9.webp' %}
+    {% capture url %}/projects/{{ project.slug }}/{% endcapture %}
     {% include templates/card.html
       title=project.title
-      image=project.image
+      image=card_image
+      alt_image=project.alt_image
       date=project.release
       categories=project.categories
       short_description=short_description

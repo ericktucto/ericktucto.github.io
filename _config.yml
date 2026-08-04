@@ -12,7 +12,7 @@ author:
 permalink: /blog/:slug/
 url: "https://ericktucto.com"
 baseurl: ""
-cdn_image: "https://cdn.stixcode.icu"
+cdn_image: "https://cdn.stixcode.icu/ericktucto.com"
 repository: ericktucto/ericktucto.github.io
 collections:
     projects:

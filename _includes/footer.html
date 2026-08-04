@@ -7,7 +7,7 @@
       <div class="flex flex-col gap-5">
         <div>
           <a href="/" class="font-display text-middle font-bold text-primary-300">
-            {{ site.author }}
+            {{ site.author.name }}
           </a>
           <p class="mt-2 max-w-sm text-base leading-relaxed text-text-400">
             Full Stack Developer. Construyo software escalable con PHP, Vue y Docker
@@ -18,7 +18,7 @@
         <ul class="flex gap-3">
           {% assign redes = "github,linkedin,youtube,tiktok" | split: "," %}
           {% for red in redes %}
-            {% assign url = site[red] %}
+            {% assign url = site.author[red] %}
             {% if url %}
             <li>
               <a href="{{ url }}" target="_blank" rel="noopener noreferrer"
